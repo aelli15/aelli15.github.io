@@ -7,7 +7,7 @@ permalink: /Courses/
 ### Teaching
 
 The following courses contain letcure content for the courses I am currently teaching or have taught going to teach:
-- [MATH 217: Linear Algebra](LinearAlgebra)
+- [MATH 217: Linear Algebra](/LinearAlgebra)
 - [STATS 250: Intro Stats](introStats)
 
 ### Course Notes
