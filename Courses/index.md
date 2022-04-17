@@ -1,6 +1,4 @@
 ---
-theme: jekyll-theme-minimal
-layout: page
 title: "Courses"
 permalink: /Courses/
 ---
