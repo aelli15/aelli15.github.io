@@ -1,7 +1,7 @@
 ---
-theme: jekyll-theme-minimal
+layout: linAlg
 title: "Linear Algebra"
 permalink: /Courses/LinearAlgebra/
 ---
 
-## Welcome to Linear Algebra
+## Syllubus
