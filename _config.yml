@@ -1,4 +1,6 @@
 theme: jekyll-theme-minimal
 title: Brody Erlandson
-description: M.S. Data Science
-             B.S. Mathematics 
+description: |
+  M.S. Data Science at University of Michigan
+  B.S. Mathematics at Eastern Michigan University
+logo: photoOfMe.jpg
