@@ -1,6 +1,10 @@
 ---
 title: "Courses"
 permalink: /Courses/
+logo: /photoOfMe.jpg
+description: |
+  M.S. in Data Science at U of M <br />
+  B.S. in Mathematics at EMU
 ---
 ## Welcome to my courses
 
