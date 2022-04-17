@@ -1,3 +1,8 @@
+---
+layout: page
+title: "Courses"
+permalink: /Courses/
+---
 ## Welcome to my courses
 
 ### Teaching
