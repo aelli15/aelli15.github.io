@@ -2,9 +2,9 @@
 
 I am a Statistic PhD Pre-canidate at Colorado State University.
 
-## [Courses](brodyee.github.io/Courses/)
+## [Courses](https://brodyee.github.io/Courses/)
 
-## [Papers and Projects](brodyee.github.io)
+## [Papers and Projects](https://brodyee.github.io/)
 
 <!--
 ## Welcome to GitHub Pages
