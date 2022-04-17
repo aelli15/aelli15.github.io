@@ -1,3 +1,7 @@
 theme: jekyll-theme-minimal
 title: Brody Erlandson
-description: M.S. Data Science, B.S. Mathematics 
+description: M.S. Data Science \n B.S. Mathematics 
+docs_list_title: 
+docs:
+- title: Courses
+  url: Courses
