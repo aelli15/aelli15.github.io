@@ -1,7 +1,7 @@
 ---
-layout: page
+theme: jekyll-theme-minimal
 title: "Linear Algebra"
-permalink: /Courses/LinearAlgebra
+permalink: LinearAlgebra
 ---
 
 ## Welcome to Linear Algebra
