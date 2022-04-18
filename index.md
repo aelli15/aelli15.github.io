@@ -1,3 +1,11 @@
+---
+title: "Brody Erlandson"
+logo: photoOfMe.jpg
+description: |
+  M.S. in Data Science at U of M <br />
+  B.S. in Mathematics at EMU
+---
+
 ## About Me
 
 I am a Statistic PhD Pre-canidate at Colorado State University.
