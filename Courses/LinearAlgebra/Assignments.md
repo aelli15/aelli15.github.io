@@ -10,4 +10,4 @@ description: |
   <a href="https://brodyee.github.io/Courses/LinearAlgebra/Assignments" >Assignments</a>
 ---
 
-1) HW 1: Quiz on Thursday May <img src="https://render.githubusercontent.com/render/math?math=12^{th}">
+1) HW 1: Quiz on Thursday May 12<sup>th</sup>
