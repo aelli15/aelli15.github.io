@@ -2,7 +2,7 @@
 layout: default
 title: "Linear Algebra"
 permalink: /Courses/LinearAlgebra/
-logo: Linear_subspaces_with_shading.svg
+logo: Linear_subspaces_with_shading
 description: |
   <a href="https://brodyee.github.io/Courses/LinearAlgebra/" >Home</a> <br />
   <a href="https://brodyee.github.io/Courses/LinearAlgebra/Syllabus" >Syllabus</a> <br />
@@ -12,4 +12,4 @@ description: |
 
 # Coming Up
 
-  - **May <img src="https://render.githubusercontent.com/render/math?math=10^{th}">**: Syllabus and System of linear equations. 
+  - **May 10<sup>th</sup>**: Syllabus and System of linear equations. 
