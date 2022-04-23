@@ -4,10 +4,10 @@ title: "Linear Algebra"
 permalink: /Courses/LinearAlgebra/
 logo: Linear_subspaces_with_shading.svg
 description: |
-  [Home](https://brodyee.github.io/Courses/LinearAlgebra/) <br />
-  [Syllabus](https://brodyee.github.io/Courses/LinearAlgebra/Syllabus) <br />
-  [Lecture Notes](https://brodyee.github.io/Courses/LinearAlgebra/LectNotes) <br />
-  [Assignments](https://brodyee.github.io/Courses/LinearAlgebra/Assignments)
+  <a href="https://brodyee.github.io/Courses/LinearAlgebra/" >Home</a> <br />
+  <a href="https://brodyee.github.io/Courses/LinearAlgebra/Syllabus" >Syllabus</a> <br />
+  <a href="https://brodyee.github.io/Courses/LinearAlgebra/LectNotes" >Lecture Notes</a> <br />
+  <a href="https://brodyee.github.io/Courses/LinearAlgebra/Assignments" >Assignments</a>
 ---
 
 # Coming Up
