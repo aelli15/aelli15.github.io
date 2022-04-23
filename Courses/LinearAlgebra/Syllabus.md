@@ -11,3 +11,9 @@ description: |
 ---
 
 # Syllabus
+
+### Course Information
+- Instructor: Brody Erlandson
+- Instructor Email:
+- Class Meeting times: Tuesday and Thursday 1:00 pm to 3:55 pm
+- Office Hours:
