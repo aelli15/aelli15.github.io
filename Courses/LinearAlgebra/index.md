@@ -4,8 +4,9 @@ title: "Linear Algebra"
 permalink: /Courses/LinearAlgebra/
 logo: 
 description: |
+  Syllubus <br />
   Lecture Notes <br />
   Assignments
 ---
 
-## Syllubus
+# Coming Up
