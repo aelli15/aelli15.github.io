@@ -11,9 +11,11 @@ description: |
 ### Teaching
 
 The following courses contain letcure content for the courses I am currently teaching or have taught going to teach:
-- [MATH 197: Linear Algebra](https://brodyee.github.io/Courses/LinearAlgebra), Spring/Summer 2022, Instructor.
-- STATS 250: Introduction to Statistics and Data Analysis, Winter 2022, Graduate Student Instructor for Labs 106 and 113.
-- STATS/DATASCI 413: Applied Regression Analysis, Fall 2021, Graduate Student Instructor for a Lab.
+- Washtenaw Community College
+  - [MATH 197: Linear Algebra](https://brodyee.github.io/Courses/LinearAlgebra), Spring/Summer 2022, WCC Instructor.
+- University of Michigan
+  - STATS 250: Introduction to Statistics and Data Analysis, Winter 2022, Graduate Student Instructor for Labs 106 and 113.
+  - STATS/DATASCI 413: Applied Regression Analysis, Fall 2021, Graduate Student Instructor for a Lab.
 
 ### Course Notes
 
