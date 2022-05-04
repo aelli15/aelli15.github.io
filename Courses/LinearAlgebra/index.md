@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Linear Algebra"
 permalink: /Courses/LinearAlgebra/
 logo: ../../threeDSystem.jpg
