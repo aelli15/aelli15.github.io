@@ -2,7 +2,7 @@
 layout: default
 title: "Linear Algebra"
 permalink: /Courses/LinearAlgebra/
-logo: 3dSystem
+logo: 3dSystem.png
 description: |
   <a href="https://brodyee.github.io/Courses/LinearAlgebra/" >Home</a> <br />
   <a href="https://brodyee.github.io/Courses/LinearAlgebra/Syllabus" >Syllabus</a> <br />
