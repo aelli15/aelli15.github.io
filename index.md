@@ -1,6 +1,6 @@
 ---
 title: "Brody Erlandson"
-logo: threeDSystem.jpg
+logo: photoOfMe.jpg
 description: |
   M.S. in Data Science at U of M <br />
   B.S. in Mathematics at EMU
