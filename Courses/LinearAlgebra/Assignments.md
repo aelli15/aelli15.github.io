@@ -10,4 +10,6 @@ description: |
   <a href="https://brodyee.github.io/Courses/LinearAlgebra/Assignments" >Assignments</a>
 ---
 
+# Assignments
+
 1) HW 1: Quiz on Thursday May 12<sup>th</sup>
