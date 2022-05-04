@@ -47,8 +47,12 @@ Upon successful completion of this course, you will be able to:
 - Calculate the least-squares solution to a system of linear equations
 
 ### Required Materials
-Textbook:  A First Course in Linear Algebra, by Robert Beezer.  This a free, Open Educational Resource (OER) textbook, available here:
-http://linear.ups.edu/html/fcla.html
+Textbooks: 
+- Linear Algebra and Its Applications by David Lay, et al. 5th Edition ISBN-13:9780321982650
+
+or you can use
+
+- A First Course in Linear Algebra, by Robert Beezer. This a free, Open Educational Resource (OER) textbook, available [here](http://linear.ups.edu/html/fcla.html)
 
 ### Time Commitment
 To meet the due dates on the schedule, expect to spend 8 to 12 hours per week for this 4 credit course during a 15 week semester, 10 to 14 hours during a 12 week semester, and 11 to 16 hours during a 10 week semester.  Some students will probably need to spend longer, and a few might not need to spend as much.
