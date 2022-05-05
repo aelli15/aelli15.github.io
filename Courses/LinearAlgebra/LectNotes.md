@@ -11,4 +11,4 @@ description: |
 
 # Lecture Notes
 
-1) [Systems of Equations](https://brodyee.github.io/Courses/LinearAlgebra/lectureNotes/lecture1.html)
+1. [Systems of Equations](https://brodyee.github.io/Courses/LinearAlgebra/lectureNotes/lecture1.html)
