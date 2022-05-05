@@ -90,6 +90,10 @@ You lowest ***X*** quizzes will be dropped. Also, the final exam can replace you
 ### Makeup Exams and Quizzes
 There are ***no makeup quizzes***. The drops are supposed to be used for unforeseen situations, like a car breaking down or anything else. Though quizzes can be drop due to low performance, this is not the purpose. If you don't feel like taking the first ***X*** quizzes, then have something happen later on, you cannot make up that quiz. So save your drops until the end of the semester if you want to use them for not taking them. Makeup exams will only be given in extraordinary circumstances at the instructor’s discretion.
 
+### Grading Curve
+
+This course will **not** have a curve in the traditional sense. However, I will guarantee that the top 25% of students will get an A (rounding up). The minimum percentage points needed to bring the lowest person in the top 25% to an A, is what everyone will have added to their grade. So if the lowest person in the top 25% has an 87%, then they need 6% to bring them to an A. Thus everyone will have 6% added to their final grade. It is very unlikely this grading system will be used, as it is normal for more than 25% of students to have an A.
+
 ### Communication
 Email Communication
 - Please send emails from your WCC account to be in compliance with federal privacy regulations.
