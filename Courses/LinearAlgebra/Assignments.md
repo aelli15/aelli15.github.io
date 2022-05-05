@@ -11,4 +11,12 @@ description: |
 
 # Assignments
 
-1) HW 1: Quiz on Thursday May 12<sup>th</sup>
+1. HW 1 Quiz on Thursday May 12<sup>th</sup>
+2. HW 2 Quiz on Thursday May 19<sup>th</sup>
+3. HW 3 Quiz on Thursday May 26<sup>th</sup>
+4. HW 4 Quiz on Thursday June 2<sup>nd</sup>
+5. HW 5 Quiz on Thursday June 9<sup>th</sup>
+6. HW 6 Quiz on Thursday June 16<sup>th</sup>
+7. HW 7 Quiz on Thursday June 23<sup>th</sup>
+8. HW 8 Quiz on Thursday June 30<sup>th</sup>
+9. HW 9 Quiz on Thursday July 7<sup>th</sup>
