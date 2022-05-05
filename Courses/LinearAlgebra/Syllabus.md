@@ -51,7 +51,7 @@ Textbooks:
 
 or you can use
 
-- A First Course in Linear Algebra, by Robert Beezer. This a free, Open Educational Resource (OER) textbook, available [here](http://linear.ups.edu/html/fcla.html)
+- A First Course in Linear Algebra, by Robert Beezer. This a *free*, Open Educational Resource (OER) textbook, available [here](http://linear.ups.edu/html/fcla.html)
 
 ### Time Commitment
 To meet the due dates on the schedule, expect to spend 8 to 12 hours per week for this 4 credit course during a 15 week semester, 10 to 14 hours during a 12 week semester, and 11 to 16 hours during a 10 week semester.  Some students will probably need to spend longer, and a few might not need to spend as much.
@@ -99,4 +99,7 @@ Email Communication
 ### Expectations and Availability of Instructor
 I will usually respond to email within 24 hours on weekdays (Monday to Friday), and will rarely respond on the weekends. If I do not respond within 24 weekday hours, please send a follow up email. You should make a habit of checking your WCC email on a regular basis as well. 
 
+### Changes of Schedule and Syllabus
+The instructor has the ability to change the schedule and syllabus throughout the semester. Though changes will try not to be made, when/if they are, students will be imidately updated. 
 
+**By staying in the course the students agree to the terms stated in the syllabus**
