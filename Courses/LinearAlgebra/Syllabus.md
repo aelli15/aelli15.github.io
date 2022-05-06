@@ -32,7 +32,8 @@ This is a first course in linear algebra. Topics include:
 - Eigenvalues and Eigenpsaces, Diagonalization
 - Inner Product Spaces, Orthogonal Matrices, Gram-Schmidt Orthogonalization
 - Least-Squares Approximation
-- Diagonalization of Symmetric Matrices
+- Diagonalization of Symmetric Matrices  
+
 If time allows:
 - Positive Definite and Semidefinite
 - Singular Value Decomposition (SVD)
