@@ -17,9 +17,9 @@ description: |
   4. **May 19<sup>th</sup>**: Linear Independence and Dependence, Inner Products and Orthogonal Sets, and Gram-Schmidt Orthogonalization.
   5. **May 24<sup>th</sup>**: More on Matrices.
   6. **May 26<sup>th</sup>**: Matrix Inverses, and Column and Row Spaces.
-  7. **May 31<sup>st</sup>**: *Exam 1*
-  8. **June 2<sup>nd</sup>**: Vector Spaces and Subspaces
-  9. **June 7<sup>th</sup>**: Basis and Dimention of a Vector Space, and Rank of a Matrix.
+  7. **May 31<sup>st</sup>**: Vector Spaces and Subspaces
+  8. **June 2<sup>nd</sup>**: Basis and Dimention of a Vector Space, and Rank of a Matrix. (Not on Exam 1)
+  9. **June 7<sup>th</sup>**: *Exam 1*
   10. **June 9<sup>th</sup>**: Determinants, and Eigenvalues and Eigenvectors.
   11. **June 14<sup>th</sup>**: Continuing Eigenvalues and Eigenvectors, and Diagonalization.
   12. **June 16<sup>th</sup>**: Linear Transformations.
