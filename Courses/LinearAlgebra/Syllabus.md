@@ -34,7 +34,7 @@ This is a first course in linear algebra. Topics include:
 - Least-Squares Approximation
 - Diagonalization of Symmetric Matrices
 If time allows:
-- Positive Definite and Semi-Definite
+- Positive Definite and Semidefinite
 - Singular Value Decomposition (SVD)
 
 
@@ -107,7 +107,7 @@ Email Communication
 I will usually respond to email within 24 hours on weekdays (Monday to Friday), and will rarely respond on the weekends. If I do not respond within 24 weekday hours, please send a follow up email. You should make a habit of checking your WCC email on a regular basis as well. 
 
 ### Changes of Schedule and Syllabus
-The instructor has the ability to change the schedule and syllabus throughout the semester. Though changes will try not to be made, when/if they are, students will be imidately updated. 
+The instructor has the ability to change the schedule and syllabus throughout the semester. Though changes will try not to be made, when/if they are, students will be immediately updated. 
 
 ### Click [Here](https://www.wccnet.edu/events/academic-dates-add-drop-withdraw.php) for Drop/Add Deadlines and [Here](https://www.wccnet.edu/learn/register/drop.php) for information on drops/withdraws.
 
