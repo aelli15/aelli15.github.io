@@ -1,0 +1,393 @@
+---
+title: "Systems Of Equations"
+author: "Brody Erlandson"
+output:
+  html_document:
+    code_folding: hide
+    toc: true
+    toc_float: true
+    toc_depth: 2
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# $\mathbf{A}\mathbf{x}=\mathbf{b}$
+
+The equation that will be used very often in linear algebra is $\mathbf{A}\mathbf{x}=\mathbf{b}$.
+
+- $\mathbf{A}$ is a matrix.
+- $\mathbf{x}$ and $\mathbf{b}$ are vectors.
+
+## Matrices
+
+A matrix has has the following form:
+
+$$\begin{bmatrix}
+   a_{11} & a_{12} & a_{13}\\
+   a_{21} & a_{22} & a_{23}
+  \end{bmatrix}$$
+  
+Where $a_{ij}$ is a scalar in the $i^{th}$ row and $j^{th}$ column. When specifying a matrix it is often important to specify the size, and we do this like the following: $\mathbf{A}$ is an $i \times j$ matrix or $\mathbf{A}_{ij}$ or $\mathbf{A}_{i\times j}$. Where $i$ is the number of rows and $j$ is the number of columns.
+
+## Vectors
+
+A vector has the following two forms:
+
+$$\begin{bmatrix}
+   x_{1}\\
+   x_{2}\\
+   x_{3}
+  \end{bmatrix} or \begin{bmatrix} x_{1} & x_{2} & x_{3} \end{bmatrix}$$
+  
+Where the first is a column vector and the second is a row vector. $x_{i}$ is a scalar, however, since vectors only have one row or column, we only list one subscript. Vectors size will be indicated similar to a matrix: $\mathbf{x}$ is an $i \times 1$ matrix or $\mathbf{x}_{i1}$ or $\mathbf{x}_{i\times 1}$. Where $i$ is the number of rows and $1$ is to indicate it is a column vector. The same is true for a row vector, but $i$ and $1$ are swapped.
+
+## The equation
+
+Now we can make since of our equation $\mathbf{A}\mathbf{x}=\mathbf{b}$. We can visually see this equation in matrix and vector form with the following.
+
+$$\begin{bmatrix}
+   a_{11} & a_{12}\\
+   a_{21} & a_{22}
+  \end{bmatrix}              
+  \begin{bmatrix}
+   x_{1}\\
+   x_{2}
+  \end{bmatrix} = 
+  \begin{bmatrix}
+   b_{1}\\
+   b_{2}
+  \end{bmatrix}$$
+
+Note that this specific view is $\mathbf{A}_{2\times 2}\mathbf{x}_{2\times 1}=\mathbf{b}_{2\times 1}$. We often won't specify the equation like this because it is messy. We see that $\mathbf{A}$ is a square matrix because $i = j$. We will start our examples with square matrices, but they do not need to be square. We will discuss more later on about the restrictions of the sizes.
+
+# The Row View
+
+We start with the row view because this is what you are familiar with. Let us start with a simple example:
+
+$$\left\{
+    \begin{array}{ll}
+        2x - y = 1\\
+        -x + 2y = 4
+    \end{array}
+\right.$$
+
+We see two equations in this system. In high school algebra, we learn a few ways on how to solve for x and y. You've probably done stuff like elimination and substitution, but in linear algebra we will go about it a bit different. Lets first put it into our favorite notation: $\mathbf{A}\mathbf{x}=\mathbf{b}$.
+
+## Matrix Notation
+
+$$\begin{bmatrix}
+   2 & -1\\
+   -1 & 2
+  \end{bmatrix}              
+  \begin{bmatrix}
+   x\\
+   y
+  \end{bmatrix} = 
+  \begin{bmatrix}
+   1\\
+   4
+  \end{bmatrix}$$
+
+Often we'll write $x_1$ and $x_2$, rather than $x$ and $y$. We can see from the equation fairly easily from the rows, and later we will teach you how to multiply this out the get the equations back. For now, we can just ignore our $\mathbf{x}$ vector and see the equation directly. Now lets visualize this system.
+
+## Row Visualization
+
+With the row view, we can plot the lines just as you have in the past. We can see what $x$ and $y$ satisfy each row equation. For $2x - y = 1$ we can see $0$ for $x$ and $-1$ for $y$ works; $1$ for $x$ and $1$ for $y$ works; $2$ for $x$ and $3$ for $y$ works; and so on. With $-x + 2y = 4$, we can see that $0$ for $x$ and $2$ for $y$ works; $2$ for $x$ and $3$ for $y$ works; and so on. Below we can see all the $x$'s and $y$'s that work for each of the equations:
+
+```{r}
+x <- -2:6
+y1 <- 2 * x - 1
+y2 <- (1/2)*x + 2
+
+plot(x, y1, "l", col="red", xlim=c(-1, 4), ylim=c(-1,5), ylab="y")
+
+# Vertical grid
+axis(1, tck = 1, lty = 1, col = "gray")
+
+# Horizontal grid  
+axis(2, tck = 1, lty = 1, col = "gray")
+
+par(new=TRUE)
+
+plot(x, y1, "l", col="red", xlim=c(-1, 4), ylim=c(-1,5), ylab="y")
+lines(x, y2, col="blue") 
+points(2, 3, pch=19, col="black")
+
+box()
+```
+
+There are in fact an infinite number of points that work, which make us a line in our 2-dimensional plane. Another way to say this, we get a 1-dimensional plane (a line) in our 2-dimensional plane from each equation. It is important to start thinking this way as it will make the later concepts easier to understand. Now let's solve this system.
+
+# Row Echelon Form
+
+## Definitions and Theorems {.tabset}
+
+### Definition 1.1. 
+**Elementary Row Operations**
+
+The following operations will transform an $i \times j$ matrix into a different matrix
+of the same size:  
+
+1. Replace one row by the sum of itself and a multiple of another row.  
+2. Interchange two rows.  
+3. Multiply all entries in a row by a nonzero constant.  
+
+### Definition 1.2.
+
+Two matrices are **row-equivalent** if one can be obtained from
+the other by a sequence of elementary row operations. If $\mathbf{A}$ is row-equivalent to
+$\mathbf{B}$ then we will write $\mathbf{A} \sim \mathbf{B}$.
+
+### Definition 1.3.
+
+A matrix is in **row-echelon** form if:
+
+1. All nonzero rows are above any rows of all zeros.
+2. Each leading entry of a row is in a column to the right of the leading entry
+of the row above it.
+3. All entries in a column below a leading entry are zeros.
+
+If a matrix in echelon form also satisfies the following conditions, it is in **reduced row-echelon** form:
+
+4. The leading entry in each nonzero row is 1.
+5. Each leading 1 is the only nonzero entry in its column.
+
+### Theorem 1.1.
+**RREF Uniqueness **
+
+The reduced row-echelon form of every matrix is unique.
+
+## Applying
+
+Lets take the example we have from above:
+
+$$\begin{bmatrix}
+   2 & -1\\
+   -1 & 2
+  \end{bmatrix}              
+  \begin{bmatrix}
+   x_1\\
+   x_2
+  \end{bmatrix} = 
+  \begin{bmatrix}
+   1\\
+   4
+  \end{bmatrix}$$
+  
+To solve this with the definitions above we first place it into an *augmented matrix*:
+
+$$\left[ \begin{array}{cc|c}
+   2 & -1 & 1\\
+   -1 & 2 & 4
+  \end{array} \right]$$ 
+  
+The augmented matrix is just $[\mathbf{A}|\mathbf{b}]$. This is convent format so that the solution of the system of equations is easy to read.
+
+Now we can begin our row operations to get our matrix in reduced row-echelon form:
+
+$$\left[ \begin{array}{cc|c}
+   2 & -1 & 1\\
+   -1 & 2 & 4
+  \end{array} \right] \overset{\text{R1 + R2}}{\sim}
+  \left[ \begin{array}{cc|c}
+   1 & 1 & 5\\
+   -1 & 2 & 4
+  \end{array} \right] \overset{\text{R2 + R1}}{\sim}
+  \left[ \begin{array}{cc|c}
+   1 & 1 & 5\\
+   0 & 3 & 9
+  \end{array} \right] \overset{\frac{1}{3}\text{R2}}{\sim}
+  \left[ \begin{array}{cc|c}
+   1 & 1 & 5\\
+   0 & 1 & 3
+  \end{array} \right] \overset{\text{R1 - R2}}{\sim}
+  \left[ \begin{array}{cc|c}
+   1 & 0 & 2\\
+   0 & 1 & 3
+  \end{array} \right] $$ 
+
+We can see that we have a **RREF** matrix $\mathbf{A}$ with our new $b$. This gives us the solution to the system of equations. When we put it back in equation form we see:
+
+$$x_1 = 2 \\ x_2 = 3$$
+
+And when we go back to look at the graph, this is where the lines intersect. In fact, when we plug-in our solution to the system of equations, we see both equations are satisfied. Here we only have one solution, $(2, 3)$, so we can give our solution set as $\{(2, 3)\}$. In the following sections we will figure out how to know how many solutions there are, and view this graphically in 3-dimensions. 
+
+# Solution Sets
+
+## Definitions and Theorems {.tabset}
+
+### Definition 1.4.
+**Equivalent Systems**
+
+Two systems of linear equations are equivalent if they have the same solution
+set.
+
+### Theorem 1.2. 
+**Equivalent Systems**
+
+If $\mathbf{A}$ and $\mathbf{B}$ are the augmented matrices of two different systems of linear equations, and $\mathbf{A} \sim \mathbf{B}$, then the two systems are equivalent.
+
+### Definition 1.5. 
+A **pivot position** of a matrix $\mathbf{A}$ is a location in $\mathbf{A}$ that corresponds to a leading 1 in the reduced echelon form of $\mathbf{A}$. A **pivot column** is a column of $\mathbf{A}$ that contains a pivot position.
+
+### Definition 1.6.
+A variable corresponding to a pivot column in an augmented matrix is a **dependent variable** (also sometimes called a **basic variable**). A variable that corresponds to a non-pivot column is an **independent variable**, which will usually be called a **free variable**.
+
+### Theorem 1.3. 
+**Existence Uniqueness Theorem**
+
+A linear system is consistent if and only if the rightmost column of the augmented matrix is not a pivot column. If a linear system is consistent, then the solution set contains either:
+
+1. a unique solution, when there are no free variables, or
+2. infinitely many solutions, when there is at least one free variable
+
+## Examples
+
+In the system we've used so far, we found the solution to be:
+
+$$\left[ \begin{array}{cc|c}
+   1 & 0 & 2\\
+   0 & 1 & 3
+  \end{array} \right]$$
+  
+We see that every column is a pivot column. Meaning we have no free variables, and thus a unique solution. Which is the black point on the graph above. Now lets look at a slightly different system in 2-dimensions:
+
+$$\begin{bmatrix}
+   2 & -1\\
+   4 & -2
+  \end{bmatrix}              
+  \begin{bmatrix}
+   x_1\\
+   x_2
+  \end{bmatrix} = 
+  \begin{bmatrix}
+   1\\
+   -2
+  \end{bmatrix} \Rightarrow \left[ \begin{array}{cc|c}
+   2 & -1 & 1\\
+   4 & -2 & -2
+  \end{array} \right] \sim \left[ \begin{array}{cc|c}
+   1 & -\frac{1}{2} & \frac{1}{2}\\
+   0 & 0 & 4
+  \end{array} \right]$$
+
+If we look at the row equations of the row-echelon form we see: $0*x_1 + 0*x_2 = 4$. This is not possible. Since the right most column is a pivot column, we do not have any solution. Our solution set is $\emptyset$ Now lets visualize this with the row view:
+
+```{r}
+x <- -2:6
+y1 <- 2*x - 1
+y2 <- 2*x + 1 
+
+plot(x, y1, "l", col="red", xlim=c(-1, 4), ylim=c(-1,5), ylab="x2", xlab = "x1")
+
+# Vertical grid
+axis(1, tck = 1, lty = 1, col = "gray")
+
+# Horizontal grid  
+axis(2, tck = 1, lty = 1, col = "gray")
+
+par(new=TRUE)
+
+plot(x, y1, "l", col="red", xlim=c(-1, 4), ylim=c(-1,5), ylab="x2", xlab = "x1")
+lines(x, y2, col="blue") 
+points(2, 3, pch=19, col="black")
+
+box()
+```
+
+We can see this system is two parallel lines, giving us not crossing points. Thus no solutions! What would give us infinite solutions for a 2-dimensional system of equations??
+
+Now lets look at a 3-dimensional system of equations:
+
+$$\left[ \begin{array}{ccc|c}
+   2 & -1 &  1 & -1\\
+   4 & -2 & -2 & 2\\
+   6 & 3  &  6 & 4
+  \end{array} \right] \sim \left[ \begin{array}{ccc|c}
+   1 & 0 &  0 & \frac{5}{6}\\
+   0 & 1 &  0 & \frac{5}{3}\\
+   0 & 0 &  1 & -1
+  \end{array} \right]$$
+  
+```{r, echo=FALSE, warning=FALSE}
+#library(matlib)
+#library(rgl)
+#
+#A <- matrix(c(2, -1, 1,
+#              4, -2, -2,
+#              6,  3, 6),
+#            byrow=TRUE, nrow=3)
+#
+#b <- c(-1, 2, 4)
+#
+#plotEqn3d(A, b)
+```
+
+We see that there is no free variables, so there is a unique solution. Our solution set is $\{(\frac{5}{6}, \frac{5}{3}, -1)\}$ Lastly, lets look at one more 3-dimensional system of equations:
+
+$$\left[ \begin{array}{ccc|c}
+   1  &  3 &  1 &  1\\
+   -4 & -9 &  2 & -1\\
+   0  & -3 & -6 & -3
+  \end{array} \right] \sim \left[ \begin{array}{ccc|c}
+   1 & 0 &  -5 & -2\\
+   0 & 1 &   2 & 1\\
+   0 & 0 &   0 & 0
+  \end{array} \right]$$
+
+```{r, echo=FALSE, warning=FALSE}
+#library(matlib)
+#library(rgl)
+#
+#A <- matrix(c(1,   3, 1,
+#              -4, -9, 2,
+#              0,  -3, -6),
+#            byrow=TRUE, nrow=3)
+#
+#b <- c(1, -1, -3)
+#
+#plotEqn3d(A, b)
+#lines3d(x=c(-2, 3), y=c(1, -1), z=c(0, 1), lwd=10)
+#echelon(A,b)
+```
+
+This system gives us one free variable, $x_3$, so we have an infinitely many solutions. We can rewrite our $x_1$ and $x_2$ in terms of $x_3$ by getting out system of equations.
+
+$$x_1 - 5x_3 = -2 \Rightarrow x_1 = 5x_3 -2 \\ x_2 + 2x_3 = 1 \Rightarrow x_2 = -2x_3 + 1 $$
+
+Now we can define our solution set, which is different than we've seen before: $\{(5x_3 -2, -2x_3 + 1, x_3)\ |\ x_3 \in \mathbb{C}\}$. We can plot the row view of the 3-dimensional system to visually see the solution set:
+
+![](3dSystem.png)
+
+The solution set is the line where all the planes intersect. As we know, a line has infinitely many points, thus our infinite solutions. What would the solution set look like if we had two free variables?
+
+
+
+
+
+
+
+
+
+
+
+
+```{r, echo=FALSE}
+#library(rgl)
+## Create some dummy data
+#dat <- replicate(2, 1:3)
+#
+## Initialize the scene, no data plotted
+#plot3d(dat, type = 'n', xlim = c(-3, 3), ylim = c(-3, 3), zlim = c(-3, 3), xlab = '', ylab = #'', zlab = '') 
+#
+## Add planes
+#planes3d(1,   3,  1,  1, col = 'red', alpha = 0.6)
+#planes3d(-4, -9,  2, -1, col = 'orange', alpha = 0.6)
+#planes3d(0,  -3, -6, -3, col = 'blue', alpha = 0.6)
+#abclines3d(x=-2, y=1, z=0, a=3, b=-1, c =1)
+```
+
+
+
