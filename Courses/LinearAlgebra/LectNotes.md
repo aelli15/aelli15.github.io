@@ -12,3 +12,4 @@ description: |
 # Lecture Notes
 
 1. [Systems of Equations](https://brodyee.github.io/Courses/LinearAlgebra/lectureNotes/lecture1.html)
+2. [Vectors, Matricies, Homogeneous Systems, and Null Space](https://brodyee.github.io/Courses/LinearAlgebra/lectureNotes/lecture2.html)
