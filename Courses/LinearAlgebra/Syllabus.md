@@ -33,6 +33,9 @@ This is a first course in linear algebra. Topics include:
 - Inner Product Spaces, Orthogonal Matrices, Gram-Schmidt Orthogonalization
 - Least-Squares Approximation
 - Diagonalization of Symmetric Matrices
+If time allows:
+- Positive Definite and Semi-Definite
+- Singular Value Decomposition (SVD)
 
 
 ### Course Objectives
@@ -61,7 +64,7 @@ To meet the due dates on the schedule, expect to spend 8 to 12 hours per week fo
 - Grading is typically completed within a week of the assignment due date.
 
 ### Determining Your Grade
-Your grade in the course will be based on ***X*** quizzes, 2 midterm exams, and a final exam.  Quizzes will be 4 points each, and exams will be 100 points each.
+Your grade in the course will be based on 9 quizzes, 2 midterm exams, and a final exam.  Quizzes will be 4 points each, and exams will be 100 points each.
 
 | Graded Items | Percent|
 | :---         |  :---: |
@@ -70,7 +73,7 @@ Your grade in the course will be based on ***X*** quizzes, 2 midterm exams, and 
 | Exam 2       |   30%  |
 | Final Exam   |   20%  |
 
-You lowest ***X*** quizzes will be dropped. Also, the final exam can replace your *lowest* exam score. So if you got a 90% on the final, an 88% on exam 2, and a 70% on exam 1, then exam 1 would be replaced with the 90%. This **does not** go the other way! Meaning if you got a 90% on the final, a 95% on the exam 2, and a 93% in the exam 1, your grades will not change. Neither exam 1 nor exam 2 will replace the final. Below is the total course percent, with a corresponding grade:
+You lowest 2 quizzes will be dropped. Also, the final exam can replace your *lowest* exam score. So if you got a 90% on the final, an 88% on exam 2, and a 70% on exam 1, then exam 1 would be replaced with the 90%. This **does not** go the other way! Meaning if you got a 90% on the final, a 95% on the exam 2, and a 93% in the exam 1, your grades will not change. Neither exam 1 nor exam 2 will replace the final. Below is the total course percent, with a corresponding grade:
 
 | Letter Grade | Percent Range |
 | :---         |    :---:      |
@@ -88,7 +91,7 @@ You lowest ***X*** quizzes will be dropped. Also, the final exam can replace you
 | F            |   59% - 0%   |
 
 ### Makeup Exams and Quizzes
-There are ***no makeup quizzes***. The drops are supposed to be used for unforeseen situations, like a car breaking down or anything else. Though quizzes can be drop due to low performance, this is not the purpose. If you don't feel like taking the first ***X*** quizzes, then have something happen later on, you cannot make up that quiz. So save your drops until the end of the semester if you want to use them for not taking them. Makeup exams will only be given in extraordinary circumstances at the instructor’s discretion.
+There are ***no makeup quizzes***. The drops are supposed to be used for unforeseen situations, like a car breaking down or anything else. Though quizzes can be drop due to low performance, this is not the purpose. If you don't feel like taking the first 2 quizzes, then have something happen later on, you cannot make up that quiz. So save your drops until the end of the semester, if you want to use them for not taking them. Makeup exams will only be given in extraordinary circumstances at the instructor’s discretion.
 
 ### Grading Curve
 
@@ -105,5 +108,7 @@ I will usually respond to email within 24 hours on weekdays (Monday to Friday), 
 
 ### Changes of Schedule and Syllabus
 The instructor has the ability to change the schedule and syllabus throughout the semester. Though changes will try not to be made, when/if they are, students will be imidately updated. 
+
+### Click [Here](https://www.wccnet.edu/events/academic-dates-add-drop-withdraw.php) for Drop/Add Deadlines and [Here](https://www.wccnet.edu/learn/register/drop.php) for information on drops/withdraws.
 
 **By staying in the course the students agree to the terms stated in the syllabus**
