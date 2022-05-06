@@ -29,5 +29,5 @@ description: |
   16. **June 30<sup>th</sup>**: Orthonormal Diagonalization and QR Factorization. (Not on Exam 2)
   17. **July 5<sup>th</sup>**: *Exam 2*
   18. **July 7<sup>th</sup>**: Continuing QR Factorization and Least Squares.
-  19. **July 12<sup>th</sup>**: Final Exam Review.
+  19. **July 12<sup>th</sup>**: Catch Up topics, Extra Topics, and/or Final Exam Review.
   20. **July 14<sup>th</sup>**: *Final Exam*
