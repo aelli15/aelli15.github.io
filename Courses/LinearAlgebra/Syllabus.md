@@ -15,7 +15,7 @@ description: |
 - Instructor: Brody Erlandson
 - Instructor Email: beerlandson at wccnet.edu
 - Class Meeting times: Tuesday and Thursday 1:00 pm to 3:55 pm
-- Office Hours: TBD
+- Office Hours: 4-5pm Wednesday (In-person Focused), 5-6pm Wednesday (Online Focused), and 12-1pm Friday (Mixed Focused)
 
 ### Course Overview
 This is a first course in linear algebra. Topics include:
