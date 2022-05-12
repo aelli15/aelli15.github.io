@@ -11,8 +11,8 @@ description: |
 
 # Homework 2
 
-Do the odd questions from the following parts:
+Do the questions specified from the following parts:
 
-- [Part 1](https://brodyee.github.io/Courses/LinearAlgebra/HWs/HW2p1.pdf)
-- [Part 2](https://brodyee.github.io/Courses/LinearAlgebra/HWs/HW2p2.pdf)
-- [Part 3](https://brodyee.github.io/Courses/LinearAlgebra/HWs/HW2p3.pdf)
+- [Part 1](https://brodyee.github.io/Courses/LinearAlgebra/HWs/HW2p1.pdf): 1, 2, 5, 9, 10, 11, 13, 15, 19, 21
+- [Part 2](https://brodyee.github.io/Courses/LinearAlgebra/HWs/HW2p2.pdf): 3, 5, 9, 11, 13, 15, 21
+- [Part 3](https://brodyee.github.io/Courses/LinearAlgebra/HWs/HW2p3.pdf): 1, 3, 5, 7, 17, 19
