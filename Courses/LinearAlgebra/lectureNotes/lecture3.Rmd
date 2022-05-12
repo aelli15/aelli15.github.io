@@ -79,12 +79,11 @@ If $\mathbf{u}, \mathbf{v} \in \mathbb{C}^n$, then $\mathbf{\overline{u + v} = \
 
 If $\mathbf{v} \in \mathbb{C}^n$ and $c \in \mathbb{C}^n$, then $\overline{c\mathbf{v}} = \bar{c}\mathbf{\bar{v}}$
 
-## Geometry of Vector Addition and Column View {.tabset}
+## Geometry of Vector Addition and Column View
 
-### Theorem 2.1. 
-**Parallelogram Rule**
+### Geometry Vector Addition Rule
 
-To add $\mathbf{v} \ \text{and} \ \mathbf{u}$, draw a parallelogram with vertices at the origin, $(v_1, v_2, \dots, v_n)$, and $(u_1, u_2, \dots, u_n)$. The fourth vertex of the parallelogram corresponds to the point $\mathbf{v} + \mathbf{u}$.
+To add $\mathbf{v} \ \text{and} \ \mathbf{u}$, draw one vector at the end of the other. The end of the second vector corresponds to the point $\mathbf{v} + \mathbf{u}$.
 
 Let's look at $\mathbf{u}, \mathbf{v}, \mathbf{w} \in \mathbb{R}^3$, where 
 
@@ -114,7 +113,7 @@ $$ \mathbf{u} = \begin{bmatrix}
 
 ![](3dLinComb.png)
 
-#### Column View
+### Column View
 
 Before we looked at $\mathbf{Ax=b}$ with the row view. Meaning, we visualized it with the row equations. Allowing us to see the planes and lines intersect where the solutions are, but we can also look at it with a column view:
 
@@ -207,7 +206,7 @@ arrows(0, 0, 1, 4, col="black", lwd=3)
 box()
 ```
 
-#### Parametric Vector Form
+### Parametric Vector Form
 
 We can write our solutions to our equations in parametric form, so that we have a clean solution. Lets talk another example we've used previously:
 
