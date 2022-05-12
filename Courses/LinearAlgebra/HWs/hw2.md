@@ -1,6 +1,6 @@
 ---
 title: "Linear Algebra"
-permalink: /Courses/LinearAlgebra/Assignments/hw1
+permalink: /Courses/LinearAlgebra/Assignments/hw2
 logo: ../../threeDSystem.jpg
 description: |
   <a href="https://brodyee.github.io/Courses/LinearAlgebra/" >Home</a> <br />
