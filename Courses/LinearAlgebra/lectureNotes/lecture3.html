@@ -1816,8 +1816,8 @@ box()</code></pre>
 <p><span class="math display">\[\text{The span of} \ S = \langle S\rangle = \{\mathbf{u} \in \mathbb{C}^n| \mathbf{u} = \sum^n_{i=1} c_i\mathbf{v}_i,\ c_i \in \mathbb{C}\}\]</span></p>
 <p>If <span class="math inline">\(W\)</span> is a set and <span class="math inline">\(\langle S\rangle = W\)</span>, then we say <span class="math inline">\(S\)</span> <strong>spans</strong> <span class="math inline">\(W\)</span>.</p>
 </div>
-<div id="theorem-4.1." class="section level3">
-<h3>Theorem 4.1.</h3>
+<div id="theorem-3.1." class="section level3">
+<h3>Theorem 3.1.</h3>
 <p><strong>Spanning Sets</strong></p>
 <p>Let <span class="math inline">\(\mathbf{A}\)</span> be an <span class="math inline">\(m \times n\)</span> matrix, let <span class="math inline">\(S\)</span> be the set containing the column vectors of <span class="math inline">\(\mathbf{A}\)</span>, and let <span class="math inline">\(\mathbf{B}\)</span> be the reduced row-echelon form of <span class="math inline">\(\mathbf{A}\)</span>. The following statements are either all true or all false:</p>
 <ol style="list-style-type: decimal">
@@ -1856,11 +1856,13 @@ box()</code></pre>
 <p><summary>Click here Solution</summary></p>
 <p>Any linear combination of the vectors in <span class="math inline">\(S\)</span> would work. We can write the entire span as <span class="math inline">\(\langle S\rangle = \{c_1\mathbf{v}_1+c_2\mathbf{v}_2+c_3\mathbf{v}_3| c_1,c_2,c_3 \in \mathbb{C}\}\)</span>. We can easily see there are infinitely many elements in this set, as there are infinitely many <span class="math inline">\(c_i\)</span>’s to choose from.</p>
 </details>
+<p></p>
 <p>Now let <span class="math inline">\(S = \{\mathbf{u}, \mathbf{v}, \mathbf{w}\}\)</span>. Find <span class="math inline">\(\langle S\rangle\)</span>.</p>
 <details>
 <p><summary>Click here Solution</summary></p>
 <p>Since we are not given specific vectors, <span class="math inline">\(\langle S\rangle = \{c_1\mathbf{u}+c_2\mathbf{v}+c_3\mathbf{w}| c_1,c_2,c_3 \in \mathbb{C}\}\)</span></p>
 </details>
+<p></p>
 <p>Again let,</p>
 <p><span class="math display">\[S = \Bigg\{ \begin{bmatrix}
                  3\\
@@ -1908,6 +1910,7 @@ box()</code></pre>
            \end{bmatrix}\]</span></p>
 <p>so <span class="math inline">\(\begin{bmatrix} 5\\ 1\\ 8 \end{bmatrix} \in \langle S\rangle\)</span>. To see if <span class="math inline">\(\langle S\rangle = \mathbb{C}^3\)</span>, we’d need to know if every vector in <span class="math inline">\(\mathbb{C}^3\)</span> is a linear combination of <span class="math inline">\(\langle S\rangle\)</span>. We can check this with Theorem 3.1 we defined above.</p>
 </details>
+<p></p>
 <p>Lastly, let</p>
 <p><span class="math display">\[\mathbf{A} = \begin{bmatrix}
                   3 &amp;  3 &amp;  2\\
@@ -1925,6 +1928,7 @@ box()</code></pre>
   \end{bmatrix}\]</span></p>
 <p>This doesn’t have a pivot in every row, so by theorem 4.1 <span class="math inline">\(\mathcal{C}(\mathbf{A}) \not= \mathbb{C}^3\)</span></p>
 </details>
+<p></p>
 </div>
 </div>
 

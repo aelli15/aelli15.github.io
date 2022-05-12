@@ -283,7 +283,7 @@ $$\text{The span of} \ S = \langle S\rangle = \{\mathbf{u} \in \mathbb{C}^n| \ma
 
 If $W$ is a set and $\langle S\rangle = W$, then we say $S$ **spans** $W$.
 
-### Theorem 4.1. 
+### Theorem 3.1. 
 **Spanning Sets**
 
 Let $\mathbf{A}$ be an $m \times n$ matrix, let $S$ be the set containing the column vectors of $\mathbf{A}$, and let $\mathbf{B}$ be the reduced row-echelon form of $\mathbf{A}$. The following statements are either all true or all false:
@@ -331,7 +331,7 @@ List a few different vectors in $\langle S\rangle$ on your own, and think about 
 
 Any linear combination of the vectors in $S$ would work. We can write the entire span as $\langle S\rangle = \{c_1\mathbf{v}_1+c_2\mathbf{v}_2+c_3\mathbf{v}_3| c_1,c_2,c_3 \in \mathbb{C}\}$. We can easily see there are infinitely many elements in this set, as there are infinitely many $c_i$'s to choose from.
 
-</details>
+</details> \newline
 
 Now let $S = \{\mathbf{u}, \mathbf{v}, \mathbf{w}\}$. Find $\langle S\rangle$.
 
@@ -339,7 +339,7 @@ Now let $S = \{\mathbf{u}, \mathbf{v}, \mathbf{w}\}$. Find $\langle S\rangle$.
 
 Since we are not given specific vectors, $\langle S\rangle = \{c_1\mathbf{u}+c_2\mathbf{v}+c_3\mathbf{w}| c_1,c_2,c_3 \in \mathbb{C}\}$
 
-</details>
+</details> \newline
 
 Again let, 
 
@@ -395,7 +395,7 @@ $$\begin{bmatrix} 5\\ 1\\ 8 \end{bmatrix} = \frac{44}{15}\begin{bmatrix}
            
 so $\begin{bmatrix} 5\\ 1\\ 8 \end{bmatrix} \in \langle S\rangle$. To see if $\langle S\rangle = \mathbb{C}^3$, we'd need to know if every vector in $\mathbb{C}^3$ is a linear combination of $\langle S\rangle$. We can check this with Theorem 3.1 we defined above.
 
-</details>
+</details> \newline
 
 Lastly, let
 
@@ -419,7 +419,7 @@ $$\begin{bmatrix}
   
 This doesn't have a pivot in every row, so by theorem 4.1 $\mathcal{C}(\mathbf{A}) \not= \mathbb{C}^3$
 
-</details>
+</details> \newline
 
 
 
