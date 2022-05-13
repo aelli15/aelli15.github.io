@@ -12,10 +12,10 @@ description: |
 # Done
 
   1. **May 10<sup>th</sup>**: Syllabus; System of Linear Equations; and Vectors, Matrices, Homogeneous Systems, and Null Space.
+  2. **May 12<sup>th</sup>**: More on Vectors, Linear Combinations, and Spanning Sets.
   
 # Coming Up
 
-  2. **May 12<sup>th</sup>**: More on Vectors, Linear Combinations, and Spanning Sets.
   3. **May 17<sup>th</sup>**: Linear Independence and Dependence, Inner Products and Orthogonal Sets, and Gram-Schmidt Orthogonalization.
   4. **May 19<sup>th</sup>**: More on Matrices.
   5. **May 24<sup>th</sup>**: Matrix Inverses, and Column and Row Spaces.
