@@ -1,0 +1,30 @@
+---
+title: "hw3 Part 2"
+author: "Brody Erlandson"
+output: html_document
+---
+
+\include{mathCommands}
+
+1. Given,
+
+$$\v = \vddd{0+8i}{12-3i}{3-1i}, \u = \vddd{2-3i}{9-1i}{2+i}$$
+
+find $\innerProd{\v}{\u}$.
+
+2. Given,
+
+$$\v = \vdddd{1}{1}{1}{1}, \u = \vdddd{2}{2}{2}{2}$$
+
+find $\innerProd{\v}{\u}$ and the distance between $\v$ and $\u$.
+
+3. From Theorem 2.1., show 3 and 6 are true. Note 6 is and iff, so you have to show both ways.
+
+4. Given $S = \{\v_1, \v_2, \v_3\}, \v_i \in \C^3$. Also let $S$ be an orthonormal set. Show that $\u = \v_1 + \v_2, \text{ and } \w = \v_1 + \v_3$ are not orthogonal.
+
+5. Using,
+
+$$S = \Bigg\{\vddd{2}{4}{8}, \vddd{3}{0}{1}, \vddd{1}{4}{0}\Bigg\}$$
+
+apply the Gram-Schmidt Orthogonalization to make an orthogonal set.
+
