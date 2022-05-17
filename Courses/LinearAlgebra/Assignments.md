@@ -13,7 +13,7 @@ description: |
 
 1. [HW 1](https://brodyee.github.io/Courses/LinearAlgebra/Assignments/hw1) Quiz on Thursday May 12<sup>th</sup>
 2. [HW 2](https://brodyee.github.io/Courses/LinearAlgebra/Assignments/hw2) Quiz on Thursday May 19<sup>th</sup>
-3. HW 3 Quiz on Thursday May 26<sup>th</sup>
+3. [HW 3](https://brodyee.github.io/Courses/LinearAlgebra/Assignments/hw3) Quiz on Thursday May 26<sup>th</sup>
 4. HW 4 Quiz on Thursday June 2<sup>nd</sup>
 5. HW 5 Quiz on Thursday June 9<sup>th</sup>
 6. HW 6 Quiz on Thursday June 16<sup>th</sup>
