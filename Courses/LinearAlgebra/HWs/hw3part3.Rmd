@@ -1,0 +1,14 @@
+---
+title: "hw 3 Part3"
+author: "Brody Erlandson"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+1. Show that all diagonal matrices are symmetric
+2. Show theorem 1.4 part 1 and 3
+3. Show theorem 2.3
+4. Show theorem 3.1
