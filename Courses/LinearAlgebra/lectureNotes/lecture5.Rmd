@@ -180,7 +180,7 @@ Matrix $\A$ and $\Cmat$ are symmetric, and they are also both diagonal matrices.
 
 If $\A \in \mathcal{M}_{mn}$ and $\v \in \C^n$, the matrix-vector product $\A\v$ is the linear combination
 
-$$\A\v = \sum_{i=1}^n x_i\mathbf{a}_i$$
+$$\A\v = \sum_{i=1}^n v_i\mathbf{a}_i$$
 
 where $\mathbf{a}_i$ is column $i$ of $\A$.
 
@@ -249,7 +249,7 @@ $$\u \cdot \v = \sum_{i=1}^nu_iv_i$$
 
 If $\A$ and $\B$ are $m \times n$ and $n \times p$ matrices, with Real number entries, then the row-column algorithm for multiplying matrices can be written as:
 
-$$AB = \mddd{\bf{a}_1 \cdot \bf{b}_1}{\dots}{\bf{a}_1 \cdot \bf{b}_p}{\vdots}{\ddots}{\vdots}{\bf{a}_m \cdot \bf{b}_1}{\dots}{\bf{a}_m \cdot \bf{b}_p}$$
+$$\A\B = \mddd{\bf{a}_1 \cdot \bf{b}_1}{\dots}{\bf{a}_1 \cdot \bf{b}_p}{\vdots}{\ddots}{\vdots}{\bf{a}_m \cdot \bf{b}_1}{\dots}{\bf{a}_m \cdot \bf{b}_p}$$
 
 or alternately
 
@@ -265,7 +265,7 @@ products are defined, and let $\alpha \in \C$.
 
 1. $\A(\B\Cmat) = (\A\B)\Cmat$
 2. $\A(\B + \Cmat) = \A\B + \A\Cmat$
-3. $(\B + \Cmat)\A = \B\A + \C\A$
+3. $(\B + \Cmat)\A = \B\A + \Cmat\A$
 4. $\alpha(\A\B) = (\alpha\A)\B = \A(\alpha\B)$
 5. $\0_{p\times m}\A = \0_{p\times n}$
 6. $\A\0_{n\times p} = \0_{m\times p}$

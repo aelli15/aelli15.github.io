@@ -1673,7 +1673,7 @@ div.tocify {
 <h3>Definition 2.1.</h3>
 <p><strong>Matrix-Vector Product</strong></p>
 <p>If <span class="math inline">\(\mathbf{A}\in \mathcal{M}_{mn}\)</span> and <span class="math inline">\(\mathbf{v}\in \mathbb{C}^n\)</span>, the matrix-vector product <span class="math inline">\(\mathbf{A}\mathbf{v}\)</span> is the linear combination</p>
-<p><span class="math display">\[\mathbf{A}\mathbf{v}= \sum_{i=1}^n x_i\mathbf{a}_i\]</span></p>
+<p><span class="math display">\[\mathbf{A}\mathbf{v}= \sum_{i=1}^n v_i\mathbf{a}_i\]</span></p>
 <p>where <span class="math inline">\(\mathbf{a}_i\)</span> is column <span class="math inline">\(i\)</span> of <span class="math inline">\(\mathbf{A}\)</span>.</p>
 </div>
 <div id="definition-2.2." class="section level3">
@@ -1729,7 +1729,7 @@ div.tocify {
 <h3>Theorem 2.5.</h3>
 <p><strong>Dot Product Form of Row-Column Algorithm</strong></p>
 <p>If <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span> are <span class="math inline">\(m \times n\)</span> and <span class="math inline">\(n \times p\)</span> matrices, with Real number entries, then the row-column algorithm for multiplying matrices can be written as:</p>
-<p><span class="math display">\[AB = \begin{bmatrix} \bf{a}_1 \cdot \bf{b}_1 &amp; \dots &amp; \bf{a}_1 \cdot \bf{b}_p\\ \vdots &amp; \ddots &amp; \vdots\\ \bf{a}_m \cdot \bf{b}_1 &amp; \dots &amp; \bf{a}_m \cdot \bf{b}_p\\\end{bmatrix}\]</span></p>
+<p><span class="math display">\[\mathbf{A}\mathbf{B}= \begin{bmatrix} \bf{a}_1 \cdot \bf{b}_1 &amp; \dots &amp; \bf{a}_1 \cdot \bf{b}_p\\ \vdots &amp; \ddots &amp; \vdots\\ \bf{a}_m \cdot \bf{b}_1 &amp; \dots &amp; \bf{a}_m \cdot \bf{b}_p\\\end{bmatrix}\]</span></p>
 <p>or alternately</p>
 <p><span class="math display">\[[\mathbf{A}\mathbf{B}]ij = \bf{a}_i \cdot \bf{b}_j\]</span></p>
 <p>where <span class="math inline">\(\bf{a}_1, \bf{a}_2, \dots, \bf{a}_m\)</span> are the rows of <span class="math inline">\(\mathbf{A}\)</span>, and <span class="math inline">\(\bf{b}_1, \bf{b}_2, \dots, \bf{b}_p\)</span> are the columns of <span class="math inline">\(\mathbf{B}\)</span>.</p>
@@ -1741,7 +1741,7 @@ div.tocify {
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\mathbf{A}(\mathbf{B}\mathbf{C}) = (\mathbf{A}\mathbf{B})\mathbf{C}\)</span></li>
 <li><span class="math inline">\(\mathbf{A}(\mathbf{B}+ \mathbf{C}) = \mathbf{A}\mathbf{B}+ \mathbf{A}\mathbf{C}\)</span></li>
-<li><span class="math inline">\((\mathbf{B}+ \mathbf{C})\mathbf{A}= \mathbf{B}\mathbf{A}+ \mathbb{C}\mathbf{A}\)</span></li>
+<li><span class="math inline">\((\mathbf{B}+ \mathbf{C})\mathbf{A}= \mathbf{B}\mathbf{A}+ \mathbf{C}\mathbf{A}\)</span></li>
 <li><span class="math inline">\(\alpha(\mathbf{A}\mathbf{B}) = (\alpha\mathbf{A})\mathbf{B}= \mathbf{A}(\alpha\mathbf{B})\)</span></li>
 <li><span class="math inline">\(\mathbf{0}_{p\times m}\mathbf{A}= \mathbf{0}_{p\times n}\)</span></li>
 <li><span class="math inline">\(\mathbf{A}\mathbf{0}_{n\times p} = \mathbf{0}_{m\times p}\)</span></li>
