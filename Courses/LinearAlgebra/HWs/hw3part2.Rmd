@@ -6,6 +6,8 @@ output: html_document
 
 \include{mathCommands}
 
+From the lecture on *"Linear Independence and Dependence, Inner Products and Orthogonal Sets, and Gram-Schmidt Orthogonalization"*, do the following questions.
+
 1. Given,
 
 $$\v = \vddd{0+8i}{12-3i}{3-1i}, \u = \vddd{2-3i}{9-1i}{2+i}$$
