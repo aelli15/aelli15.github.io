@@ -19,7 +19,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Definitions and Theorems {.tabset}
 
-### DefInition 1.1.
+### Definition 1.1.
 **Matrix**
 
 An $m \times n$ matrix is a rectangular array of Complex numbers, with $m$ rows and $n$ columns. The number In row $i$ and column $j$ of matrix $\A$ is denoted $[\A]_{ij}$ or $a_{ij}$. If $\A$ is an $m \times n$ matrix, we often write it as
@@ -28,18 +28,18 @@ $$\A = [\mathbf{a}_1|\mathbf{a}_2|\dots|\mathbf{a}_n]$$
 
 where $\mathbf{a}_j$ is column $j$ of $\A$, for $j = 1, 2, \dots, n$.
 
-### DefInition 1.2. 
+### Definition 1.2. 
 $\mathcal{M}_{mn}$
 
 The set of all $m \times n$ matrices with complex entries is called the **vector space**
 $\mathcal{M}_{mn}$.
 
-### DefInition 1.3.
+### Definition 1.3.
 **Matrix Equality**
 
 If $\A$ and $\B$ are $m \times n$ matrices, $\A = \B$ means $a_{ij} = b_{ij}$ for all $i = 1, 2, \dots, m$, and $j = 1, 2, \dots, n$.
 
-### DefInition 1.4. 
+### Definition 1.4. 
 **Matrix Addition**
 
 If $\A$ and $\B$ are $m \times n$ matrices, the sum of $\A$ and $\B$ is the $m \times n$ matrix $\A+\B$, defined by 
@@ -48,15 +48,15 @@ $$[\A + \B]_{ij} = a_{ij} + b_{ij}$$
 
 for all $i = 1, 2, \dots, m$, and $j = 1, 2, \dots, n$.
 
-### DefInition 1.5.
+### Definition 1.5.
 **Matrix Scalar Multiplication**
 
-If $\A$ is an $m \times n$ matrix and $\alpha \in \C$, the product of $\alpha$ and $\A$ is the $m \times n$ matrix $\alpha\A$, defIned by $[\alpha\A]_{ij} = \alpha[\A]_{ij}$ for all $i = 1, 2, \dots, m$, and $j = 1, 2, \dots, n$.
+If $\A$ is an $m \times n$ matrix and $\alpha \in \C$, the product of $\alpha$ and $\A$ is the $m \times n$ matrix $\alpha\A$, defined by $[\alpha\A]_{ij} = \alpha[\A]_{ij}$ for all $i = 1, 2, \dots, m$, and $j = 1, 2, \dots, n$.
 
-### DefInition 1.6.
+### Definition 1.6.
 **Zero Matrix**
 
-The zero matrix In $\mathcal{M}_{mn}$ is the $m \times n$ matrix $\mathbf{0}_{mn}$ defIned by $[\0]_{ij} = 0$ for all $i = 1, 2, \dots, m$, and $j = 1, 2, \dots, n$
+The zero matrix In $\mathcal{M}_{mn}$ is the $m \times n$ matrix $\mathbf{0}_{mn}$ defined by $[\0]_{ij} = 0$ for all $i = 1, 2, \dots, m$, and $j = 1, 2, \dots, n$
 
 ### Theorem 1.1.
 **Vector Space Properties**
@@ -74,16 +74,16 @@ If $\A$, $\B$, and $\Cmat$ are $m \times n$ matrices, and $\alpha$ and $\beta$ a
 9. $(\alpha + \beta)\A = \alpha\A + \beta\A$
 10. $1\A = \A$
 
-### DefInition 1.7.
+### Definition 1.7.
 **Transpose**
 
-The transpose of a matrix $\A$ is $\A^T$, defIned by
+The transpose of a matrix $\A$ is $\A^T$, defined by
 
 $$[\A^T]_{ij} = [\A]_{ji}$$
 
 for all $i = 1, 2, \dots, m$, and $j = 1, 2, \dots, n$.
 
-### DefInition 1.8.
+### Definition 1.8.
 **Symmetric Matrices**
 
 The matrix $\A$ is symmetric if $\A = \A^T$.
@@ -100,10 +100,10 @@ If $\A,\B \in \mathcal{M}_{mn}$ and $\alpha \in \C$, then
 2. $(\alpha\A)^T = \alpha\A^T$
 3. $(\A^T)^T = \A$
 
-### DefInition 1.9.
+### Definition 1.9.
 **Conjugate**
 
-If $\A \in \mathcal{M}_{mn}$, the conjugate of $\A$ is $\bar{\A}$, defIned by
+If $\A \in \mathcal{M}_{mn}$, the conjugate of $\A$ is $\bar{\A}$, defined by
 
 $[\bar{\A}]_{ij} = \overline{[\A]}_{ij}$
 
@@ -119,14 +119,14 @@ If $\A \B \in \mathcal{M}_{mn}$ and $\alpha \in C$, then
 3. $\overline{(\bar{\A})} = \A$
 4. $\overline{(\A^T)} = (\bar{\A})^T$
 
-Note: sInce it doesn’t matter whether we take the conjugate or the transpose of
+Note: since it doesn’t matter whether we take the conjugate or the transpose of
 a matrix first, we will often simplify the notation for the ”conjugate transpose”
 as follows $\overline{(\A^T)} = (\bar{\A})^T = \bar{\A}^T$
 
-### DefInition 1.10. 
+### Definition 1.10. 
 **Adjoint**
 
-If $\A \in \mathcal{M}_{mn}$, the *adjoint* of $\A$ is $\A^*$, defIned by
+If $\A \in \mathcal{M}_{mn}$, the *adjoint* of $\A$ is $\A^*$, defined by
 
 $\A^* = \bar{\A}^T$
 
@@ -139,7 +139,7 @@ If $\A, \B \in \mathcal{M}_{mn}$ and $\alpha \in \C$, then
 2. $(\alpha\A)^* = \alpha\A^*$
 3. $(\A^*)^* = \A$
 
-### DefInition 1.11.
+### Definition 1.11.
 **Diagonal Matrices**
 
 A diagonal matrix is an $n \times n$ matrix with $0$’s everywhere except possibly on the main diagonal. We can write this as
@@ -162,11 +162,11 @@ Which of the following are symmetric:
 
 $$\A = \mdd{1}{0}{0}{1}, \B= \mdd{5+i}{2}{0}{14}, \Cmat = \mdd{0}{0}{0}{1}$$
 
-Also, what is common amoungst the the matricies that are symmetric?
+Also, what is common amoungst the the matrices that are symmetric?
 
 <details><summary>Click here Solution</summary> 
 
-Matrix $\A$ and $\Cmat$ are symmetric, and they are also both diagonal matricies.
+Matrix $\A$ and $\Cmat$ are symmetric, and they are also both diagonal matrices.
 
 </details> \newline 
 
@@ -175,16 +175,16 @@ Matrix $\A$ and $\Cmat$ are symmetric, and they are also both diagonal matricies
 
 ## Definitions and Theorems {.tabset}
 
-### DefInition 2.1. 
+### Definition 2.1. 
 **Matrix-Vector Product**
 
-If $\A \in \mathcal{M}_{mn}$ and $\v \in \C^n$, the matrix-vector product $\A\v$ is the lInear combInation
+If $\A \in \mathcal{M}_{mn}$ and $\v \in \C^n$, the matrix-vector product $\A\v$ is the linear combination
 
 $$\A\v = \sum_{i=1}^n x_i\mathbf{a}_i$$
 
 where $\mathbf{a}_i$ is column $i$ of $\A$.
 
-### DefInition 2.2.
+### Definition 2.2.
 **Standard Basis Vectors**
 
 The set of standard basis vectors In $\C^n$ is $\{\mathbf{e}_1, \mathbf{e}_2, \dots, \mathbf{e}_n\}$ where
@@ -193,7 +193,7 @@ $$[\mathbf{e}_i]_j = \begin{cases} 0, i\not=j\\ 1, i=j \end{cases}$$
 
 for all $i = 1, 2, \dots, n$, and $j = 1, 2, \dots, n$.
 
-### DefInition 2.3.
+### Definition 2.3.
 **Identity Matrix**
 
 The $n \times n$ identity matrix is $\I_n$, whose columns are the standard basis vectors in $\C^n$:
@@ -210,7 +210,7 @@ $$\sum_{i=1}^n x_i\mathbf{a}_i = \mathbf{b}$$
 
 which has the same solution set as the system of linear equations $\mathcal{LS}(\A, \mathbf{b})$.
 
-### DefInition 2.4.
+### Definition 2.4.
 **Matrix Multiplication**
 
 If $\A = [\bf{a}_1|\mathbf{a}_2|\dots| \bf{a}_n]$ is an $m \times n$ matrix, and $\B = [\bf{b}_1|\mathbf{b}_2|\dots| \bf{b}_p]$ is an $n \times p$ matrix, then the product of $\A$ and $\B$ is the $m \times p$ matrix $\A\B = [\A\bf{b}_1 | \A\bf{b}_2 | \dots | \A\bf{b}_p]$
@@ -237,7 +237,7 @@ If $\A$ is an $m \times n$ matrix and $\B$ is an $n \times p$ matrix, then $\A\B
 
 $$[\A\B]ij = \sum_{k=1}^n a_{ik}b_{kj} = a_{i1}b_{1j} + a_{i2}b_{2j} + \dots + a_{in}b_{nj}$$
 
-### DefInition 2.5.
+### Definition 2.5.
 **Dot Product**
 
 If $\u$ and $\v$ are vectors in $\R^n$, the dot product of $\u$ and $\v$ is
@@ -247,7 +247,7 @@ $$\u \cdot \v = \sum_{i=1}^nu_iv_i$$
 ### Theorem 2.5.
 **Dot Product Form of Row-Column Algorithm**
 
-If $\A$ and $\B$ are $m \times n$ and $n \times p$ matrices, with Real number entries, then the row-column algorithm for multiplyIng matrices can be written as:
+If $\A$ and $\B$ are $m \times n$ and $n \times p$ matrices, with Real number entries, then the row-column algorithm for multiplying matrices can be written as:
 
 $$AB = \mddd{\bf{a}_1 \cdot \bf{b}_1}{\dots}{\bf{a}_1 \cdot \bf{b}_p}{\vdots}{\ddots}{\vdots}{\bf{a}_m \cdot \bf{b}_1}{\dots}{\bf{a}_m \cdot \bf{b}_p}$$
 
@@ -316,7 +316,7 @@ $$\mdd{1}{0}{0}{0} \mdd{0}{0}{1}{0}$$
 
 $$\0_{22}$$
 
-Note that we get the zero matrix, and niether of the matricies are the zero matrix.
+Note that we get the zero matrix, and neither of the matrices are the zero matrix.
 
 </details> \newline 
 
