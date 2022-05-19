@@ -14,10 +14,10 @@ description: |
   1. **May 10<sup>th</sup>**: Syllabus; System of Linear Equations; and Vectors, Matrices, Homogeneous Systems, and Null Space.
   2. **May 12<sup>th</sup>**: More on Vectors, Linear Combinations, and Spanning Sets.
   3. **May 17<sup>th</sup>**: Linear Independence and Dependence, Inner Products and Orthogonal Sets, and Gram-Schmidt Orthogonalization.
+  4. **May 19<sup>th</sup>**: More on Matrices.
   
 # Coming Up
 
-  4. **May 19<sup>th</sup>**: More on Matrices.
   5. **May 24<sup>th</sup>**: Matrix Inverses, and Column and Row Spaces.
   6. **May 26<sup>th</sup>**: Vector Spaces and Subspaces.
   7. **May 31<sup>st</sup>**: Basis and Dimension of a Vector Space, and Rank of a Matrix. (Not on Exam 1)
