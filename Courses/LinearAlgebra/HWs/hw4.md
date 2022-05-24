@@ -9,7 +9,7 @@ description: |
   <a href="https://brodyee.github.io/Courses/LinearAlgebra/Assignments" >Assignments</a>
 ---
 
-# Homework 3
+# Homework 4
 
 Do the questions listed in the following parts:
 
