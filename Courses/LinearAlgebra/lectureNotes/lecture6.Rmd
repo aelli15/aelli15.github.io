@@ -136,7 +136,7 @@ Let $\A$ be an $n \times n$ matrix. The following statements are logically equiv
 3. $\A$ is row equivalent to the $n \times n$ identity matrix.
 4. $\A$ has $n$ pivot positions.
 5. The equation $\A\mathbf{x} = \0$ has only the trivial solution.
-6. $\mathcal{N}(\A) = {\0}$
+6. $\mathcal{N}(\A) = \{\0\}$
 7. The columns of $\A$ form a linearly independent set.
 8. The linear transformation $\mathbf{x} \mapsto \A\mathbf{x}$ is one-to-one $\mathbf b \in \C^n$.
 10. The system $\mathcal{LS}(\A, \mathbf{b})$ has a unique solution for every $\mathbf{b} \in \C^n$.
