@@ -16,4 +16,5 @@ description: |
 3. [Linear Independence and Dependence, Inner Products and Orthogonal Sets, and Gram-Schmidt Orthogonalization.](https://brodyee.github.io/Courses/LinearAlgebra/lectureNotes/lecture4.html)
 4. [More on Matrices.](https://brodyee.github.io/Courses/LinearAlgebra/lectureNotes/lecture5.html)
 5. [Matrix Inverses, and Column and Row Spaces.](https://brodyee.github.io/Courses/LinearAlgebra/lectureNotes/lecture6.html)
+6. [Vector Spaces and Subspaces.](https://brodyee.github.io/Courses/LinearAlgebra/lectureNotes/lecture7.html)
 
