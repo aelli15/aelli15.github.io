@@ -10,8 +10,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 The following questions are from *Vector Spaces and Subspaces*
 
-1. Show $\mathcal M_{mn}$ is a vector space.
-2. Show Theorem 2.3.
-3. Show Theorem 2.4.
+1. Show #5 from definition 1.1, for $\mathcal M_{mn}$.
+2. Show #8 from definition 1.1, for $\mathcal M_{mn}$.
+3. Show Theorem 2.3.
+4. Show Theorem 2.4.
 
 More questions may be added by the end of the day 5/26/2022
