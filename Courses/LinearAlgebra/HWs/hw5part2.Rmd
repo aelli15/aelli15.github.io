@@ -1,0 +1,13 @@
+---
+title: "Homework 5 part 2"
+author: "Brody Erlandson"
+output: html_document
+---
+
+
+\include{mathCommands}
+
+
+1. Show if a basis for a vector space $V$ has exactly $n$ vectors in it, any set of more than $n$ vectors in $V$ is linearly dependent. (Hint: $\A\vx = \bf b$)
+2. Show Theorem 3.6.
+
