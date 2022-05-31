@@ -1,0 +1,406 @@
+---
+title: "Basis and Dimension of a Vector Space, and Rank of a Matrix"
+author: "Brody Erlandson"
+output:
+  html_document:
+    code_folding: hide
+    toc: true
+    toc_float: true
+    toc_depth: 2
+---
+
+\include{mathCommands}
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Linear Independence and Spanning Sets
+
+Most of these definitions and theorems you've seen before, they are just updated so that they are defined for a vector space.
+
+## Definitions and Theorems {.tabset}
+
+### Definition 1.1.
+**Relation of Linear Dependence**
+
+Given a vector space $V$, a subset $S = \{\mathbf{v}_1, \mathbf{v}_2, \dots , \mathbf{v}_n\}$ of $V$, and a set of scalars $\{c_1, c_2, \dots , c_n\}$. A equation $c_1\mathbf{v}_1 + c_2\mathbf{v}_2 + \dots + c_n\mathbf{v}_n = \mathbf{0}$ is a *relation of linear dependence* on $S$.
+
+### Definition 1.2. 
+**Trivial Relation of Linear Dependence**
+
+Given a vector space $V$ and a  subset of vectors $S = \{\mathbf{v}_1, \mathbf{v}_2, \dots , \mathbf{v}_n\}$ of $V$, the *trivial relation of linear dependence* on $S$ is $0\mathbf{v}_1 + 0\mathbf{v}_2 + \dots + 0\mathbf{v}_n = \mathbf{0}$.
+
+### Definition 1.3. 
+**Linearly Independent**
+
+Given a vector space V and a subset of vectors $S = \{\mathbf{v}_1, \mathbf{v}_2, \dots , \mathbf{v}_n\}$ of $V$, $S$ is *linearly independent* if the only relation of linear dependence on $S$ is the trivial one.
+
+### Definition 1.4. 
+**Linearly Dependent**
+
+If a subset of vectors in vector space $V$ is not linearly independent, it is *linearly dependent*. In other words, a set $S = \{\mathbf{v}_1, \mathbf{v}_2, \dots , \mathbf{v}_n\} \subseteq V$ is linearly dependent if and only if the equation $c_1\mathbf{v}_1 + c_2\mathbf{v}_2 + \dots + c_n\mathbf{v}_n = \mathbf{0}$ has a non-trivial solution.
+
+### Definition 1.5.
+**Spanning Set of a Vector Space**
+
+Given a vector space $V$ and a subset $S$ of $V$, $S$ is a spanning set of $V$ if
+
+$$\span{S} = V$$
+
+If $S$ is a spanning set of $V$, we also say $S$ spans $V$.
+
+### Theorem 1.1.
+**Unique Representation Threorem (VRRB)**
+
+If $B = \{\mathbf{b}_1, \mathbf{b}_2, \dots,\mathbf{b}_n\}$ is a linearly independent spanning set of $V$, then any vector $\u$ in $V$ can be written uniquely as a linear combination of the vectors in $B$. In other words, there exists a unique set of scalars ${\alpha_1, \alpha_2, \dots, \alpha_n}$ such that
+
+$$\u = \sum_{i=1}^n \alpha_i\mathbf{b}_i$$
+
+<details><summary>*Proof*</summary> 
+
+Let $B = \set{\mathbf{b}}{n}$, $A = \set{\alpha}{n}$, and $G= \set{\gamma}{n}$, where $\forall\ \alpha_i, \gamma_i \in \C$, $A \not= G$, $\mathbf{b}_i \in \C^n$, and $B$ is a linearly independent set. Assume:
+
+$$\u = \sum_{i=1}^n \alpha_i\mathbf{b}_i\ \text{ and }\ \u = \sum_{i=1}^n \gamma_i\mathbf{b}_i$$
+
+Then,
+
+$$\sum_{i=1}^n \alpha_i\mathbf{b}_i - \sum_{i=1}^n \gamma_i\mathbf{b}_i = \0 \\
+\Rightarrow \sum_{i=1}^n \alpha_i\mathbf{b}_i - \gamma_i\mathbf{b}_i = \0\\
+\Rightarrow \sum_{i=1}^n (\alpha_i- \gamma_i)\mathbf{b}_i = \0 \\
+\Rightarrow \alpha_i- \gamma_i = \0 \\
+\Rightarrow \alpha_i = \gamma_i$$
+
+This contradicts $A \not= G$, so the there is only one set that gives us the linear combination.
+
+</details> \newline 
+
+
+# Bases
+
+## Definitions and Theorems {.tabset}
+
+### Definition 2.1.
+**Basis**
+
+A basis for a vector space $V$ is a linearly independent spanning set of $V$. In other words, if $S \subseteq V$ is linearly independent, and $\span S = V$, then $S$ is a basis for $V$.
+
+### Definition 2.2.
+**Finite-Dimensional Vector Space**
+
+A vector space $V$ is called finite-dimensional if some finite set of vectors in $V$ spans $V$.
+
+### Theorem 2.2.
+**The Spanning Set Theorem**
+
+Let $S = \{\v_1, \v_2, \dots, \v_p\}$ be a set of vectors in a vector space $V$ and let $H = \span S$. Then:
+
+1. If one of the vectors in $S$ is a linear combination of the other vectors, it can be removed from $S$, and $S$ will still span $H$.
+2. If $H \not= \{0\}$, then some subset of $S$ is a basis for $H$.
+
+<details><summary>*Proof*</summary> 
+
+Let $S = \{\v_1, \v_2, \dots, \v_n\}$ be a set of vectors in a vector space $V$ and let $H = \span S$, assume some vector $\v_p$ is linearly dependent on the other vectors in $S$. Then,
+
+$$\v_p = \sum_{i \not= p} c_i\v_i,\text{ where } c_i \in F$$
+
+This means if we have a set $T$ where $T \cup \{\v_p\} = S$ and $\v_p \not\in T$, then $\v_p \in \span T$. Implying $\span S = \span{T \cup \{\v_p\}} = \span T$. It follows that we can let $T \subseteq S$ and $U \subseteq S$, where $T$ is a linearly independent set, $U \subseteq \span T$, and $T \cup U = S$.  Then $\span S = \span{T \cup U} = \span{T} = H$. So $T$ is a basis for $H$ and $T \subseteq S$.
+
+</details> \newline 
+
+### Theorem 2.3.
+
+Every non-zero finite-dimensional vector space has a basis.
+
+<details><summary>*Proof*</summary> 
+
+Let $V$ be a non-zero finite-dimensional vector space. By definition, $V$ has a spanning set. Call this spanning set $B$. If $B$ is linearly independent, it is a basis for $V$. If it is linearly dependent, then by the Spanning Set Theorem, with $H = V$ in this case, some subset of $B$ is a basis for $V$.
+
+</details> \newline 
+
+### Theorem 2.4.
+
+An $n \times n$ matrix $\A$ is invertible iff the set containing the columns of $\A$ is a basis for $\C^n$.
+
+<details><summary>*Proof*</summary> 
+
+By the Invertible Matrix Theorem, $\A$ is invertible iff the set containing the columns of $\A$ is linearly independent. Also by IMT, $\A$ is invertible iff the set containing the columns of $\A$ spans $\C^n$. Therefore $\A$ is is invertible iff the set containing the columns of $\A$ is a basis for $\C^n$.
+
+</details> \newline 
+
+### Definition 2.3.
+**Orthogonal Basis**
+
+A basis for a vector space that is also an orthogonal set is called an orthogonal basis.
+
+### Definition 2.4.
+**Inner Product Space**
+
+A vector space with an inner product defined on it is an inner product space.
+
+### Theorem 2.5.
+
+If $\{\u_1, \u_2, \dots, \u_p\}$ is an orthogonal basis for an inner product space $V$, then for any vector $\vy \in V$,
+
+$$\mathbf{y} = \sum_{i=1}^p \alpha_i\u_i$$
+
+where
+
+$$\alpha_i = \frac{ \innerProd{\u_i}{\mathbf{y}_i} }{ \innerProd{\u_i}{\u_i}}$$
+
+### Definition 2.5.
+**Orthonormal Basis**
+
+A basis for a vector space that is also an orthormal set is called an orthonormal basis
+
+### Theorem 2.6.
+
+If ${\u_1, \u_2, \dots, \u_p}$ is an orthonormal basis for an inner product space $V$, then for any vector $\mathbf{y} \in V$,
+
+$$\mathbf{y} = \sum_{i=1}^n \innerProd{\u_i}{\mathbf{y}}\u_i$$
+
+<details><summary>*Proof*</summary> 
+
+$$\mathbf{y} = \sum_{i=1}^p \alpha_i\u_i$$
+
+where
+
+$$\alpha_i = \frac{ \innerProd{\u_i}{\mathbf{y}_i} }{ \innerProd{\u_i}{\u_i}} = \frac{ \innerProd{\u_i}{\mathbf{y}_i} }{1} $$
+
+</details> \newline 
+
+### Theorem 2.7.
+**Existence of a Basis**
+
+Every vector space has a basis.
+
+*Note* the proof of this theorem is beyond the scope of the course. It uses some abstract concepts from formal set theory like the Axiom of Choice (or equivalently, Zorn’s Lemma).
+
+### Theorem 2.8.
+**Basis for Zero Vector Space**
+
+A basis for the zero vector space, $V = \{0\}$, over any field $F$, is the empty set, $\emptyset$.
+
+<details><summary>*Proof*</summary> 
+
+First, we can easily see that $\emptyset$ is linearly independent. With this alternative definition of span:
+
+*The span of A is the intersection of all vector subspaces that contain A.*
+
+We can easily see that, because $\emptyset$ is a subset of every vector space, the intersection of all vector subspaces is $\{\0\}$.
+
+</details> \newline 
+
+## Some Common Bases
+
+### $\C^3$
+
+For $\C^3$ the standard basis is:
+
+$$\Bigg\{\vddd{1}{0}{0}, \vddd{0}{1}{0}, \vddd{0}{0}{1}\Bigg\}$$
+
+### $\mathcal M_{mn}$
+
+Let,
+
+$$B = \{B_{lk}|[B_{lk}]_{ji} \begin{cases} 1 \text{, if }k=i \text{ and }l=j\\ \text{0, otherwise} \end{cases}  \forall\ k,l \}$$
+
+This is a standard basis for $\mathcal M_{mn}$
+
+### $\mathbb P_n$
+
+Let,
+
+$$B = \{ 1, x, x^2, \dots, x^n \}$$
+
+This is a stnadard basis for $\mathbb P_n$.
+
+### Find the basis
+
+Let,
+
+$$S = \Bigg\{ \vddd{1}{2}{3}, \vddd{1}{5}{3}, \vddd{4}{0}{1}, \vddd{8}{0}{2} \Bigg\} $$
+
+Find the basis for $\span S$
+
+<details><summary>Solution</summary> 
+
+We can make this into a matrix $\A$ and find the $\col{\A}$. This is because $\col{\A} = \span S$. So,
+
+$$\A = \begin{bmatrix} 1 & 1 & 4 & 8 \\
+                       2 & 5 & 0 & 0 \\
+                       3 & 3 & 1 & 2 \\\end{bmatrix} \sim \begin{bmatrix} 1 & 0 & 0 & 0 \\
+                                                                          0 & 1 & 0 & 0 \\
+                                                                          0 & 0 & 1 & 2 \\\end{bmatrix} $$
+                                                                          
+The first 3 columns are pivots, so they are a basis for $\col{\A}$ and $\span S$.
+
+</details> \newline 
+
+# Dimension of a Vector Space
+
+## Definitions and Theorems {.tabset}
+
+### Definition 3.1.
+**Dimension**
+
+The dimension of a vector space $V$ is the number of vectors in any basis for $V$. $V$ is finite dimensional if the basis is a finite set, otherwise $V$ is infinite dimensional.
+
+### Theorem 3.3.
+**Dimension of Zero Vector Space**
+
+The zero vector space, $V = \{0\}$, over any field $F$, has dimension zero.
+
+<details><summary>*Proof*</summary> 
+
+Since $\emptyset$ is a basis for the zero vector space, and there are zero vectors in $\emptyset$, the dimension of the zero vector space is zero.
+
+</details> \newline 
+
+### Theorem 3.4.
+
+Let $H$ be a subspace of a finite-dimensional vector space $V$. Any linearly independent set in $H$ can be expanded to a basis for $H$ if it is not already. $H$ is finite-dimensional and $\text{dim}(H) \le \text{dim}(V)$.
+
+<details><summary>*Proof*</summary> 
+
+Let $B = \set{\v}{n}$ and $H$ be a subspace of finite-dimensional vector space $V$, where $\v_i \in V$, $\span B \subseteq H$, and $H \not\subseteq \span B$. Then,
+
+$$\exists\ \w_1,\dots,\w_m\in V,\ \w_1,\dots,\w_m \in H\text{ and }\w_1,\dots,\w_m\not\in \span B$$
+
+If we let $\w_1,\dots,\w_m$ be a linearly independent set, then $\span{B\cup\{\w_1,\dots,\w_m\}} = H$. Following the same logic, we have $\u_1,\dots,\u_m\in V,\ \u_1,\dots,\u_m \not\in H$, letting these be linearly independent and $\span T= H$ and $\span{T \cup \{\u_1,\dots,\u_m\}} = V$, we can see $\forall i, \u_i \not\in T$. Since $T \cup \{\u_1,\dots,\u_m\}$ is finite-dimensional, so is $T$. Also $|T| \le |T \cup \{\u_1,\dots,\u_m\}| \Rightarrow \text{dim}(H) \le \text{dim}(V)$.
+
+</details> \newline 
+
+### Theorem 3.5.
+
+If a vector space $V$ is n-dimensional, $n \ge 1$, any set of exactly $n$ linearly independent vectors in $V$ is also a basis for $V$. Any set of exactly $n$ vectors that spans $V$ is a basis for $V$.
+
+<details><summary>*Proof*</summary> 
+
+Let $B$ be a linearly independent subset of $V$ with exactly $n$ vectors, $n\ge 1$. By Theorem 3.4, if $B$ is not already a basis for $V$, it can be expanded to a basis by adding vectors. But since $V$ is n-dimensional, a basis for $V$ cannot have more than $n$ vectors, so $B$ must already be a basis. Now consider a set $C$ of exactly $n$ vectors that spans $V$, $n \ge 1$. By the Spanning Set Theorem, if $C$ is not already a basis for $V$, we can remove vectors until it is. But since $V$ is n-dimensional, a basis for $V$ cannot have fewer than $n$ vectors, so $C$ must already be a basis.
+
+</details> \newline 
+
+### Theorem 3.6.
+
+If $A$ is an $m\times n$ matrix, then $\text{dim}(\mathcal N(\A))$ is equal to the number of free variables in the equation $\A\mathbf x = \0$, and $\dim{\col{\A}}$ is equal to the number of pivot columns in $\A$.
+
+## Examples
+
+Let,
+
+$$\A = \begin{bmatrix} 1 & 2 & 4 & 8 \\
+                       2 & 0 & 0 & 0 \\
+                       3 & .5 & 1 & 2 \\\end{bmatrix}$$
+                       
+What is the $\dim{\col{\A}}$?
+
+<details><summary>*Solution*</summary> 
+
+$$\A = \begin{bmatrix} 1 & 2 & 4 & 8 \\
+                       2 & 0 & 0 & 0 \\
+                       3 & .5 & 1 & 2 \\\end{bmatrix} \sim \begin{bmatrix} 1 & 0 & 0 & 0 \\
+                                                                          0 & 1 & 2 & 4 \\
+                                                                          0 & 0 & 0 & 0 \\\end{bmatrix} $$
+  
+  
+Since the first two columns span the column space, these are also a basis for $\col{\A}$. Letting us see the $\dim{\col{\A}} = 2$
+                                                                          
+</details>
+
+# Rank of a Matrix
+
+## Definitions and Theorems {.tabset}
+
+### Definition 4.1.
+**Rank**
+
+The rank of an $m \times n$ matrix $\A$, written $r(\A)$, is $\dim{\col{\A}}$.
+
+### Definition 4.2.
+**Nullity**
+
+The nullity of an $m \times n$ matrix $\A$, written $n(\A)$, is $\dim{\null{\A}}$.
+
+### Theorem 4.1.
+**The Rank Theorem**
+
+If $\A$ is $m \times n$, then
+
+1. $r(\A) = \dim{\row{\A}}$
+2. $r(\A) + n(\A) = n$
+
+<details><summary>*Proof*</summary> 
+
+Since $r(A) = \dim{\col{\A}}$ which is the number of pivots in $\A$, and each pivot corresponds to a non-zero row of $\A$, $\dim{\row{A}}$ is also equal to the number of pivots in $\A$, and $r(A) = \dim{\col{\A}} = \dim{\row{A}}$. Since $n(\A)$ is equal to the number of free variables in the equation $\A\vx = \0$, which correspond to the non-pivot columns of $\A$, $n(\A)$ is equal to the number of non-pivot columns of $\A$. Since the number of pivot columns plus the number of non-pivot columns is the total number of columns, we have:
+
+$$r(\A) + n(\A) = n$$
+
+</details> \newline 
+
+### Theorem 4.2.
+
+Let $\A$ be an $m \times n$ matrix. Then $r(\A) = r(\A^T)$.
+
+<details><summary>*Proof*</summary> 
+
+$r(\A) =  \dim{\col{\A}} = \dim{\row{\A^T}} = r(\A^T)$
+
+</details> \newline 
+
+## Examples
+
+Let,
+
+$$\A = \begin{bmatrix}
+1 & 3 & 4 & -1 & 2 \\
+2 & 6 & 6 & 0 & -3 \\
+3 & 9 & 3 & 6 & -3 \\
+3 & 9 & 0 & 9 & 0 \\
+\end{bmatrix}$$
+
+Find $n(\A)$ and  $r(\A)$
+
+<details><summary>Solution</summary> 
+
+$$\A \sim \begin{bmatrix}
+1 & 3 & 0 & -3 & 0 \\
+0 & 0 & 1 & -1 & 0 \\
+0 & 0 & 0 & 0 & 1 \\
+0 & 0 & 0 & 0 & 0 \\
+\end{bmatrix}$$
+
+So the $r(\A) = \dim{\col{\A}} = 3 = \dim{\row{\A}}$, and $5 - 3 = 2 = n(\A) = \dim{\null{\A}}$
+
+</details>
+
+# IMT Revisited
+
+## Definitions and Theorems {.tabset}
+
+### Theorem 5.1. 
+**Invertible Matrix Theorem (IMT)**
+
+Let $\A$ be an $n \times n$ matrix. The following statements are logically equivalent.
+
+1. $\A$ is an invertible matrix.
+2. $\A$ is nonsingular
+3. $\A$ is row equivalent to the $n \times n$ identity matrix.
+4. $\A$ has $n$ pivot positions.
+5. The equation $\A\mathbf{x} = \0$ has only the trivial solution.
+6. $\mathcal{N}(\A) = {\0}$
+7. The columns of $\A$ form a linearly independent set.
+8. The linear transformation $\mathbf{x} \mapsto \A\mathbf{x}$ is one-to-one.
+9. The equation $\A\mathbf{x}=\mathbf{b}$ has a unique solution for every b in Cn.
+10. The system $\mathcal{LS}(\A, \mathbf{b})$ has a unique solution for every $\mathbf{b} in \C^n$.
+11. The columns of $\A$ span $\C^n$.
+12. The linear transformation $\mathbf{x} \mapsto \A\mathbf{x}$ is onto.
+13. There is an $n \times n$ matrix $\Cmat$ such that $\Cmat\A = \I_n$.
+14. There is an $n \times n$ matrix $\mathbf{D}$ such that $\A\mathbf{D} = \I_n$.
+15. $\A^T$ is an invertible matrix.
+16. det $\A \not= 0$.
+17. The columns of $\A$ form a basis for $\C^n$.
+18. $\col{\A} = \C^n$
+19. $\dim{\col{\A}} = n$
+20. $r(\A) = n$
+21. $n(\A) = 0$
