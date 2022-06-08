@@ -19,10 +19,10 @@ description: |
   - **May 26<sup>th</sup>**: Vector Spaces and Subspaces.
   - **May 31<sup>st</sup>**: Basis and Dimension of a Vector Space, and Rank of a Matrix. (Not on Exam 1)
   - **June 2<sup>nd</sup>**: Exam 1 Review. [Practice Exam 1](https://brodyee.github.io/Courses/LinearAlgebra/lectureNotes/PracticeExam1.pdf)
+  - **June 7<sup>th</sup>**: *Exam 1*
   
 # Coming Up
 
-  - **June 7<sup>th</sup>**: *Exam 1*
   - **June 9<sup>th</sup>**: Linear Transformations.
   - **June 14<sup>th</sup>**: Kernel, Range, and Isomorphism.
   - **June 16<sup>th</sup>**: Coordinate Vectors.
