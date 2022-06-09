@@ -70,9 +70,10 @@ Your grade in the course will be based on 9 quizzes, 2 midterm exams, and a fina
 
 | Graded Items | Percent|
 | :---         |  :---: |
+| Class Work   |   10%  |
 | Quizzes      |   20%  |
-| Exam 1       |   30%  |
-| Exam 2       |   30%  |
+| Exam 1       |   25%  |
+| Exam 2       |   25%  |
 | Final Exam   |   20%  |
 
 You lowest 2 quizzes will be dropped. Also, the final exam can replace your *lowest* exam score. So if you got a 90% on the final, an 88% on exam 2, and a 70% on exam 1, then exam 1 would be replaced with the 90%. This **does not** go the other way! Meaning if you got a 90% on the final, a 95% on the exam 2, and a 93% in the exam 1, your grades will not change. Neither exam 1 nor exam 2 will replace the final. Below is the total course percent, with a corresponding grade:
