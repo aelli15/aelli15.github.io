@@ -30,14 +30,14 @@ A mapping from a set $A$ to a set $B$ is a set of ordered pairs $(a, b)$ such th
 
 A linear transformation $T$ is one that satisfies the following equation, where $x$ and $y$ are in the domain, and $\alpha$ and $\beta$ are scalars:
 
-$$T(\alpha x + \beta y) = \alpha T(x) + \beta T(y)$$
+$$T(\alpha x + \beta y) = \alpha T(\vx) + \beta T(\vy)$$
 
 ### Definition 1.3. 
 **Composite Mapping**
 
 Given $T : U \rightarrow V$ and $S : V \rightarrow W$, the composition of $S$ and $T$ is a mapping from $U$ to $W$, written $(S \circ T) : U \rightarrow W$ defined by
 
-$$(S \circ T)(u) = S(T(u))$$
+$$(S \circ T)(\u) = S(T(\u))$$
 
 ### Theorem 1.1.
 **Compositions of Linear Transformations are Linear**
@@ -98,7 +98,11 @@ Letting $T$ be the transformation from the previous mapping, is $T$ linear?
 
 Where $\v \in \C^3$,
 
-$$T(\v) = \vdd{v_1}{v_2} \Rightarrow T(\alpha\v) = T(\vddd{\alpha v_1}{\alpha v_2}{\alpha v_3}) = \vdd{\alpha v_1}{\alpha v_2} = \alpha\vdd{v_1}{v_2} = \alpha T(\v)$$
+$$T(\v) = \vdd{v_1}{v_2} \Rightarrow T(\alpha\v + \beta\u)
+\\ = T(\vddd{\alpha v_1+\beta u_1}{\alpha v_2+\beta u_2}{\alpha v_3+\beta u_3}) 
+\\ = \vdd{\alpha v_1+\beta u_1}{\alpha v_2+\beta u_2} 
+\\ = \alpha\vdd{v_1}{v_2} + \beta\vdd{u_1}{u_2} 
+\\ = \alpha T(\v) + \beta T(\u)$$
 
 </details>
 
