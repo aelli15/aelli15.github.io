@@ -1,0 +1,312 @@
+---
+title: "Linear Transformations"
+author: "Brody Erlandson"
+output:
+  html_document:
+    code_folding: hide
+    toc: true
+    toc_float: true
+    toc_depth: 2
+---
+
+\include{mathCommands}
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Mappings
+
+## Definitions and Theorems {.tabset}
+
+### Definition 1.1.
+**Mapping**
+
+A mapping from a set $A$ to a set $B$ is a set of ordered pairs $(a, b)$ such that $\forall\ a \in A$ corresponds to exactly one element $b$ of $B$.
+
+### Definition 1.2.
+**Linearity**
+
+A linear transformation $T$ is one that satisfies the following equation, where $x$ and $y$ are in the domain, and $\alpha$ and $\beta$ are scalars:
+
+$$T(\alpha x + \beta y) = \alpha T(x) + \beta T(y)$$
+
+### Definition 1.3. 
+**Composite Mapping**
+
+Given $T : U \rightarrow V$ and $S : V \rightarrow W$, the composition of $S$ and $T$ is a mapping from $U$ to $W$, written $(S \circ T) : U \rightarrow W$ defined by
+
+$$(S \circ T)(u) = S(T(u))$$
+
+### Theorem 1.1.
+**Compositions of Linear Transformations are Linear**
+
+If $T : U \rightarrow V$ and $S : V \rightarrow W$ are both linear transformations, then
+
+$$(S \circ T) : U \rightarrow W$$
+
+is a linear transformation.
+
+<details><summary>*Proof*</summary>
+
+Let $T : U \rightarrow V$ and $S : V\rightarrow W$ be linear transformations, $\alpha$ and $\beta$ be
+scalars, and $\u$ and $\v$ be elements of $U$. Then
+
+$$(S \circ T)(\alpha \u + \beta \v) = S(T(\alpha\u + \beta \v))
+\\ = S(\alpha T(\u) + \beta T(\v))
+\\ = S(\alpha T(\u)) + S(\beta T(\v))
+\\ = \alpha S(T(\u)) + \beta S(T(\v))
+\\ = \alpha(S \circ T)(\u) + \beta(S \circ T)(\v)$$
+
+</details>
+
+### Definition 1.4. 
+**Preimage**
+
+Given $T : U \rightarrow V$, for every $v \in V$, the preimage of $v$ is the subset of $U$ defined by
+
+$T^{−1}(v) = \{u \in U : T(u) = v\}$
+
+## Examples
+
+Is the following a mapping?
+
+$$\Bigg(\vddd{1}{2}{3}, \vdd{1}{2}\Bigg), \Bigg(\vddd{2}{2}{3}, \vdd{2}{2}\Bigg), \Bigg(\vddd{1}{2}{3}, \vdd{1}{3}\Bigg)$$
+
+<details><summary>Solution</summary> 
+
+No, because $\vddd{1}{2}{3}$ maps to 2 vectors. 
+
+</details>
+
+Is the following a mapping?
+
+$$\Bigg(\vddd{1}{2}{3}, \vdd{1}{2}\Bigg), \Bigg(\vddd{2}{2}{3}, \vdd{2}{2}\Bigg), \Bigg(\vddd{1}{2}{4}, \vdd{1}{2}\Bigg)$$
+
+<details><summary>Solution</summary> 
+
+Yes, because each vector maps to one vector. This mapping can be generally defined by
+
+$$\Bigg(\vddd{v_1}{v_2}{v_3}, \vdd{v_1}{v_2}\Bigg)$$
+
+</details>
+
+Letting $T$ be the transformation from the previous mapping, is $T$ linear?
+
+<details><summary>Solution</summary> 
+
+Where $\v \in \C^3$,
+
+$$T(\v) = \vdd{v_1}{v_2} \Rightarrow T(\alpha\v) = T(\vddd{\alpha v_1}{\alpha v_2}{\alpha v_3}) = \vdd{\alpha v_1}{\alpha v_2} = \alpha\vdd{v_1}{v_2} = \alpha T(\v)$$
+
+</details>
+
+Letting $T(\v) = \vdd{v_1v_2}{v_2+v_3}$, where $\v \in \C^n$, is $T$ linear?
+
+<details><summary>Solution</summary> 
+
+$$T(\alpha\v) = T(\vddd{\alpha v_1}{\alpha v_2}{\alpha v_3}) = \vdd{\alpha v_1 \alpha v_2}{\alpha v_2+ \alpha v_3} = \vdd{\alpha^2 v_1 v_2}{\alpha (v_2+ v_3)} = \alpha\vdd{\alpha v_1 v_2}{v_2+ v_3} \not= \alpha T(\v)$$
+
+</details>
+
+Whats the preimage to of both of the previous transformations?
+
+<details><summary>Solution</summary> 
+
+For the first transformation $T$, we can see that the preimage $T^{-1}$ is
+
+$$T^{-1}(\vdd{v_1}{v_2}) = \{\vddd{u_1}{u_2}{u_3} \in \C^3| v_1 = u_1, v_2 = u_2\}$$
+
+For the second transformation $T$, we can see that the preimage is
+
+$$T^{-1}(\vdd{v_1}{v_2}) = \{\vddd{u_1}{u_2}{u_3} \in \C^3| v_1 = u_1u_2, v_2 = u_2+u_3\}$$
+
+</details>
+
+# Vector Space of Linear Transformations
+
+## Definitions and Theorems {.tabset}
+
+### Definition 2.1. 
+**Transformation Addition**
+
+Let $T : U \rightarrow V$ and $S : U \rightarrow V$ be linear transformations with the same domain and codomain. The sum of $T$ and $S$ is the transformation $T +S : U \rightarrow V$ defined as
+
+$$(T + S)(\u) = T(\u) + S(\u)$$
+
+for all $\u \in U$.
+
+### Definition 2.2.
+**Transformation Scalar Multiplication**
+
+Let $T : U \rightarrow V$ be linear a transformation and let $\alpha$ be a scalar. The scalar multiple of $\alpha$ and $T$ is the transformation $\alpha T : U \rightarrow V$ defined as
+
+$$(\alpha T)(\u) = \alpha T(\u)$$
+
+for all $\u \in U$
+
+### Theorem 2.1.
+**Sum of Linear Transformations is Linear**
+
+If $T : U \rightarrow V$ and $S : U \rightarrow V$ are both linear transformations, then
+
+$$T + S : U \rightarrow V$$
+
+is a linear transformation.
+
+<details><summary>*Proof*</summary>
+
+Let $T : U \rightarrow V$ and $S : V\rightarrow W$ be linear transformations, $\alpha$ and $\beta$ be
+scalars, and $\u$ and $\v$ be elements of $U$. Then
+
+$$(S + T)(\alpha \u + \beta \v) = S(\alpha\u + \beta \v) + T(\alpha\u + \beta \v)
+\\ = \alpha S(\u) + \beta S(\v) + \alpha T(\u) + \beta T(\v)
+\\ = \alpha (S + T)(\u) + \beta (S + T)(\v)$$
+
+</details>
+
+### Theorem 2.2.
+**Scalar Multiple of a Linear Transformation is Linear**
+
+If $T : U \rightarrow V$ is a linear transformations and $\alpha$ is a scalar, then
+
+$$\alpha T : U \rightarrow V$$
+
+is a linear transformation.
+
+<details><summary>*Proof*</summary>.
+
+Let $T : U \rightarrow V$ be a linear transformation, $\alpha$, $\beta$, $\gamma$ be
+scalars, and $\u$ and $\v$ be elements of $U$. Then
+
+$$(\gamma T)(\alpha \u + \beta \v) = \gamma T(\alpha\u + \beta \v)
+\\ = \gamma T(\alpha\u) + \gamma T(\beta\v)
+\\ = \gamma\alpha T(\u) + \gamma\beta T(\v)
+\\ = \alpha(\gamma T(\u)) + \beta(\gamma T(\v))
+\\ = \alpha(\gamma T)(\u) + \beta(\gamma T)(\v)$$
+
+</details>
+
+### Definition 2.3.
+**Vector Space of Linear Transformations**
+
+The vector space of linear transformations from $U$ to $V$ is the set of all linear transformations from $U$ to $V$, denoted
+
+$$\mathcal{LT}(U, V )$$
+
+### Theorem 2.3.
+**VS of Linear Transformations is a Vector Space**
+
+$\mathcal{LT}(U, V )$, together with the definitions of vector addition and scalar multiplication in definitions 2.1 and 2.2 respectively, is a vector space over any field.
+
+## Examples
+
+Let $\v \mapsto T(\v) = \vddd{4v_1}{2v_2}{v_3}$ and $\v \mapsto S(\v) = \vddd{v_1}{v_2}{3v_3}$, where $\v \in \C^3$. Find the transformation:
+
+$$(\alpha((S+T)\circ T))(\v)$$
+
+<details><summary>Solution</summary> 
+
+$$(\alpha((S+T)\circ T))(\v) = \alpha(S+T)(T(\v)) = \alpha(S(T(\v)) + T(T(\v))) = \alpha(\vddd{4v_1}{2v_2}{3v_3} + \vddd{16v_1}{4v_2}{v_3}) = \vddd{\alpha 20v_1}{\alpha6v_2}{\alpha4v_3}$$
+
+</details>
+
+# Matrix Transformations
+
+## Definitions and Theorems {.tabset}
+
+### Definition 3.1. 
+**Matrix Transformation**
+
+The mapping $T : \C^n \rightarrow \C^m$ defined by
+
+$$T(\vx) = \A\vx$$
+
+where $\A$ is an $m \times n$ matrix, is called a matrix transformation
+
+### Theorem 3.1.
+**Matrix Transformations are Linear**
+
+
+If $\A$ is an $m \times n$ matrix, then the matrix transformation
+
+$$T(\vx) = \A\vx$$
+
+is linear.
+
+<details><summary>*Proof*</summary>.
+
+Let $\alpha$ and $\beta$ be scalars, and $\u$ and $\v$ be vectors in $\C^n$. Then
+
+$$T(\alpha\u + \beta\v) = \A(\alpha\u + \beta\v)
+\\ = \A\alpha\u + \A\beta\v
+\\ = \alpha\A\u + \beta\A\v
+\\ = \alpha T(\u) + \beta T(\v)$$
+
+
+</details>
+
+
+## Visualizations
+
+Page 30 of [this](https://abel.math.harvard.edu/~knill/teaching/math19/math19b_2011.pdf) document contains many examples of common matrix transforms. You can also find some examples in lays book on page 74.
+
+# Matrix of a Linear Transformation From $\C^n$ to $\C^m$
+
+## Definitions and Theorems {.tabset}
+
+### Definition 4.1.
+**Matrix of a Linear Transformation**
+
+Let $T : \C^n \rightarrow \C^m$ be a linear transformation. The matrix of the linear transformation $T$ is
+
+$$[T(\mathbf e_1) | T(\mathbf e_2) | \dots | T(\mathbf e_n)]$$ 
+
+where $\{\mathbf e_1, \mathbf e_2, \dots, \mathbf e_n\}$ is the standard basis for $\C^n$
+
+### Theorem 4.1.
+**Matrix of a Linear Transformation**
+
+Let $T : \C^n \rightarrow \C^m$ be a linear transformation. Then there exists a unique matrix $\A$ such that $T(\vx) = \A\vx, \forall\ \vx \in \C^n$. Moreover, 
+
+$$\A = [T(\mathbf e_1) | T(\mathbf e_2) | \dots | T(\mathbf e_n)]$$
+
+Likewise, for any $m \times n$ matrix $\A$, there exists a unique linear transformation $T : \C^n \rightarrow \C^m$ such that $T(\vx) = \A\vx, \forall\ \vx \in \C^n$.
+
+### Theorem 4.2. 
+**Composition of Linear Mappings**
+
+Let $T : \C^p \rightarrow \C^n$ and $S : \C^n \rightarrow \C^m$ be linear transformations with matrices $\A$ and $\B$ respectively. Then $(S \circ T) : \C^p \rightarrow \C^m$ is also linear, and its matrix is $\B\A$.
+
+<details><summary>*Proof*</summary>
+
+Consider $\vx \in \C^p$. Then
+
+$$(S \circ T)(\vx) = S(T(\vx)) = S(\A\vx) = \B\A\vx$$
+
+Since $(S \circ T)(\vx) = \B\A\vx$, by theorem 4.1 $(S \circ T)$ is linear, and its matrix is $\B\A$. 
+
+</details>
+
+## Examples
+
+Let $\v \mapsto T(\v) = \vdddd{v_1}{2v_1 - v_2}{v_2 - v_3}{v_3 + v_2}$, where $\v\in\C^3$. Find the matrix $\A$ where $\A\v = T(\v)$. Use $A$ to transform $\u = \vddd{2}{1}{4}$.
+
+<details><summary>Solution</summary>
+
+First we can find the matrix for T:
+
+$$T(\mathbf e_1) = T(\vddd{1}{0}{0}) = \vdddd{1}{2}{0}{0}
+\\ T(\mathbf e_2) = T(\vddd{0}{1}{0}) = \vdddd{0}{-1}{1}{1}
+\\ T(\mathbf e_3) = T(\vddd{0}{0}{1}) = \vdddd{0}{0}{-1}{1}$$
+
+Now we can make $A$
+
+$$\A = [T(\mathbf e_1) | T(\mathbf e_2) | T(\mathbf e_3)] = \begin{bmatrix} 1 & 0 & 0 \\ 2 & -1 & 0 \\ 0 & 1 & -1 \\ 0 & 1 & 1 \end{bmatrix}$$
+
+With this matrix, we can transform $\u$
+
+$$\A\u = \begin{bmatrix} 1 & 0 & 0 \\ 2 & -1 & 0 \\ 0 & 1 & -1 \\ 0 & 1 & 1 \end{bmatrix} \vddd{2}{1}{4} = \vdddd{2}{3}{-3}{5} = \vdddd{2}{2(2) - 1}{1 - 4}{4 + 1} = T(\vddd{2}{1}{4})$$
+
+</details>
