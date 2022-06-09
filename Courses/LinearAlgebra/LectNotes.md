@@ -18,4 +18,5 @@ description: |
 5. [Matrix Inverses, and Column and Row Spaces.](https://brodyee.github.io/Courses/LinearAlgebra/lectureNotes/lecture6.html)
 6. [Vector Spaces and Subspaces.](https://brodyee.github.io/Courses/LinearAlgebra/lectureNotes/lecture7.html)
 7. [Basis and Dimension of a Vector Space, and Rank of a Matrix.](https://brodyee.github.io/Courses/LinearAlgebra/lectureNotes/lecture8.html)
+8. [Linear Transformations](https://brodyee.github.io/Courses/LinearAlgebra/lectureNotes/LinearTrans.html)
 
