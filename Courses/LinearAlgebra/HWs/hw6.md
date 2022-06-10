@@ -11,6 +11,5 @@ description: |
 
 # Homework 6
 
-*Problems will be uploaded until 6/9/2022 end-of-day (11:59 pm)*
-
-[Book Problems](https://brodyee.github.io/Courses/LinearAlgebra/HWs/linTransBookProb.pdf): *From 1.9*: 5, 19, 21, and 23; *From 4.2*: 30
+[Part 1](https://brodyee.github.io/Courses/LinearAlgebra/HWs/linTransBookProb.pdf): *From 1.9*: 5, 19, 21, and 23; *From 4.2*: 30
+[Part 2](https://brodyee.github.io/Courses/LinearAlgebra/HWs/hw6part2.html)
