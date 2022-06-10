@@ -12,4 +12,5 @@ description: |
 # Homework 6
 
 [Part 1](https://brodyee.github.io/Courses/LinearAlgebra/HWs/linTransBookProb.pdf): *From 1.9*: 5, 19, 21, and 23; *From 4.2*: 30
+
 [Part 2](https://brodyee.github.io/Courses/LinearAlgebra/HWs/hw6part2.html)
