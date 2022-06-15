@@ -233,7 +233,7 @@ Now we show the other way, injective $\Leftarrow\ \mathcal{K}(T) = \{0\}$:
 
 Given $\mathcal{K}(T) = \{0\}$ and $\mathbf{u}, \mathbf{w}\in U$, letting $T(\mathbf{u}- \mathbf{w}) = \mathbf{0}$. Then, $T(\mathbf{u}- \mathbf{w}) = \mathbf{0} \Rightarrow \mathbf{u}- \mathbf{w}= \mathbf{0} \Rightarrow \mathbf{u}= \mathbf{w}$
 
-<details>
+</details>
 
 ### Theorem 1.3.
 
@@ -358,11 +358,7 @@ $$
 Since
 
 $$
-\mathcal{K}(T)=\left\{\left[\begin{array}{l}
-0 \\
-0 \\
-0
-\end{array}\right]\right\}
+\mathcal{K}(T)=\left\{0\right\}
 $$
 
 $T$ is injective.
@@ -787,8 +783,7 @@ $$T^{−1}(T(\mathbf{u})) = \mathbf{u}, \forall\mathbf{u}\in U$$
 If $T : U \rightarrow V$ is an invertible linear transformation, then $T^{−1}: V \rightarrow U$ is also an invertible linear transformation and $(T^{−1})^{−1} = T$
 
 ### Theorem 3.6.
-
-\*\*Inverse of a Composition\*
+**Inverse of a Composition**
 
 If $T : U \rightarrow V$ and $S : V \rightarrow W$ are invertible linear transformations, then $S \circ T : U \rightarrow W$ is also an invertible linear transformation and
 
@@ -844,7 +839,7 @@ Let $T : U \rightarrow V$ be a linear transformation. Then $T$ is injective iff 
 
 ### Theorem 3.9.
 
-**Rank \### Theorem for Linear Transformations**
+**Rank Theorem for Linear Transformations**
 
 Let $T : U \rightarrow V$ be a linear transformation. Then
 
@@ -902,11 +897,7 @@ Is $T$ invertible? Why or why not?
 we found the kernel to be
 
 $$
-\mathcal{K}(T)=\left\{\left[\begin{array}{l}
-0 \\
-0 \\
-0
-\end{array}\right]\right\}
+\mathcal{K}(T)=\left\{0\right\}
 $$
 
 so we know $T$ is injective, and $n(T)=0$. The Rank Theorem says
