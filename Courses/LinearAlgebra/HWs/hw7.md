@@ -12,3 +12,4 @@ description: |
 # Homework 7
 
 [Part 1](https://brodyee.github.io/Courses/LinearAlgebra/HWs/linTransBookProb.pdf): *From 1.9*: 25, 26, 27, and 28; *From 4.2*: 25, 31(b), and 33
+[Part 2](https://brodyee.github.io/Courses/LinearAlgebra/HWs/hw7part2.html): All questions
