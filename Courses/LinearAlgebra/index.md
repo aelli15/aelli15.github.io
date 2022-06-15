@@ -21,10 +21,10 @@ description: |
   - **June 2<sup>nd</sup>**: Exam 1 Review. [Practice Exam 1](https://brodyee.github.io/Courses/LinearAlgebra/lectureNotes/PracticeExam1.pdf)
   - **June 7<sup>th</sup>**: *Exam 1*
   - **June 9<sup>th</sup>**: Linear Transformations.
+  - **June 14<sup>th</sup>**: Kernel, Range, and Isomorphism.
   
 # Coming Up
 
-  - **June 14<sup>th</sup>**: Kernel, Range, and Isomorphism.
   - **June 16<sup>th</sup>**: Coordinate Vectors.
   - **June 21<sup>st</sup>**: Matrix Representations and Change of Basis.
   - **June 23<sup>rd</sup>**: Determinants, and Eigenvalues and Eigenvectors.
