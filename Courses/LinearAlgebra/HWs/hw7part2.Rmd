@@ -1,0 +1,23 @@
+---
+title: "HW 7 Part 2"
+author: "Brody Erlandson"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+1. Given $T: U \rightarrow V$, where $\mathbf 0 \in U$ and $\mathbf 0' \in V$ are the zero vectors for the respective spaces, show that $T(\mathbf 0) = \mathbf 0'$ for all linear transformations.
+
+2. Let 
+
+$T: \mathbb{C}^{4} \rightarrow \mathbb{P}_{3}$, where $T(\mathbf{v})=(v_1 + v_2) + (v_2 + v_3)x + (v_3 + v_4)x^2 + v_4x^3$
+
+What is the Kernel and Range? Is this an isomorphism?
+
+3. Let $S =  \Bigg\langle\Bigg\{\left[\begin{array}{c}2\\ 0 \\ 1 \\ 1 \end{array}\right],\left[\begin{array}{c}0 \\ 0 \\ 3\\ 1\end{array}\right],\left[\begin{array}{c}1 \\ 1 \\ 1\\ 1 \end{array}\right]\Bigg\}\Bigg\rangle$, and
+
+$T: S \rightarrow \mathbb{C}^{3}$, where $T(\mathbf s)=\left[\begin{array}{c}s_1 \\ s_2 \\ s_3\end{array}\right]$ and $\mathbf s \in S$
+
+What is the Kernel and Range? Is this an isomorphism?
