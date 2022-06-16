@@ -20,4 +20,5 @@ description: |
 7. [Basis and Dimension of a Vector Space, and Rank of a Matrix.](https://brodyee.github.io/Courses/LinearAlgebra/lectureNotes/lecture8.html)
 8. [Linear Transformations](https://brodyee.github.io/Courses/LinearAlgebra/lectureNotes/LinearTrans.html)
 9. [Kernel, Range, and Isomorphism](https://brodyee.github.io/Courses/LinearAlgebra/lectureNotes/KernelRangeIsomo.html)
+10. [Coordinate Vectors](https://brodyee.github.io/Courses/LinearAlgebra/lectureNotes/CoordinateVectors.html)
 
