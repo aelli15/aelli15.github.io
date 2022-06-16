@@ -11,4 +11,4 @@ description: |
 
 # June 16th Classwork
 
-[Problems](https://brodyee.github.io/Courses/LinearAlgebra/HWs/coordVectQs.pdf): 
+[Problems](https://brodyee.github.io/Courses/LinearAlgebra/HWs/coordVectQs.pdf): 1, 7, 13, and 33
