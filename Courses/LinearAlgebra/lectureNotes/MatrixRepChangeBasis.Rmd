@@ -1,0 +1,434 @@
+---
+title: "Matrix Representations and Change of Basis"
+author: "Brody Erlandson"
+output:
+  html_document:
+    code_folding: hide
+    toc: true
+    toc_float: true
+    toc_depth: 2
+---
+
+\renewcommand{\v}{\mathbf{v}}
+\renewcommand{\u}{\mathbf{u}}
+\newcommand{\w}{\mathbf{w}}
+\newcommand{\vx}{\mathbf{x}}
+\newcommand{\vy}{\mathbf{y}}
+\newcommand{\vz}{\mathbf{z}}
+\newcommand{\0}{\mathbf{0}}
+\newcommand{\1}{\mathbf{1}}
+\newcommand{\A}{\mathbf{A}}
+\newcommand{\B}{\mathbf{B}}
+\newcommand{\Cmat}{\mathbf{C}}
+\newcommand{\I}{\mathbf{I}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\set}[2]{\{#1_1, #1_2, \dots, #1_#2\}}
+\newcommand{\null}[1]{\mathcal{N}(#1)}
+\newcommand{\col}[1]{\mathcal{C}(#1)}
+\newcommand{\row}[1]{\mathcal{R}(#1)}
+\newcommand{\eig}{\mathcal{E}}
+\newcommand{\vdd}[2]{\begin{bmatrix} #1\\ #2 \end{bmatrix}}
+\newcommand{\vddd}[3]{\begin{bmatrix} #1\\ #2\\ #3 \end{bmatrix}}
+\newcommand{\vdddd}[4]{\begin{bmatrix} #1\\ #2\\ #3\\ #4 \end{bmatrix}}
+\newcommand{\mdd}[4]{\begin{bmatrix} #1 & #2\\ #3 & #4 \end{bmatrix}}
+\newcommand{\mddd}[9]{\begin{bmatrix} #1 & #2 & #3\\ #4 & #5 & #6\\ #7 & #8 & #9\\\end{bmatrix}}
+\newcommand{\span}[1]{\langle #1 \rangle}
+\newcommand{\innerProd}[2]{\langle #1, #2 \rangle}
+\newcommand{\norm}[1]{\lVert #1 \rVert}
+\newcommand{\dim}[1]{\text{dim}(#1)}
+\newcommand{\det}{\text{det}}
+\newcommand{\kernel}{\mathcal{K}}
+\newcommand{\range}{\mathcal{R}}
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Matrix Representations
+
+## Definitions and Theorems {.tabset}
+
+### Definition 1.1.
+**Matrix Representation for a Linear Transformation**
+
+Let $T: U \rightarrow V$ be a linear transformation from a vector space $U$ with basis
+
+$$
+B=\left\{\mathbf{b}_{1}, \mathbf{b}_{2}, \ldots, \mathbf{b}_{n}\right\}
+$$
+
+to a vector space $V$ with basis $C$. Then the matrix
+
+$$
+M_{B, C}^{T}=\left[\rho_{C}\left(T\left(\mathbf{b}_{1}\right)\right)\left|\rho_{C}\left(T\left(\mathbf{b}_{2}\right)\right)\right| \cdots \mid \rho_{C}\left(T\left(\mathbf{b}_{n}\right)\right)\right]
+$$
+
+is the matrix representation of $\mathbf{T}$ relative to the bases $B$ and $C$.
+
+### Theorem 1.1. 
+**Matrix Representation for a Linear Transformation**
+
+Let $T: U \rightarrow V$ be a linear transformation from a vector space $U$ with basis
+
+$$
+B=\left\{\mathbf{b}_{1}, \mathbf{b}_{2}, \ldots, \mathbf{b}_{n}\right\}
+$$
+
+to a vector space $V$ with basis $C$. Then
+
+$$
+\rho_{C}(T(\mathbf{u}))=M_{B, C}^{T} \rho_{B}(\mathbf{u})
+$$
+
+where
+
+$$
+M_{B, C}^{T}=\left[\rho_{C}\left(T\left(\mathbf{b}_{1}\right)\right)\left|\rho_{C}\left(T\left(\mathbf{b}_{2}\right)\right)\right| \cdots \mid \rho_{C}\left(T\left(\mathbf{b}_{n}\right)\right)\right]
+$$
+
+is the matrix representation of $T$ relative to the bases $B$ and $C$.
+
+## Examples
+
+ Let $T: \mathbb{P}_{2} \rightarrow \mathbb{P}_{4}$ be given by
+
+$$
+T(\mathbf{p})=\mathbf{p}+2 x^{2} \mathbf{p}
+$$
+
+and let $B$ and $C$ be the standard bases for $\mathbb{P}_{2}$ and $\mathbb{P}_{4}$ respectively. Find the matrix representation of $T$ relative to the bases $B$ and $C$, and use it to calculate $T(1+x)$
+
+<details><summary>Solution</summary>
+
+The standard basis for $\mathbb{P}_{2}$ is
+
+$$
+B=\left\{1, x, x^{2}\right\}
+$$
+
+and the standard basis for $\mathbb{P}_{4}$ is
+
+$$
+C=\left\{1, x, x^{2}, x^{3}, x^{4}\right\}
+$$
+
+By definition,
+
+$$
+M_{B, C}^{T}=\left[\rho_{C}\left(T\left(\mathbf{b}_{1}\right)\right)\left|\rho_{C}\left(T\left(\mathbf{b}_{2}\right)\right)\right| \rho_{C}\left(T\left(\mathbf{b}_{3}\right)\right)\right]
+$$
+
+Where
+
+$$
+\mathbf{b}_{1}=1, \quad \mathbf{b}_{2}=x, \quad \mathbf{b}_{3}=x^{2}
+$$
+
+We can compute $T\left(\mathbf{b}_{1}\right)$ using the function rule $T(\mathbf{p})=\mathbf{p}+2 x^{2} \mathbf{p}$ :
+
+$$
+T\left(\mathbf{b}_{1}\right)=\mathbf{b}_{1}+2 x^{2} \mathbf{b}_{1}=1+2 x^{2}(1)=1+2 x^{2}
+$$
+
+Likewise:
+
+$$
+\begin{aligned}
+&T\left(\mathbf{b}_{2}\right)=\mathbf{b}_{2}+2 x^{2} \mathbf{b}_{2}=x+2 x^{2}(x)=x+2 x^{3} \\
+&T\left(\mathbf{b}_{3}\right)=\mathbf{b}_{3}+2 x^{2} \mathbf{b}_{3}=x^{2}+2 x^{2}\left(x^{2}\right)=x^{2}+2 x^{4}
+\end{aligned}
+$$
+
+Then we can find the coordinate vectors by observation, since $C$ is the standard basis:
+
+$$
+\begin{aligned}
+T\left(\mathbf{b}_{1}\right) &=\gamma_{1} \mathbf{c}_{1}+\gamma_{2} \mathbf{c}_{2}+\gamma_{3} \mathbf{c}_{3}+\gamma_{4} \mathbf{c}_{4}+\gamma_{5} \mathbf{c}_{5} \\
+1+2 x^{2} &=\gamma_{1}(1)+\gamma_{2}(x)+\gamma_{3}\left(x^{2}\right)+\gamma_{4}\left(x^{3}\right)+\gamma_{5}\left(x^{4}\right) \\
+1+0 x+2 x^{2}+0 x^{3}+0 x^{4} &=\gamma_{1}+\gamma_{2} x+\gamma_{3} x^{2}+\gamma_{4} x^{3}+\gamma_{5} x^{4}
+\end{aligned}
+$$
+
+So
+
+$$
+\rho_{C}\left(T\left(\mathbf{b}_{1}\right)\right)=\left[\begin{array}{c}
+\gamma_{1} \\
+\gamma_{2} \\
+\gamma_{3} \\
+\gamma_{4} \\
+\gamma_{5}
+\end{array}\right]=\left[\begin{array}{l}
+1 \\
+0 \\
+2 \\
+0 \\
+0
+\end{array}\right]
+$$
+
+Similarly
+
+$$
+\begin{aligned}
+&T\left(\mathbf{b}_{2}\right)=0+1 x+0 x^{2}+2 x^{3}+0 x^{4} \\
+&T\left(\mathbf{b}_{3}\right)=0+0 x+1 x^{2}+0 x^{3}+2 x^{4}
+\end{aligned}
+$$
+
+$\mathrm{So}$
+
+$$
+\rho_{C}\left(T\left(\mathbf{b}_{2}\right)\right)=\left[\begin{array}{l}
+0 \\
+1 \\
+0 \\
+2 \\
+0
+\end{array}\right], \quad \rho_{C}\left(T\left(\mathbf{b}_{3}\right)\right)=\left[\begin{array}{l}
+0 \\
+0 \\
+1 \\
+0 \\
+2
+\end{array}\right]
+$$
+
+And finally
+
+$$
+M_{B, C}^{T} = [\rho_{C}(T(\mathbf{b}_{1}))|\rho_{C}(T(\mathbf{b}_{2}))| \rho_{C}(T(\mathbf{b}_{3})] =\left[\begin{array}{ccc}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+2 & 0 & 1 \\
+0 & 2 & 0 \\
+0 & 0 & 2
+\end{array}\right]
+$$
+
+Now we can calculate $T(1+x)$ by finding the coordinate vector of $\mathbf{p}=1+x$ relative to $B$ and multiplying by $M_{B, C}^{T}$. By observation,
+
+$$
+\mathbf{p}=1+x=1+1 x+0 x^{2}
+$$
+
+$\mathrm{So}$
+
+$$
+\rho_{B}(\mathbf{p})=\left[\begin{array}{l}
+1 \\
+1 \\
+0
+\end{array}\right]
+$$
+
+and 
+
+$$
+\rho_{C}(T(\mathbf{p}))=M_{B, C}^{T} \rho_{B}(\mathbf{p})
+$$
+
+$$
+=\left[\begin{array}{lll}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+2 & 0 & 1 \\
+0 & 2 & 0 \\
+0 & 0 & 2
+\end{array}\right]\left[\begin{array}{l}
+1 \\
+1 \\
+0
+\end{array}\right]
+$$
+
+$$
+=\left[\begin{array}{l}
+1 \\
+1 \\
+2 \\
+2 \\
+0
+\end{array}\right]
+$$
+
+From $\rho_{C}(T(\mathbf{p}))$ we can construct $T(\mathbf{p})$ :
+
+$$
+\begin{aligned}
+T(\mathbf{p}) &=1 \mathbf{c}_{1}+1 \mathbf{c}_{2}+2 \mathbf{c}_{3}+2 \mathbf{c}_{4}+0 \mathbf{c}_{5} \\
+&=1(1)+1(x)+2\left(x^{2}\right)+2\left(x^{3}\right)+0\left(x^{4}\right) \\
+&=1+x+2 x^{2}+2 x^{3}
+\end{aligned}
+$$
+
+We can check our work by computing $T(1+x)$ directly from the function rule for $T$ :
+
+$$
+T(1+x)=(1+x)+2 x^{2}(1+x)=1+x+2 x^{2}+2 x^{3}
+$$
+
+</details>
+
+# Change of Basis
+
+## Definitions and Theorems {.tabset}
+
+### Definition 2.1.
+**Change of Basis Matrix**
+
+Let $I_{V}: V \rightarrow V$ be the identity transformation on a vector space $V$, with bases $B$ and $C$. The matrix representation of $I_{V}$ relative to $B$ and $C$ is called the change of basis matrix from $B$ to $C$ :
+
+$$
+M_{B, C}^{I_{V}}=C_{B, C}=\left[\rho_{C}\left(\mathbf{b}_{1}\right)\left|\rho_{C}\left(\mathbf{b}_{2}\right)\right| \cdots \mid \rho_{C}\left(\mathbf{b}_{n}\right)\right]
+$$
+
+### Theorem 2.1.
+**Change of Basis**
+
+If $\mathbf{v}$ is a vector in a vector space $V$ with bases $B$ and $C$, then
+
+$$
+\rho_{C}(\mathbf{v})=C_{B, C} \rho_{B}(\mathbf{v})
+$$
+
+<details><summary>Proof</summary>
+
+$$
+\begin{array}{r}
+\rho_{C}\left(I_{V}(\mathbf{v})\right)=M_{B, C}^{I_{V}} \rho_{B}(\mathbf{v}) \\
+\rho_{C}(\mathbf{v})=C_{B, C} \rho_{B}(\mathbf{v})
+\end{array}
+$$
+
+</details>
+
+### Theorem 2.2.
+**Inverse of Change of Basis Matrix**
+
+If $V$ is a vector space with bases $B$ and $C$, then the change of basis matrix $C_{B, C}$ is invertible, and its inverse is
+
+$$
+C_{B, C}^{-1}=C_{C, B}
+$$
+
+<details><summary>Proof</summary>
+
+Since the columns of $C_{B, C}$ are the coordinate vectors of basis vectors, they form a linearly independent set. Therefore $C_{B, C}$ is invertible and we can write
+
+$$
+\begin{aligned}
+\rho_{C}(\mathbf{v}) &=C_{B, C} \rho_{B}(\mathbf{v}) \\
+C_{B, C}^{-1} \rho_{C}(\mathbf{v}) &=C_{B, C}^{-1} C_{B, C} \rho_{B}(\mathbf{v}) \\
+C_{B, C}^{-1} \rho_{C}(\mathbf{v}) &=\rho_{B}(\mathbf{v}) \\
+\rho_{B}(\mathbf{v}) &=C_{B, C}^{-1} \rho_{C}(\mathbf{v}) \\
+\rho_{B}(\mathbf{v}) &=C_{C, B} \rho_{C}(\mathbf{v})
+\end{aligned}
+$$
+
+Therefore
+
+$$
+C_{B, C}^{-1}=C_{C, B}
+$$
+</details>
+
+## Examples
+
+Let
+
+$$\mathcal B = \{\vdd{1}{2}, \vdd{2}{1}\}\text{ and }\mathcal C = \{\vdd{1}{0}, \vdd{1}{1}\}$$
+
+Find the change of basis matrix $C_{B,C}$ and find $C_{C,B}$
+
+<details><summary>Solution</summary>
+
+First row reduce $[C|B]$ to find $\rho_C(\mathbf b_1)$ and $\rho_C(\mathbf b_2)$, which gives us:
+
+$$\rho_C(\mathbf b_1) = \vdd{-1}{2}
+\\ \rho_C(\mathbf b_2) = \vdd{1}{1}$$
+
+Now we can make our change of basis matrix $C_{B,C}$:
+
+$$\mdd{-1}{1}{2}{1}$$
+Now that we know $C_{B,C}$, we know $C^{-1}_{B,C} = C_{C,B}$, so
+
+$$C_{C,B} = \mdd{-\frac{1}{3}}{\frac{1}{3}}{\frac{2}{3}}{\frac{1}{3}}$$
+
+</details>
+
+Now, let
+
+$$
+B=\left\{1, x, x^{2}, x^{3}, x^{4}\right\} \\
+C=\left\{1,1+x, 1+x+x^{2}, 1+x+x^{2}+x^{3}, 1+x+x^{2}+x^{3}+x^{4}\right\}
+$$
+
+Find $C_{B,C}$
+
+<details><summary>Solution</summary>
+
+To build the change-of-basis matrix between $B$ and $C$, we must first build a vector representation of each vector in $B$ relative to $C$,
+$$\rho_{C}(1)=\rho_{C}((1)(1))=\left[\begin{array}{l}1 \\ 0 \\ 0 \\ 0 \\ 0\end{array}\right] \\
+\rho_{C}(x)=\rho_{C}((-1)(1)+(1)(1+x))=\left[\begin{array}{c}-1 \\ 1 \\ 0 \\ 0 \\ 0\end{array}\right] \\
+\rho_{C}\left(x^{2}\right)=\rho_{C}\left((-1)(1+x)+(1)\left(1+x+x^{2}\right)\right)=\left[\begin{array}{c}0 \\ -1 \\ 1 \\ 0 \\ 0\end{array}\right] \\ 
+\rho_{C}\left(x^{3}\right)=\rho_{C}\left((-1)\left(1+x+x^{2}\right)+(1)\left(1+x+x^{2}+x^{3}\right)\right)=\left[\begin{array}{c}0 \\ 0 \\ -1 \\ 1 \\ 0\end{array}\right] \\
+\rho_{C}\left(x^{4}\right)=\rho_{C}\left((-1)\left(1+x+x^{2}+x^{3}\right)+(1)\left(1+x+x^{2}+x^{3}+x^{4}\right)\right)=\left[\begin{array}{c}0 \\ 0 \\ 0 \\ -1 \\ 1\end{array}\right]$$
+
+Then we package up these vectors as the columns of a matrix,
+$$
+C_{B, C}=\left[\begin{array}{ccccc}
+1 & -1 & 0 & 0 & 0 \\
+0 & 1 & -1 & 0 & 0 \\
+0 & 0 & 1 & -1 & 0 \\
+0 & 0 & 0 & 1 & -1 \\
+0 & 0 & 0 & 0 & 1
+\end{array}\right]
+$$
+Now, to illustrate Theorem 2.1, consider the vector $\mathbf{u}=5-3 x+2 x^{2}+8 x^{3}-3 x^{4}$. We can build the representation of $\mathbf{u}$ relative to $B$ easily,
+$$
+\rho_{B}(\mathbf{u})=\rho_{B}\left(5-3 x+2 x^{2}+8 x^{3}-3 x^{4}\right)=\left[\begin{array}{c}
+5 \\
+-3 \\
+2 \\
+8 \\
+-3
+\end{array}\right]
+$$
+Applying Theorem 2.1, we obtain a second representation of $\mathbf{u}$, but now relative to $C$
+$$
+\rho_{C}(\mathbf{u}) =C_{B, C} \rho_{B}(\mathbf{u}) \\
+= {\left[\begin{array}{ccccc}
+1 & -1 & 0 & 0 & 0 \\
+0 & 1 & -1 & 0 & 0 \\
+0 & 0 & 1 & -1 & 0 \\
+0 & 0 & 0 & 1 & -1 \\
+0 & 0 & 0 & 0 & 1
+\end{array}\right]\left[\begin{array}{c}
+5 \\
+-3 \\
+2 \\
+8 \\
+-3
+\end{array}\right]}\\
+=\left[\begin{array}{c}
+8 \\
+-5 \\
+-6 \\
+11 \\
+-3
+\end{array}\right] 
+$$
+
+We can check our work by unraveling this second representation,
+$\mathbf{u}=\rho_{C}^{-1}\left(\rho_{C}(\mathbf{u})\right)$
+$=\rho_{C}^{-1}\left(\left[\begin{array}{c}8 \\ -5 \\ -6 \\ 11 \\ -3\end{array}\right]\right)$
+$=8(1)+(-5)(1+x)+(-6)\left(1+x+x^{2}\right)$
+$+(11)\left(1+x+x^{2}+x^{3}\right)+(-3)\left(1+x+x^{2}+x^{3}+x^{4}\right) \quad$
+$=5-3 x+2 x^{2}+8 x^{3}-3 x^{4}$
+
+</details>
