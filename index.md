@@ -14,6 +14,7 @@ I am currently a Statistic PhD Pre-canidate at Colorado State University, where 
 
 ## [Papers and Projects](https://brodyee.github.io/)
 
+## [Resume]()
 <!--
 ## Welcome to GitHub Pages
 
