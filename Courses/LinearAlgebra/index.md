@@ -23,10 +23,10 @@ description: |
   - **June 9<sup>th</sup>**: Linear Transformations.
   - **June 14<sup>th</sup>**: Kernel, Range, and Isomorphism.
   - **June 16<sup>th</sup>**: Coordinate Vectors.
+  - **June 21<sup>st</sup>**: Matrix Representations and Change of Basis, and Determinants
   
 # Coming Up
 
-  - **June 21<sup>st</sup>**: Matrix Representations and Change of Basis, and Determinants
   - **June 23<sup>rd</sup>**: Eigenvalues and Eigenvectors.
   - **June 28<sup>th</sup>**: Diagonalization and Orthonormal Diagonalization.
   - **June 30<sup>th</sup>**: QR Factorization. (Not on Exam 2)
