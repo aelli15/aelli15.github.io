@@ -10,7 +10,7 @@ description: |
 
 ### Teaching
 
-The following courses contain letcure content for the courses I am currently teaching or have taught going to teach:
+The following courses that I have taught, and some contain lecture content:
 - Washtenaw Community College
   - [MATH 197: Linear Algebra](https://brodyee.github.io/Courses/LinearAlgebra), Spring/Summer 2022, Instructor.
 - University of Michigan
