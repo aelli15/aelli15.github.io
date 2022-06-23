@@ -8,7 +8,7 @@ description: |
 
 ## About Me
 
-I am currently a Statistic PhD Pre-canidate at Colorado State University, where I hope to do research in nonparameteric bayesian methods and computation. I am trying to have a good mixture of computing and theoretical background. I love to dwell on theoretical and abstract structures, but also love to code and implement my ideas. I find it very important to pass on my knowledge to others, and encourge others to explore mathematics and statistics at a deeper level. I have been a lab instructor at University of Michigan during my masters degree and a part time instructor at Washtenaw Community College. Beyond academics, I love music, cooking, and enjoying nature!
+I am currently a Statistic PhD Pre-canidate at Colorado State University, where I hope to do research in nonparametric Bayesian methods and computation. I am trying to have a good mixture of computing and theoretical background. I love to dwell on theoretical and abstract structures, but also love to code and implement my ideas. I find it very important to pass on my knowledge to others, and encourage others to explore mathematics and statistics at a deeper level. I have been a lab instructor at University of Michigan during my masters degree and a part time instructor at Washtenaw Community College. Beyond academics, I love music, cooking, and enjoying nature!
 
 ## [Courses](Courses/)
 
