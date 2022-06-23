@@ -20,7 +20,7 @@ description: |
 5. [HW 5](https://brodyee.github.io/Courses/LinearAlgebra/Assignments/hw5) Quiz on Thursday June 9<sup>th</sup>
 6. [HW 6](https://brodyee.github.io/Courses/LinearAlgebra/Assignments/hw6) Quiz on Thursday June 16<sup>th</sup>
 7. [HW 7](https://brodyee.github.io/Courses/LinearAlgebra/Assignments/hw7) Quiz on Thursday June 23<sup>rd</sup>
-8. HW 8 Quiz on Thursday June 30<sup>th</sup>
+8. [HW 8](https://brodyee.github.io/Courses/LinearAlgebra/Assignments/hw8) Quiz on Thursday June 30<sup>th</sup>
 9. HW 9 Quiz on Thursday July 7<sup>th</sup>
 
 ### Classworks
@@ -29,7 +29,7 @@ description: |
 2. [Classwork](https://brodyee.github.io/Courses/LinearAlgebra/classwork/classworkJune14.html) on Tuesday June 14<sup>th</sup>
 3. [Classwork](https://brodyee.github.io/Courses/LinearAlgebra/Assignments/CW16th) on Thursday June 16<sup>th</sup>
 4. [Classwork](https://brodyee.github.io/Courses/LinearAlgebra/Assignments/CW21st) on Tuesday June 21<sup>st</sup>
-5. Classwork on Thursday June 23<sup>rd</sup>
+5. [Classwork](https://brodyee.github.io/Courses/LinearAlgebra/Assignments/CW23rd) on Thursday June 23<sup>rd</sup>
 6. Classwork on Tuesday June 28<sup>th</sup>
 7. Classwork on Thursday June 30<sup>th</sup>
 8. Classwork on Tuesday July 5<sup>th</sup>
