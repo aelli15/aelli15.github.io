@@ -22,4 +22,5 @@ description: |
 9. [Kernel, Range, and Isomorphism](https://brodyee.github.io/Courses/LinearAlgebra/lectureNotes/KernelRangeIsomo.html)
 10. [Coordinate Vectors](https://brodyee.github.io/Courses/LinearAlgebra/lectureNotes/CoordinateVectors.html)
 11. [Matrix Representations and Change of Basis](https://brodyee.github.io/Courses/LinearAlgebra/lectureNotes/MatrixRepChangeBasis.html), and [Determinants](https://brodyee.github.io/Courses/LinearAlgebra/lectureNotes/Determinants.html)
+12. [Eigenvalues and Eigenvectors](https://brodyee.github.io/Courses/LinearAlgebra/lectureNotes/EigenVals-Vecs.html)
 
