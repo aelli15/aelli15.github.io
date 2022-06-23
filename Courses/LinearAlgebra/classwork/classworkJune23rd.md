@@ -11,3 +11,4 @@ description: |
 
 # June 23rd Classwork
 
+[Book Problems](https://brodyee.github.io/Courses/LinearAlgebra/HWs/eigenHW.pdf): *From 5.1:* 1, 7, and 9; *From 5.2:* 1, 3, and 15.
