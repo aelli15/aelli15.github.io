@@ -17,4 +17,4 @@ description: |
 
 [Part 3](https://brodyee.github.io/Courses/LinearAlgebra/HWs/eigenHW.pdf): *From 5.1:* 3, 5, 11, and 13; *From 5.2:* 5, 7, 9, and 13
 
-Part 4: Will be uploaded tonight 
+[Part 4](https://brodyee.github.io/Courses/LinearAlgebra/HWs/hw8part4.html) 
