@@ -10,3 +10,5 @@ description: |
 ---
 
 # Homework 9
+
+[Part 1](https://brodyee.github.io/Courses/LinearAlgebra/HWs/diagHW.pdf): 
