@@ -506,7 +506,10 @@ $$
 A^{*}=(\bar{A})^{T}=A^{T}
 $$
 
-Another way to say this is that a real hermitian matrix is symmetric. Theorem 2.2. Symmetric Matrices Have Real Eigenvalues
+Another way to say this is that a real hermitian matrix is symmetric. 
+
+### Theorem 2.2.
+**Symmetric Matrices Have Real Eigenvalues**
 
 If $A$ is a symmetric, then it has real eigenvalues and eigenvectors.
 
