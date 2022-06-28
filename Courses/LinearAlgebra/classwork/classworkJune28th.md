@@ -11,4 +11,6 @@ description: |
 
 # June 28th Classwork
 
-[Book Problems](https://brodyee.github.io/Courses/LinearAlgebra/HWs/diagHW.pdf):
+[Part 1](https://brodyee.github.io/Courses/LinearAlgebra/HWs/diagHW.pdf):
+
+[Part 2](https://brodyee.github.io/Courses/LinearAlgebra/HWs/orthogDiagHW.pdf):
