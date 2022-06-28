@@ -11,6 +11,6 @@ description: |
 
 # June 28th Classwork
 
-[Part 1](https://brodyee.github.io/Courses/LinearAlgebra/HWs/diagHW.pdf):
+[Part 1](https://brodyee.github.io/Courses/LinearAlgebra/HWs/diagHW.pdf): 1, 5, and 7
 
-[Part 2](https://brodyee.github.io/Courses/LinearAlgebra/HWs/orthogDiagHW.pdf):
+[Part 2](https://brodyee.github.io/Courses/LinearAlgebra/HWs/orthogDiagHW.pdf): 7 and 13
