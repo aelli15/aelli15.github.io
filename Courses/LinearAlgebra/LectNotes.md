@@ -23,4 +23,5 @@ description: |
 10. [Coordinate Vectors](https://brodyee.github.io/Courses/LinearAlgebra/lectureNotes/CoordinateVectors.html)
 11. [Matrix Representations and Change of Basis](https://brodyee.github.io/Courses/LinearAlgebra/lectureNotes/MatrixRepChangeBasis.html), and [Determinants](https://brodyee.github.io/Courses/LinearAlgebra/lectureNotes/Determinants.html)
 12. [Eigenvalues and Eigenvectors](https://brodyee.github.io/Courses/LinearAlgebra/lectureNotes/EigenVals-Vecs.html)
+13. [Diagonalization and Orthonormal Diagonalization](https://brodyee.github.io/Courses/LinearAlgebra/lectureNotes/Diagonalization.html)
 
