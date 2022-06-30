@@ -25,10 +25,10 @@ description: |
   - **June 16<sup>th</sup>**: Coordinate Vectors.
   - **June 21<sup>st</sup>**: Matrix Representations and Change of Basis, and Determinants
   - **June 23<sup>rd</sup>**: Eigenvalues and Eigenvectors.
+  - **June 28<sup>th</sup>**: Diagonalization and Orthonormal Diagonalization.
   
 # Coming Up
 
-  - **June 28<sup>th</sup>**: Diagonalization and Orthonormal Diagonalization.
   - **June 30<sup>th</sup>**: QR Factorization (Not on Exam 2), and Exam 2 Review [Practice Exam 2](https://brodyee.github.io/Courses/LinearAlgebra/lectureNotes/practiceExam2.pdf)
   - **July 5<sup>th</sup>**: *Exam 2*
   - **July 7<sup>th</sup>**: Least Squares.
