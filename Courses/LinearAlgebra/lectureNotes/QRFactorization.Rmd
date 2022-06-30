@@ -1,0 +1,594 @@
+---
+title: "QR Factorization"
+author: "Brody Erlandson"
+output:
+  html_document:
+    code_folding: hide
+    toc: true
+    toc_float: true
+    toc_depth: 2
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Gram-Schmidt Orthogonalization
+
+##  Definitions and Theorems {.tabset}
+
+### Theorem 1.1. 
+**Gram-Schmidt Orthogonalization**
+
+Given a linearly independent set of vectors in $\mathbb{C}^{n}, S=\left\{\mathbf{v}_{1}, \mathbf{v}_{2}, \ldots, \mathbf{v}_{p}\right\}$, define
+
+$$
+\mathbf{u}_{j}=\mathbf{v}_{j}-\sum_{i=1}^{j-1} \frac{\left\langle\mathbf{u}_{i}, \mathbf{v}_{j}\right\rangle}{\left\langle\mathbf{u}_{i}, \mathbf{u}_{i}\right\rangle} \mathbf{u}_{i}, j=1, \ldots, p
+$$
+
+Then the set $T=\left\{\mathbf{u}_{1}, \mathbf{u}_{2}, \ldots, \mathbf{u}_{p}\right\}$ is an orthogonal set of non-zero vectors, and $\langle T\rangle=\langle S\rangle$
+
+The sum in theorem $1.1$ can be expanded as:
+
+$\mathbf{u}_{j}=\mathbf{v}_{j}-\frac{\left\langle\mathbf{u}_{1}, \mathbf{v}_{j}\right\rangle}{\left\langle\mathbf{u}_{1}, \mathbf{u}_{1}\right\rangle} \mathbf{u}_{1}-\frac{\left\langle\mathbf{u}_{2}, \mathbf{v}_{j}\right\rangle}{\left\langle\mathbf{u}_{2}, \mathbf{u}_{2}\right\rangle} \mathbf{u}_{2}-\frac{\left\langle\mathbf{u}_{3}, \mathbf{v}_{j}\right\rangle}{\left\langle\mathbf{u}_{3}, \mathbf{u}_{3}\right\rangle} \mathbf{u}_{3}-\cdots-\frac{\left\langle\mathbf{u}_{j-1}, \mathbf{v}_{j}\right\rangle}{\left\langle\mathbf{u}_{j-1}, \mathbf{u}_{j-1}\right\rangle} \mathbf{u}_{j-1}, \quad j=1, \ldots, p$
+
+### Corollary 1.1.1. 
+
+Given a basis $B$ for $\mathbb{C}^{n}, B=\left\{\mathbf{v}_{1}, \mathbf{v}_{2}, \ldots, \mathbf{v}_{n}\right\}$, define
+
+$$
+\mathbf{u}_{j}=\mathbf{v}_{j}-\sum_{i=1}^{j-1} \frac{\left\langle\mathbf{u}_{i}, \mathbf{v}_{j}\right\rangle}{\left\langle\mathbf{u}_{i}, \mathbf{u}_{i}\right\rangle} \mathbf{u}_{i}, j=1, \ldots, n
+$$
+
+Then $D=\left\{\mathbf{u}_{1}, \mathbf{u}_{2}, \ldots, \mathbf{u}_{n}\right\}$ is an orthogonal basis for $\mathbb{C}^{n}$.
+
+<details><summary>*Proof*</summary>
+
+Since $B$ is linearly independent, by theorem $1.1, D$ is an orthogonal set of non-zero vectors. Since $D$ is orthogonal, it is linearly independent, and since it contains $n$ vectors, it is a basis for $\mathbb{C}^{n}$.
+
+</details>
+
+## Examples
+
+Find an orthonormal basis for $\mathcal{C}(A)$, where
+
+$$
+A=\left[\begin{array}{rrrrr}
+1 & 2 & -2 & 1 & 0 \\
+2 & 2 & 0 & 1 & 1 \\
+-1 & 0 & -2 & -1 & -2 \\
+0 & 1 & -2 & 0 & -1
+\end{array}\right]
+$$
+
+<details><summary>Solution</summary>
+
+As usual, we row-reduce $A$ to find its pivot columns, which will form a basis for $\mathcal{C}(A)$
+
+$$
+A=\left[\begin{array}{rrrrr}
+1 & 2 & -2 & 1 & 0 \\
+2 & 2 & 0 & 1 & 1 \\
+-1 & 0 & -2 & -1 & -2 \\
+0 & 1 & -2 & 0 & -1
+\end{array}\right] \sim\left[\begin{array}{rrrrr}
+1 & 0 & 2 & 0 & 1 \\
+0 & 1 & -2 & 0 & -1 \\
+0 & 0 & 0 & 1 & 1 \\
+0 & 0 & 0 & 0 & 0
+\end{array}\right]
+$$
+
+A basis for $\mathcal{C}(A)$ is
+
+$$
+\left\{\left[\begin{array}{r}
+1 \\
+2 \\
+-1 \\
+0
+\end{array}\right],\left[\begin{array}{l}
+2 \\
+2 \\
+0 \\
+1
+\end{array}\right],\left[\begin{array}{r}
+1 \\
+1 \\
+-1 \\
+0
+\end{array}\right]\right\}
+$$
+
+To find an orthonormal basis, we do the Gram-Schmidt algorithm on the basis vectors we just found. This give us an orthogonal basis. Then we simply normalize each of the basis vectors to get an orthonormal basis.
+
+Let
+
+$$
+\mathbf{v}_{1}=\left[\begin{array}{r}
+1 \\
+2 \\
+-1 \\
+0
+\end{array}\right], \quad \mathbf{v}_{2}=\left[\begin{array}{l}
+2 \\
+2 \\
+0 \\
+1
+\end{array}\right], \quad \mathbf{v}_{3}=\left[\begin{array}{r}
+1 \\
+1 \\
+-1 \\
+0
+\end{array}\right]
+$$
+
+Then let
+
+$$
+\mathbf{u}_{1}=\mathbf{v}_{1}=\left[\begin{array}{r}
+1 \\
+2 \\
+-1 \\
+0
+\end{array}\right]
+$$
+
+$$
+\begin{aligned}
+& \mathbf{u}_{2}=\mathbf{v}_{2}-\left(\frac{\mathbf{v}_{2} \cdot \mathbf{u}_{1}}{\mathbf{u}_{1} \cdot \mathbf{u}_{1}}\right) \mathbf{u}_{1}=\left[\begin{array}{l}2 \\2 \\0 \\1\end{array}\right]-\frac{6}{6}\left[\begin{array}{r}1 \\2 \\-1 \\0\end{array}\right]=\left[\begin{array}{l}1 \\0 \\1 \\1\end{array}\right]
+\end{aligned}
+$$
+
+$$
+\mathbf{u}_{3}=\mathbf{v}_{3}-\left(\frac{\mathbf{v}_{3} \cdot \mathbf{u}_{1}}{\mathbf{u}_{1} \cdot \mathbf{u}_{1}}\right) \mathbf{u}_{1}-\left(\frac{\mathbf{v}_{3} \cdot \mathbf{u}_{2}}{\mathbf{u}_{2} \cdot \mathbf{u}_{2}}\right) \mathbf{u}_{2}
+$$
+
+$$
+=\left[\begin{array}{r}
+1 \\
+1 \\
+-1 \\
+0
+\end{array}\right]-\frac{2}{3}\left[\begin{array}{r}
+1 \\
+2 \\
+-1 \\
+0
+\end{array}\right]-\frac{0}{3}\left[\begin{array}{l}
+1 \\
+0 \\
+1 \\
+1
+\end{array}\right]
+$$
+
+$$
+=\left[\begin{array}{r}
+\frac{1}{3} \\
+-\frac{1}{3} \\
+-\frac{1}{3} \\
+0
+\end{array}\right]
+$$
+
+So an orthogonal basis for $\mathcal{C}(A)$ is
+
+$$
+\left\{\mathbf{u}_{1}, \mathbf{u}_{2}, \mathbf{u}_{3}\right\}=\left\{\left[\begin{array}{r}
+1 \\
+2 \\
+-1 \\
+0
+\end{array}\right],\left[\begin{array}{r}
+1 \\
+0 \\
+1 \\
+1
+\end{array}\right],\left[\begin{array}{r}
+\frac{1}{3} \\
+-\frac{1}{3} \\
+-\frac{1}{3} \\
+0
+\end{array}\right]\right\}
+$$
+
+Now we normalize the basis vectors: divide each one by its norm to make them all unit vectors. Then we have an orthonormal basis. Let
+
+$$
+\mathbf{w}_{1}=\frac{\mathbf{u}_{1}}{\left\|\mathbf{u}_{1}\right\|}, \quad \mathbf{w}_{2}=\frac{\mathbf{u}_{2}}{\left\|\mathbf{u}_{2}\right\|}, \quad \mathbf{w}_{3}=\frac{\mathbf{u}_{3}}{\left\|\mathbf{u}_{3}\right\|}
+$$
+
+Then
+
+$$
+\begin{gathered}
+\mathbf{w}_{1}=\frac{\mathbf{u}_{1}}{\left\|\mathbf{u}_{1}\right\|}=\frac{\mathbf{u}_{1}}{\sqrt{6}}=\left[\begin{array}{c}
+\frac{1}{\sqrt{6}} \\
+\frac{2}{\sqrt{6}} \\
+-\frac{1}{\sqrt{6}} \\
+0
+\end{array}\right] \\
+\mathbf{w}_{2}=\frac{\mathbf{u}_{2}}{\left\|\mathbf{u}_{2}\right\|}=\frac{\mathbf{u}_{2}}{\sqrt{3}}=\left[\begin{array}{c}
+\frac{1}{\sqrt{3}} \\
+0 \\
+\frac{1}{\sqrt{3}} \\
+\frac{1}{\sqrt{3}}
+\end{array}\right] \\
+=\frac{\mathbf{u}_{3}}{\left(\frac{1}{\sqrt{3}}\right)}=\sqrt{3} \mathbf{u}_{3}=\left[\begin{array}{c}
+\frac{\sqrt{3}}{3} \\
+-\frac{\sqrt{3}}{3} \\
+-\frac{\sqrt{3}}{3} \\
+0
+\end{array}\right]=\left[\begin{array}{c}
+\frac{1}{\sqrt{3}} \\
+-\frac{1}{\sqrt{3}} \\
+-\frac{1}{\sqrt{3}} \\
+0
+\end{array}\right]
+\end{gathered}
+$$
+
+And an orthonormal basis for $\mathcal{C}(A)$ is:
+
+$$
+\left\{\mathbf{w}_{1}, \mathbf{w}_{2}, \mathbf{w}_{3}\right\}=\left\{\left[\begin{array}{c}
+\frac{1}{\sqrt{6}} \\
+\frac{2}{\sqrt{6}} \\
+-\frac{1}{\sqrt{6}} \\
+0
+\end{array}\right],\left[\begin{array}{c}
+\frac{1}{\sqrt{3}} \\
+0 \\
+\frac{1}{\sqrt{3}} \\
+\frac{1}{\sqrt{3}}
+\end{array}\right],\left[\begin{array}{c}
+\frac{1}{\sqrt{3}} \\
+-\frac{1}{\sqrt{3}} \\
+-\frac{1}{\sqrt{3}} \\
+0
+\end{array}\right]\right\}
+$$
+
+Details of dot product and norm calculations for G-S process:
+
+$$
+\begin{aligned}
+\mathbf{v}_{2} \cdot \mathbf{u}_{1} &=2 \cdot 1+2 \cdot 2+0(-1)+1 \cdot 0=6 \\
+\mathbf{u}_{1} \cdot \mathbf{u}_{1} &=1 \cdot 1+2 \cdot 2+(-1)(-1)+0 \cdot 0=6 \\
+\mathbf{v}_{3} \cdot \mathbf{u}_{1} &=1 \cdot 1+1 \cdot 2+(-1)(-1)+0 \cdot 0=4 \\
+\mathbf{v}_{3} \cdot \mathbf{u}_{2} &=1 \cdot 1+1 \cdot 0+(-1) 1+0 \cdot 1=0 \\
+\mathbf{u}_{2} \cdot \mathbf{u}_{2} &=1 \cdot 1+0 \cdot 0+1 \cdot 1+1 \cdot 1=3 \\
+\mathbf{u}_{3} \cdot \mathbf{u}_{3} &=\frac{1}{3} \cdot \frac{1}{3}+\left(-\frac{1}{3}\right)\left(-\frac{1}{3}\right)+\left(-\frac{1}{3}\right)\left(-\frac{1}{3}\right)+0 \cdot 0=\frac{3}{9}=\frac{1}{3} \\
+\left\|\mathbf{u}_{1}\right\| &=\sqrt{\mathbf{u}_{1} \cdot \mathbf{u}_{1}}=\sqrt{6} \\
+\left\|\mathbf{u}_{2}\right\| &=\sqrt{\mathbf{u}_{2} \cdot \mathbf{u}_{2}}=\sqrt{3} \\
+\left\|\mathbf{u}_{3}\right\| &=\sqrt{\mathbf{u}_{3} \cdot \mathbf{u}_{3}}=\sqrt{\frac{1}{3}}=\frac{1}{\sqrt{3}}
+\end{aligned}
+$$
+
+</details>
+
+# QR Factorization
+
+##  Definitions and Theorems {.tabset}
+
+### Theorem 2.1.
+**QR Factorization**
+
+If $A$ is a real $m \times n$ matrix with linearly independent columns, then $A$ can be factored as
+
+$$
+A=Q R
+$$
+
+where $Q$ is an $m \times n$ matrix whose columns form an orthonormal basis for $\mathcal{C}(A)$ and $R$ is an $n \times n$ upper triangular invertible matrix with positive entries on its diagonal.
+
+<details><summary>*Proof*</summary>
+
+Let
+
+$$
+A=\left[\mathbf{v}_{1}\left|\mathbf{v}_{2}\right| \ldots \mid \mathbf{v}_{n}\right]
+$$
+
+Since
+
+$$
+B=\left\{\mathbf{v}_{1}, \mathbf{v}_{2}, \ldots, \mathbf{v}_{n}\right\}
+$$
+
+is linearly independent, $B$ is a basis for $\mathcal{C}(A)$. Perform the Gram-Schmidt algorithm on $B$ to produce an orthogonal set, and normalize the vectors in that set to produce the orthonormal set
+
+$$
+D=\left\{\mathbf{u}_{1}, \mathbf{u}_{2}, \ldots, \mathbf{u}_{n}\right\}
+$$
+
+By corollary 1.1.1, $D$ is an orthonormal basis for $\mathcal{C}(A)$.
+
+Now consider the $k^{t h}$ column of $A, \mathbf{v}_{k}$. By theorem $1.1$
+
+$$
+\mathbf{v}_{k} \in\left\langle\left\{\mathbf{v}_{1}, \mathbf{v}_{2}, \ldots, \mathbf{v}_{k}\right\}\right\rangle=\left\langle\left\{\mathbf{u}_{1}, \mathbf{u}_{2}, \ldots, \mathbf{u}_{k}\right\}\right\rangle
+$$
+
+Therefore we can write $\mathbf{v}_{k}$ as a linear combination of $\mathbf{u}_{1}, \mathbf{u}_{2}, \ldots, \mathbf{u}_{k}$ as
+
+$$
+\mathbf{v}_{k}=r_{1 k} \mathbf{u}_{1}+r_{2 k} \mathbf{u}_{2}+\cdots+r_{k k} \mathbf{u}_{k}
+$$
+
+for some real numbers $r_{1 k}, r_{2 k}, \ldots, r_{k k}$. If $r_{k k}<0$, multiply $r_{k k}$ and $\mathbf{u}_{k}$ by $-1$ so that
+
+$$
+r_{k k} \geq 0
+$$
+
+Now we can write $\mathbf{v}_{k}$ as a linear combination of $\mathbf{u}_{1}, \mathbf{u}_{2}, \ldots, \mathbf{u}_{n}$ as follows:
+
+$$
+\mathbf{v}_{k}=r_{1 k} \mathbf{u}_{1}+r_{2 k} \mathbf{u}_{2}+\cdots+r_{k k} \mathbf{u}_{k}+0 \mathbf{u}_{k+1}+0 \mathbf{u}_{k+2}+\cdots+0 \mathbf{u}_{n}
+$$
+
+Define
+
+$$
+\mathbf{r}_{k}=\left[\begin{array}{c}
+r_{1 k} \\
+r_{2 k} \\
+\vdots \\
+r_{k k} \\
+0 \\
+\vdots \\
+0
+\end{array}\right]
+$$
+
+Then, using the definition of a matrix-vector product, we have
+
+$$
+\mathbf{v}_{k}=\left[\mathbf{u}_{1}\left|\mathbf{u}_{2}\right| \cdots \mid \mathbf{u}_{n}\right] \mathbf{r}_{k}
+$$
+
+Now let
+
+$$
+Q=\left[\begin{array}{l|l|l|l}
+\mathbf{u}_{1} & \mathbf{u}_{2} & \cdots & \mathbf{u}_{n}
+\end{array}\right]
+$$
+
+and
+
+$$
+R=\left[\mathbf{r}_{1}\left|\mathbf{r}_{2}\right| \cdots \mid \mathbf{r}_{n}\right]=\left[\begin{array}{ccccc}
+r_{11} & r_{12} & r_{13} & \cdots & r_{1 n} \\
+0 & r_{22} & r_{23} & \cdots & r_{2 n} \\
+0 & 0 & r_{33} & \cdots & r_{3 n} \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & 0 & r_{n n}
+\end{array}\right]
+$$
+
+Then we have
+
+$$
+\mathbf{v}_{k}=Q \mathbf{r}_{k}
+$$
+
+and
+
+$$
+A=\left[\mathbf{v}_{1}\left|\mathbf{v}_{2}\right| \ldots \mid \mathbf{v}_{n}\right]=\left[Q \mathbf{r}_{1}\left|Q \mathbf{r}_{2}\right| \ldots \mid Q \mathbf{r}_{n}\right]=Q R
+$$
+
+where $Q$ and $R$ are the desired matrices for the factorization. Note that the columns of $Q$ form an orthonormal basis for $\mathcal{C}(A)$ by construction. To see that $R$ is invertible, consider 
+
+$$
+\begin{aligned}
+R \mathbf{x} &=\mathbf{0} \\
+Q R \mathbf{x} &=Q \mathbf{0} \\
+A \mathbf{x} &=\mathbf{0}
+\end{aligned}
+$$
+
+Since the columns of $A$ are linearly independent, the only solution to this equation is the trivial solution
+
+$$
+\mathbf{x}=\mathbf{0}
+$$
+
+Therefore $R$ is invertible. Lastly, since we ensured that $r_{k k} \geq 0$, and
+
+$$
+|R|=\prod_{k=1}^{n} r_{k k} \neq 0
+$$
+
+we can conclude that
+
+$$
+r_{k k}>0, \quad k=1,2, \ldots, n
+$$
+
+and the entries on the diagonal of $R$ are positive.
+
+</details>
+
+## Examples
+
+Find a QR factorization of $A$, if possible, where
+
+$$
+A=\left[\begin{array}{rrr}
+1 & 2 & 1 \\
+2 & 2 & 1 \\
+-1 & 0 & -1 \\
+0 & 1 & 0
+\end{array}\right]
+$$
+
+<details><summary>Solution</summary>
+
+A $\mathrm{QR}$ factorization of $A$ exists if the columns of $A$ form a linearly independent set. To find out, we row-reduce $A$ as usual:
+
+$$
+A=\left[\begin{array}{rrr}
+1 & 2 & 1 \\
+2 & 2 & 1 \\
+-1 & 0 & -1 \\
+0 & 1 & 0
+\end{array}\right] \sim\left[\begin{array}{lll}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1 \\
+0 & 0 & 0
+\end{array}\right]
+$$
+
+Since there is a pivot in every column of $A$, its columns form a linearly independent set and a QR factorization exists. To find it, we need an orthonormal basis for $\mathcal{C}(A)$. As in the previous example, let 
+
+$$
+\mathbf{v}_{1}=\left[\begin{array}{r}
+1 \\
+2 \\
+-1 \\
+0
+\end{array}\right], \quad \mathbf{v}_{2}=\left[\begin{array}{l}
+2 \\
+2 \\
+0 \\
+1
+\end{array}\right], \quad \mathbf{v}_{3}=\left[\begin{array}{r}
+1 \\
+1 \\
+-1 \\
+0
+\end{array}\right]
+$$
+
+And a basis for $\mathcal{C}(A)$ is
+
+$$
+\left\{\mathbf{v}_{1}, \mathbf{v}_{2}, \mathbf{v}_{3}\right\}=\left\{\left[\begin{array}{r}
+1 \\
+2 \\
+-1 \\
+0
+\end{array}\right],\left[\begin{array}{l}
+2 \\
+2 \\
+0 \\
+1
+\end{array}\right],\left[\begin{array}{r}
+1 \\
+1 \\
+-1 \\
+0
+\end{array}\right]\right\}
+$$
+
+We do the Gram-Schmidt process on this basis (see example $1.1$ for details) and get an orthogonal basis for $\mathcal{C}(A)$ :
+
+$$
+\left\{\mathbf{v}_{1}, \mathbf{v}_{2}, \mathbf{v}_{3}\right\}=\left\{\left[\begin{array}{r}
+1 \\
+2 \\
+-1 \\
+0
+\end{array}\right],\left[\begin{array}{l}
+1 \\
+0 \\
+1 \\
+1
+\end{array}\right],\left[\begin{array}{r}
+\frac{1}{3} \\
+-\frac{1}{3} \\
+-\frac{1}{3} \\
+0
+\end{array}\right]\right\}
+$$
+
+Then we normalize these basis vectors (see example 1.1) to get an orthonormal basis for $\mathcal{C}(A)$
+
+$$
+\left\{\mathbf{w}_{1}, \mathbf{w}_{2}, \mathbf{w}_{3}\right\}=\left\{\left[\begin{array}{c}
+\frac{1}{\sqrt{6}} \\
+\frac{2}{\sqrt{6}} \\
+-\frac{1}{\sqrt{6}} \\
+0
+\end{array}\right],\left[\begin{array}{c}
+\frac{1}{\sqrt{3}} \\
+0 \\
+\frac{1}{\sqrt{3}} \\
+\frac{1}{\sqrt{3}}
+\end{array}\right],\left[\begin{array}{c}
+\frac{1}{\sqrt{3}} \\
+-\frac{1}{\sqrt{3}} \\
+-\frac{1}{\sqrt{3}} \\
+0
+\end{array}\right]\right\}
+$$
+
+Now we use the $\mathrm{QR}$ factorization theorem to find $Q$ and $R$. $Q$ is simply the matrix whose columns are the orthonormal basis vectors we just found: 
+
+$$
+Q=\left[\begin{array}{ccc}
+\frac{1}{\sqrt{6}} & \frac{1}{\sqrt{3}} & \frac{1}{\sqrt{3}} \\
+\frac{2}{\sqrt{6}} & 0 & -\frac{1}{\sqrt{3}} \\
+-\frac{1}{\sqrt{6}} & \frac{1}{\sqrt{3}} & -\frac{1}{\sqrt{3}} \\
+0 & \frac{1}{\sqrt{3}} & 0
+\end{array}\right]
+$$
+
+But how do we find $R$ ? We could construct it from the proof of theorem 2.1, but there is an easier way.
+
+$Q$ is not square so it's not an orthogonal matrix, however since its columns are orthonormal, it still satisfies the property
+
+$$
+Q^{T} Q=I
+$$
+
+We can use this property to derive a formula for $R$ as follows:
+
+$$
+Q^{T} A=Q^{T}(Q R)=\left(Q^{T} Q\right) R=I R=R
+$$
+
+Substituting for $Q^{T}$ and $A$ in this example we have
+
+$$
+R=Q^{T} A=\left[\begin{array}{cccc}
+\frac{1}{\sqrt{6}} & \frac{2}{\sqrt{6}} & -\frac{1}{\sqrt{6}} & 0 \\
+\frac{1}{\sqrt{3}} & 0 & \frac{1}{\sqrt{3}} & \frac{1}{\sqrt{3}} \\
+\frac{1}{\sqrt{3}} & -\frac{1}{\sqrt{3}} & -\frac{1}{\sqrt{3}} & 0
+\end{array}\right]\left[\begin{array}{ccc}
+1 & 2 & 1 \\
+2 & 2 & 1 \\
+-1 & 0 & -1 \\
+0 & 1 & 0
+\end{array}\right]=\left[\begin{array}{ccc}
+\sqrt{6} & \sqrt{6} & 2 \sqrt{\frac{2}{3}} \\
+0 & \sqrt{3} & 0 \\
+0 & 0 & \frac{1}{\sqrt{3}}
+\end{array}\right]
+$$
+
+We can check the factorization by multiplying $Q$ and $R$ to confirm that we get A back
+
+$$
+Q R=\left[\begin{array}{ccc}
+\frac{1}{\sqrt{6}} & \frac{1}{\sqrt{3}} & \frac{1}{\sqrt{3}} \\
+\frac{2}{\sqrt{6}} & 0 & -\frac{1}{\sqrt{3}} \\
+-\frac{1}{\sqrt{6}} & \frac{1}{\sqrt{3}} & -\frac{1}{\sqrt{3}} \\
+0 & \frac{1}{\sqrt{3}} & 0
+\end{array}\right]\left[\begin{array}{ccc}
+\sqrt{6} & \sqrt{6} & 2 \sqrt{\frac{2}{3}} \\
+0 & \sqrt{3} & 0 \\
+0 & 0 & \frac{1}{\sqrt{3}}
+\end{array}\right]=\left[\begin{array}{ccc}
+1 & 2 & 1 \\
+2 & 2 & 1 \\
+-1 & 0 & -1 \\
+0 & 1 & 0
+\end{array}\right]=A
+$$
+</details>
