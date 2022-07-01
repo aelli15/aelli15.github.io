@@ -17,4 +17,4 @@ description: |
 
 [Part 3](): All questions
 
-[Part 4]():
+[Part 4](https://brodyee.github.io/Courses/LinearAlgebra/HWs/leastSquaresHW.pdf): Will be posted on the July 7
