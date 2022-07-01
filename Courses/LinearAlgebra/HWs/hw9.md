@@ -15,6 +15,6 @@ description: |
 
 [Part 2](https://brodyee.github.io/Courses/LinearAlgebra/HWs/orthogDiagHW.pdf): 1, 3, 15, 17, and 23
 
-[Part 3](): All questions
+[Part 3](https://brodyee.github.io/Courses/LinearAlgebra/HWs/hw9part3.html): All questions
 
 [Part 4](https://brodyee.github.io/Courses/LinearAlgebra/HWs/leastSquaresHW.pdf): Will be posted on July 7
