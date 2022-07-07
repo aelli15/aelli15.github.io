@@ -21,7 +21,7 @@ description: |
 6. [HW 6](https://brodyee.github.io/Courses/LinearAlgebra/Assignments/hw6) Quiz on Thursday June 16<sup>th</sup>
 7. [HW 7](https://brodyee.github.io/Courses/LinearAlgebra/Assignments/hw7) Quiz on Thursday June 23<sup>rd</sup>
 8. [HW 8](https://brodyee.github.io/Courses/LinearAlgebra/Assignments/hw8) Quiz on Thursday June 30<sup>th</sup>
-9. [HW 9](https://brodyee.github.io/Courses/LinearAlgebra/Assignments/hw9) Quiz on *Tuesday* July 12<sup>th</sup>
+9. [HW 9](https://brodyee.github.io/Courses/LinearAlgebra/Assignments/hw9) ~~Quiz on *Tuesday* July 12<sup>th</sup>~~
 
 ### Classworks
 
@@ -32,4 +32,4 @@ description: |
 5. [Classwork](https://brodyee.github.io/Courses/LinearAlgebra/Assignments/CW23rd) on Thursday June 23<sup>rd</sup>
 6. [Classwork](https://brodyee.github.io/Courses/LinearAlgebra/Assignments/CW28th) on Tuesday June 28<sup>th</sup>
 7. ~~Classwork on Thursday June 30<sup>th</sup>~~ Cancelled due to exam review
-8. Classwork on Thursday July 7<sup>th</sup>
+8. [Classwork](https://brodyee.github.io/Courses/LinearAlgebra/Assignments/CWjuly7th) on Thursday July 7<sup>th</sup>
