@@ -25,4 +25,5 @@ description: |
 12. [Eigenvalues and Eigenvectors](https://brodyee.github.io/Courses/LinearAlgebra/lectureNotes/EigenVals-Vecs.html)
 13. [Diagonalization and Orthonormal Diagonalization](https://brodyee.github.io/Courses/LinearAlgebra/lectureNotes/Diagonalization.html)
 14. [QR Factorization](https://brodyee.github.io/Courses/LinearAlgebra/lectureNotes/QRFactorization.html)
+15. [Least Squares](https://brodyee.github.io/Courses/LinearAlgebra/lectureNotes/LeastSquares.html)
 
