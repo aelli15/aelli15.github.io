@@ -32,5 +32,5 @@ description: |
   
 # Coming Up
 
-  - **July 12<sup>th</sup>**: Final Exam Review.
+  - **July 12<sup>th</sup>**: Exam 2 Review and Questions. [Final Exam Practice](https://brodyee.github.io/Courses/LinearAlgebra/lectureNotes/finalExamReview.pdf) and [Final Exam Practice Solutions](https://brodyee.github.io/Courses/LinearAlgebra/lectureNotes/finalExamReviewSol.pdf)
   - **July 14<sup>th</sup>**: *Final Exam*
