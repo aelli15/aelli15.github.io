@@ -1,6 +1,6 @@
 ---
 title: "Brody Erlandson"
-logo: IMG_501.PNG
+logo: IMG_5016.PNG
 description: |
   M.S. in Data Science at U of M <br />
   B.S. in Mathematics at EMU
