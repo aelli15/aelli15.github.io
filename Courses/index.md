@@ -1,7 +1,7 @@
 ---
 title: "Courses"
 permalink: /Courses/
-logo: ../IMG_0516.PNG
+logo: ../picOfMe.PNG
 description: |
   M.S. in Data Science at U of M <br />
   B.S. in Mathematics at EMU
