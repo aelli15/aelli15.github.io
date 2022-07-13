@@ -29,8 +29,8 @@ description: |
   - **June 30<sup>th</sup>**: QR Factorization (Not on Exam 2), and Exam 2 Review [Practice Exam 2](https://brodyee.github.io/Courses/LinearAlgebra/lectureNotes/practiceExam2.pdf)
   - **July 5<sup>th</sup>**: *Exam 2*
   - **July 7<sup>th</sup>**: Least Squares.
+  - **July 12<sup>th</sup>**: Exam 2 Review and Questions. [Final Exam Practice](https://brodyee.github.io/Courses/LinearAlgebra/lectureNotes/finalExamReview.pdf) and [Final Exam Practice Solutions](https://brodyee.github.io/Courses/LinearAlgebra/lectureNotes/finalExamReviewSol.pdf)
   
 # Coming Up
 
-  - **July 12<sup>th</sup>**: Exam 2 Review and Questions. [Final Exam Practice](https://brodyee.github.io/Courses/LinearAlgebra/lectureNotes/finalExamReview.pdf) and [Final Exam Practice Solutions](https://brodyee.github.io/Courses/LinearAlgebra/lectureNotes/finalExamReviewSol.pdf)
   - **July 14<sup>th</sup>**: *Final Exam*
