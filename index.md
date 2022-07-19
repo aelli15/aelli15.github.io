@@ -12,7 +12,7 @@ I am currently a Statistic PhD Pre-canidate at Colorado State University, where 
 
 ## [Courses](Courses/)
 
-## [Research and Projects](researchAndProjects)
+## [Research and Projects](researchAndProjects.md)
 
 ## [Resume](ResumeJun2022.pdf)
 <!--
