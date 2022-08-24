@@ -11,6 +11,9 @@ description: |
 ### Teaching
 
 The following courses that I have taught, and some contain lecture content:
+- Colorado State University
+  - STAT 204: Statistics With Business Applications, Falls 2022, Graduate Teachers Assistant.
+  - STAT 301: Introduction to Applied Statistical Methods, Fall 2022, Graduate Teachers Assistant.
 - Washtenaw Community College
   - [MATH 197: Linear Algebra](https://brodyee.github.io/Courses/LinearAlgebra), Spring/Summer 2022, Instructor.
 - University of Michigan
