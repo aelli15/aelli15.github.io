@@ -1608,7 +1608,7 @@ this so that we can compare to what the actual posterior is. We will
 also look at a more complex example in a bit. First lets note the
 posterior distribution:</p>
 <p><span class="math display">\[\theta|Y_1, \dots, Y_n \sim
-gamma(3+\sum_{i=1}^ny_i, 1/2+n)\]</span></p>
+gamma(4+\sum_{i=1}^ny_i, 1/2+n)\]</span></p>
 </div>
 <div id="stan-set-up" class="section level1">
 <h1>Stan Set up</h1>
@@ -1636,16 +1636,19 @@ generated quantities {
 <p>You can read in more depth <a href="https://mc-stan.org/docs/reference-manual/blocks.html">here</a></p>
 <p>For our simple model we will use the following <code>.stan</code>
 file:</p>
-<pre><code>data {
-  int&lt;lower=1&gt; n;        // Number of samples
-  int&lt;lower=0&gt; y[n];     // Sample vector
+<pre><code>// saved as pois.stan
+data {
+  int&lt;lower=1&gt; n;               // Number of samples
+  int&lt;lower=0&gt; y[n];            // Sample vector
+  real&lt;lower=0&gt; alpha;          // First gamma prior parameter
+  real&lt;lower=0&gt; beta;           // Second gamma prior parameter
 }
 parameters {
-   real&lt;lower=0&gt; theta;  // Our parameter of interest
+   real&lt;lower=0&gt; theta;         // Our parameter of interest
 }
 model {
-   theta ~ gamma(3, 1/2) // Prior
-   y ~ poisson(theta)
+   theta ~ gamma(alpha, beta);  // Prior
+   y ~ poisson(theta);          // Likelihood
 }</code></pre>
 </div>
 <div id="running-our-model" class="section level1">
@@ -1675,7 +1678,7 @@ posterior:</p>
 ## theta    6.81    0.00 0.15    6.53    6.71    6.81    6.92    7.12  1508    1
 ## lp__  1881.94    0.02 0.73 1879.85 1881.78 1882.22 1882.41 1882.46  1988    1
 ## 
-## Samples were drawn using NUTS(diag_e) at Tue Jan 31 20:44:01 2023.
+## Samples were drawn using NUTS(diag_e) at Wed Feb  1 11:40:09 2023.
 ## For each parameter, n_eff is a crude measure of effective sample size,
 ## and Rhat is the potential scale reduction factor on split chains (at 
 ## convergence, Rhat=1).</code></pre>
@@ -1751,7 +1754,7 @@ stanFit &lt;- stan(file = &quot;norm.stan&quot;, # Stan file
 ## Sig2     2.91    0.00 0.18    2.58    2.78    2.90    3.02    3.29  3687    1
 ## lp__  -976.42    0.02 0.99 -979.07 -976.79 -976.12 -975.71 -975.45  1736    1
 ## 
-## Samples were drawn using NUTS(diag_e) at Tue Jan 31 20:44:57 2023.
+## Samples were drawn using NUTS(diag_e) at Wed Feb  1 11:41:07 2023.
 ## For each parameter, n_eff is a crude measure of effective sample size,
 ## and Rhat is the potential scale reduction factor on split chains (at 
 ## convergence, Rhat=1).</code></pre>
