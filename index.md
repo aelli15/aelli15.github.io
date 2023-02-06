@@ -3,30 +3,7 @@ title: "Brody Erlandson"
 logo: picOfMe1.PNG
 description:
 ---
-<!-- Tab links -->
-<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'About Me')">About Me</button>
-  <button class="tablinks" onclick="openCity(event, 'Courses')">Courses</button>
-  <button class="tablinks" onclick="openCity(event, 'Research and Projects')">Research and Projects</button>
-</div>
 
-<!-- Tab content -->
-<div id="About Me" class="tabcontent">
-  <h3>About Me</h3>
-  <p>I am currently a Statistic PhD Pre-canidate at Colorado State University, where I hope to do research in nonparametric Bayesian methods and computation. I am trying to have a good mixture of computing and theoretical background. I love to dwell on theoretical and abstract structures, but also love to code and implement my ideas. I find it very important to pass on my knowledge to others, and encourage others to explore mathematics and statistics at a deeper level. I have been a lab instructor at University of Michigan during my masters degree and a part time instructor at Washtenaw Community College. Beyond academics, I love music, cooking, and enjoying nature!.</p>
-</div>
-
-<div id="Courses" class="tabcontent">
-  <h3>Courses</h3>
-  <p>Paris is the capital of France.</p>
-</div>
-
-<div id="Research and Projects" class="tabcontent">
-  <h3>Research and Projects</h3>
-  <p>Tokyo is the capital of Japan.</p>
-</div>
-
-<!--
 ## About Me
 
 I am currently a Statistic PhD Pre-canidate at Colorado State University, where I hope to do research in nonparametric Bayesian methods and computation. I am trying to have a good mixture of computing and theoretical background. I love to dwell on theoretical and abstract structures, but also love to code and implement my ideas. I find it very important to pass on my knowledge to others, and encourage others to explore mathematics and statistics at a deeper level. I have been a lab instructor at University of Michigan during my masters degree and a part time instructor at Washtenaw Community College. Beyond academics, I love music, cooking, and enjoying nature!
