@@ -40,17 +40,17 @@
     <div class="container">
       
       <div class="tabs">
-        <input type="radio" name="tabGroup1" id="tab1" class="tab" checked>
+        <input type="radio" name="tabs" id="tab1" checked> <!-- class="tab"> -->
         <label for="tab1">Tab 1</label>
         <div class="tabContent">
           <p>Tab 1 content goes here.</p>
         </div>
-        <input type="radio" name="tabGroup1" id="tab2" class="tab">
+        <input type="radio" name="tabs" id="tab2"> <!-- class="tab"> -->
         <label for="tab2">Tab 2</label>
         <div class="tabContent">
           <p>Tab 2 content goes here.</p>
         </div>
-        <input type="radio" name="tabGroup1" id="tab3" class="tab">
+        <input type="radio" name="tabs" id="tab3"> <!-- class="tab"> -->
         <label for="tab3">Tab 3</label>
         <div class="tabContent">
           <p>Tab 3 content goes here.</p>
@@ -86,14 +86,14 @@
     font-weight: bold;
 }
 
-.tabs .tab {
+.tabs .tabContent {
     width: 100%;
     padding: 20px;
     background: #fff;
     order: 1;
     display: none;
 }
-.tabs .tab h2 {
+.tabs .tabContent h2 {
     font-size: 3em;
 }
 
