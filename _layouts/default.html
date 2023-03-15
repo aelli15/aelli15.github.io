@@ -38,7 +38,7 @@
   <section>
     <!-- clickable tabs-->
     <div class="container">
-      <div class="tab-wrap">
+      <div class="tabs">
         <input type="radio" name="tabGroup1" id="tab1" class="tab" checked>
         <label for="tab1">Tab 1</label>
         <input type="radio" name="tabGroup1" id="tab2" class="tab">
@@ -68,3 +68,40 @@
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
   </body>
 </html>
+  
+<style>
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 25px;
+}
+.tabs input[type="radio"] {
+    display: none;
+}
+.tabs label {
+    padding: 25px;
+    background: #e2e2e2;
+    font-weight: bold;
+}
+
+.tabs .tab {
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+    order: 1;
+    display: none;
+}
+.tabs .tab h2 {
+    font-size: 3em;
+}
+
+.tabs input[type='radio']:checked + label + .tab {
+    display: block;
+}
+
+.tabs input[type="radio"]:checked + label {
+    background: #fff;
+}
+</style>
