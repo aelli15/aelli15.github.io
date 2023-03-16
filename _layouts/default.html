@@ -38,6 +38,12 @@
   <!-- ------------------------------------------------------------------------ -->
   <!--                          Formatting Content                              -->
   <!-- ------------------------------------------------------------------------ -->
+  <!-- Import element definition -->
+  <script
+    type="module"
+    src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"
+  ></script>
+      
   <section>
     <!-- ------------------------------------------------------------------------ -->
     <!--                           Formatting Tabs                                -->
@@ -46,7 +52,7 @@
         <input type="radio" name="tabs" id="tab1" checked> <!-- class="tab"> -->
         <label for="tab1">About Me</label>
         <div class="tabContent">
-          <object data="aboutme.txt"></object>
+          <zero-md src="/aboutme.md"></zero-md>
         </div>
         <input type="radio" name="tabs" id="tab2"> <!-- class="tab"> -->
         <label for="tab2">Courses</label>
