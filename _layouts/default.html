@@ -43,6 +43,15 @@
     type="module"
     src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"
   ></script>
+  
+  <style>
+    #rightAlign {
+      float:right;
+      width: auto;
+      margin: 0 auto;
+      padding: 0px;
+    }
+  </style>
   <!-- ------------------------------------------------------------------------ -->
   <!-- ------------------------------------------------------------------------ -->
       
@@ -54,7 +63,7 @@
         <input type="radio" name="tabs" id="tab1" checked> 
         <label for="tab1">About Me</label>
         <div class="tabContent">
-          <zero-md src="aboutme.md"></zero-md>
+          <zero-md id="rightAlign" src="aboutme.md"></zero-md>
         </div>
         <input type="radio" name="tabs" id="tab2"> 
         <label for="tab2">Courses</label>
