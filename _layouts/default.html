@@ -35,56 +35,68 @@
         </ul>
         {% endif %}
       </header>
+  
   <!-- ------------------------------------------------------------------------ -->
-  <!--                          Formatting Content                              -->
+  <!--                    Using this to read in md files                        -->
   <!-- ------------------------------------------------------------------------ -->
-  <!-- Import element definition -->
   <script
     type="module"
     src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"
   ></script>
+  <!-- ------------------------------------------------------------------------ -->
+  <!-- ------------------------------------------------------------------------ -->
       
   <section>
     <!-- ------------------------------------------------------------------------ -->
     <!--                           Formatting Tabs                                -->
     <!-- ------------------------------------------------------------------------ -->
      <div class="tabs">
-        <input type="radio" name="tabs" id="tab1" checked> <!-- class="tab"> -->
+        <input type="radio" name="tabs" id="tab1" checked> 
         <label for="tab1">About Me</label>
         <div class="tabContent">
           <zero-md src="aboutme.md"></zero-md>
         </div>
-        <input type="radio" name="tabs" id="tab2"> <!-- class="tab"> -->
+        <input type="radio" name="tabs" id="tab2"> 
         <label for="tab2">Courses</label>
         <div class="tabContent">
-          <p>Tab 2 content goes here.</p>
+          <zero-md src="courses.md"></zero-md>
         </div>
-        <input type="radio" name="tabs" id="tab3"> <!-- class="tab"> -->
+        <input type="radio" name="tabs" id="tab3"> 
         <label for="tab3">Resume</label>
         <div class="tabContent">
-          <p>put resume link</p>
+          <object data="ResumeJan23.pdf" 
+                width="590" 
+                height="500"> 
+        </object>
         </div>
-        <input type="radio" name="tabs" id="tab4"> <!-- class="tab"> -->
+        <input type="radio" name="tabs" id="tab4"> 
         <label for="tab4">Research</label>
         <div class="tabContent">
-          <p>Tab 4 content goes here.</p>
+          <zero-md src="research.md"></zero-md>
         </div>
-        <input type="radio" name="tabs" id="tab5"> <!-- class="tab"> -->
+        <input type="radio" name="tabs" id="tab5"> 
         <label for="tab5">Talks</label>
         <div class="tabContent">
-          <p>Tab 5 content goes here.</p>
+          <zero-md src="talks.md"></zero-md>
         </div>
-        <input type="radio" name="tabs" id="tab6"> <!-- class="tab"> -->
+       
+        <!-- ------------------------------------------------------------------------ -->
+        <!-- if you want to add a tab(s) copy and paste below, and make the corresponding
+             .md file. make sure to change id if adding more than just one. -->
+        <!-- ------------------------------------------------------------------------ -->
+        <!--
+        <input type="radio" name="tabs" id="tab6"> 
         <label for="tab6">Extra</label>
         <div class="tabContent">
-          <p>Put extra content here</p>
+          <zero-md src="extra.md"></zero-md>
         </div>
+        -->
+        <!-- ------------------------------------------------------------------------ -->
+        <!-- ------------------------------------------------------------------------ -->
       </div>
       <!-- ------------------------------------------------------------------------ -->
       <!-- ------------------------------------------------------------------------ -->
   </section>
-  <!-- ------------------------------------------------------------------------ -->
-  <!-- ------------------------------------------------------------------------ -->
       <footer>
         {% if site.github.is_project_page %}
         <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
@@ -163,3 +175,11 @@ section {
     background: radial-gradient(ellipse, #eee 0, #f7f7f7, #fff 100%);    
 }
 </style>
+<!-- ------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------ -->
+
+
+<!-- ------------------------------------------------------------------------ -->
+<!--  Everything with the comments styled like this was add by brodyee        -->
+<!-- ------------------------------------------------------------------------ -->
+
