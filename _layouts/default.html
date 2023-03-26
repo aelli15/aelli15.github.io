@@ -14,7 +14,7 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
+      <header class="header">
         <h1><a href="{{ "/" | absolute_url }}">{{ page.title | default: site.github.repository_name }}</a></h1>
 
         {% if site.logo %}
@@ -122,70 +122,73 @@
 <!--                           Styling the tabs                               -->
 <!-- ------------------------------------------------------------------------ -->
 <style>
-.wrapper {
-  width: auto;
-  max-width: 95%;
-  height: auto;
-  display: flex;
-  flex-flow: column wrap;
-}
-
-section {
-  float: right;
-  width: auto;
-  margin: 0 auto;
-  padding: 0px;
-}
-  
-.tabs {
-    float: right;
+  .header {
+    padding-right: 1rem;
+  }
+  .wrapper {
+    width: auto;
+    max-width: 95%;
+    height: auto;
     display: flex;
-    flex-wrap: wrap;
-    padding: 5px;
-}
-.tabs input[type="radio"] {
-    display: none;
-}
-.tabs label {
-  display: inline-block;
-  margin: 0px; 
-  padding: 15px 25px;
-  font-weight: 600;
-  text-align: center;
-  color: #bbb;
-  border: 1px solid transparent;
-  border-radius: 15px;
-}
+    flex-flow: column wrap;
+  }
 
-.tabs label:before {
-  font-weight: normal;
-  margin-right: 10px;
-}
-  
-.tabs label:hover {
-  color: #888;
-  cursor: pointer;
-}
-  
-.tabs .tabContent {
-    width: 100%;
-    padding: 20px;
-    background: #fff;
-    order: 1;
-    display: none;
-}
-.tabs .tabContent h2 {
-    font-size: 3em;
-}
+  section {
+    float: right;
+    width: auto;
+    margin: 0 auto;
+    padding: 0px;
+  }
 
-.tabs input[type='radio']:checked + label + .tabContent {
-    display: block;
-}
+  .tabs {
+      float: right;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 5px;
+  }
+  .tabs input[type="radio"] {
+      display: none;
+  }
+  .tabs label {
+    display: inline-block;
+    margin: 0px; 
+    padding: 15px 25px;
+    font-weight: 600;
+    text-align: center;
+    color: #bbb;
+    border: 1px solid transparent;
+    border-radius: 15px;
+  }
 
-.tabs input[type="radio"]:checked + label {
-    color: #267CB9;
-    background: radial-gradient(ellipse, #eee 0, #f7f7f7, #fff 100%);    
-}
+  .tabs label:before {
+    font-weight: normal;
+    margin-right: 10px;
+  }
+
+  .tabs label:hover {
+    color: #888;
+    cursor: pointer;
+  }
+
+  .tabs .tabContent {
+      width: 100%;
+      padding: 20px;
+      background: #fff;
+      order: 1;
+      display: none;
+  }
+  .tabs .tabContent h2 {
+      font-size: 3em;
+  }
+
+  .tabs input[type='radio']:checked + label + .tabContent {
+      display: block;
+  }
+
+  .tabs input[type="radio"]:checked + label {
+      color: #267CB9;
+      background: radial-gradient(ellipse, #eee 0, #f7f7f7, #fff 100%);    
+  }
 </style>
 <!-- ------------------------------------------------------------------------ -->
 <!-- ------------------------------------------------------------------------ -->
