@@ -35,27 +35,8 @@
         </ul>
         {% endif %}
       </header>
-  
-  <!-- ------------------------------------------------------------------------ -->
-  <!--                    Using this to read in md files                        -->
-  <!-- ------------------------------------------------------------------------ -->
-  <script
-    type="module"
-    src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"
-  ></script>
-  
-  <style>
-    #rightAlign {
-      float:right;
-      width: 800px;
-      margin: 0 auto;
-      padding: 0px;
-    }
-  </style>
-  <!-- ------------------------------------------------------------------------ -->
-  <!-- ------------------------------------------------------------------------ -->
       
-  <section>
+  <section class="custom_section">
     <!-- ------------------------------------------------------------------------ -->
     <!--                           Formatting Tabs                                -->
     <!-- ------------------------------------------------------------------------ -->
@@ -75,9 +56,9 @@
         <div class="tabContent">
           <object data="ResumeJan23.pdf" 
                   align="right"
-                  width="800" 
-                  height="500"> 
-        </object>
+                  width="100%" 
+                  height="600"> 
+          </object>
         </div>
         <input type="radio" name="tabs" id="tab4"> 
         <label for="tab4">Research</label>
@@ -113,81 +94,77 @@
         {% endif %}
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
-    </div>
-    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+  </div>
+  <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+      <!-- ------------------------------------------------------------------------ -->
+  <!--                    Using this to read in md files                        -->
+  <!-- ------------------------------------------------------------------------ -->
+  <script
+    type="module"
+    src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"
+  ></script>
+  
+  <!-- ------------------------------------------------------------------------ -->
+  <!-- ------------------------------------------------------------------------ -->
   </body>
 </html>
   
 <!-- ------------------------------------------------------------------------ -->
 <!--                           Styling the tabs                               -->
 <!-- ------------------------------------------------------------------------ -->
-<style>
-.wrapper {
-  width: auto;
-  max-width: 95%;
-  height: auto;
-  display: flex;
-  flex-flow: column wrap;
-}
+<style> 
+  .custom_section {
+    width: 550;
+  }
+  .tabs {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 5px;
+  }
+  .tabs input[type="radio"] {
+      display: none;
+  }
+  .tabs label {
+    display: inline-block;
+    margin: 0px; 
+    padding: 15px 25px;
+    font-weight: 600;
+    text-align: center;
+    color: #bbb;
+    border: 1px solid transparent;
+    border-radius: 15px;
+  }
 
-section {
-  float: right;
-  width: auto;
-  margin: 0 auto;
-  padding: 0px;
-}
-  
-.tabs {
-    float: right;
-    width: 900px;
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 90%;
-    padding: 5px;
-}
-.tabs input[type="radio"] {
-    display: none;
-}
-.tabs label {
-  display: inline-block;
-  margin: 0px; 
-  padding: 15px 25px;
-  font-weight: 600;
-  text-align: center;
-  color: #bbb;
-  border: 1px solid transparent;
-  border-radius: 15px;
-}
+  .tabs label:before {
+    font-weight: normal;
+    margin-right: 10px;
+  }
 
-.tabs label:before {
-  font-weight: normal;
-  margin-right: 10px;
-}
-  
-.tabs label:hover {
-  color: #888;
-  cursor: pointer;
-}
-  
-.tabs .tabContent {
-    width: 100%;
-    padding: 20px;
-    background: #fff;
-    order: 1;
-    display: none;
-}
-.tabs .tabContent h2 {
-    font-size: 3em;
-}
+  .tabs label:hover {
+    color: #888;
+    cursor: pointer;
+  }
 
-.tabs input[type='radio']:checked + label + .tabContent {
-    display: block;
-}
+  .tabs .tabContent {
+      width: 100%;
+      padding: 20px;
+      background: #fff;
+      order: 1;
+      display: none;
+  }
+  .tabs .tabContent h2 {
+      font-size: 3em;
+  }
 
-.tabs input[type="radio"]:checked + label {
-    color: #267CB9;
-    background: radial-gradient(ellipse, #eee 0, #f7f7f7, #fff 100%);    
-}
+  .tabs input[type='radio']:checked + label + .tabContent {
+      display: block;
+  }
+
+  .tabs input[type="radio"]:checked + label {
+      color: #267CB9;
+      background: radial-gradient(ellipse, #eee 0, #f7f7f7, #fff 100%);    
+  }
 </style>
 <!-- ------------------------------------------------------------------------ -->
 <!-- ------------------------------------------------------------------------ -->
