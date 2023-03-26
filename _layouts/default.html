@@ -18,6 +18,7 @@
         <h1><a href="{{ "/" | absolute_url }}">{{ page.title | default: site.github.repository_name }}</a></h1>
 
         {% if site.logo %}
+          <img src="{{page.logo | relative_url}}" alt="Logo" />
         {% endif %}
 
         <p>{{ page.description | default: site.github.project_tagline }}</p>
@@ -58,7 +59,51 @@
     <!-- ------------------------------------------------------------------------ -->
     <!--                           Formatting Tabs                                -->
     <!-- ------------------------------------------------------------------------ -->
-     
+     <div class="tabs">
+        <input type="radio" name="tabs" id="tab1" checked> 
+        <label for="tab1">About Me</label>
+        <div class="tabContent">
+          <zero-md id="rightAlign" src="aboutme.md"></zero-md>
+        </div>
+        <input type="radio" name="tabs" id="tab2"> 
+        <label for="tab2">Courses</label>
+        <div class="tabContent">
+          <zero-md id="rightAlign" src="courses.md"></zero-md>
+        </div>
+        <input type="radio" name="tabs" id="tab3"> 
+        <label for="tab3">Resume</label>
+        <div class="tabContent">
+          <object data="ResumeJan23.pdf" 
+                  align="right"
+                  width="800" 
+                  height="500"> 
+        </object>
+        </div>
+        <input type="radio" name="tabs" id="tab4"> 
+        <label for="tab4">Research</label>
+        <div class="tabContent">
+          <zero-md id="rightAlign" src="research.md"></zero-md>
+        </div>
+        <input type="radio" name="tabs" id="tab5"> 
+        <label for="tab5">Talks</label>
+        <div class="tabContent">
+          <zero-md id="rightAlign" src="talks.md"></zero-md>
+        </div>
+       
+        <!-- ------------------------------------------------------------------------ -->
+        <!-- if you want to add a tab(s) copy and paste below, and make the corresponding
+             .md file. make sure to change id if adding more than just one. -->
+        <!-- ------------------------------------------------------------------------ -->
+        <!--
+        <input type="radio" name="tabs" id="tab6"> 
+        <label for="tab6">Extra</label>
+        <div class="tabContent">
+          <zero-md src="extra.md"></zero-md>
+        </div>
+        -->
+        <!-- ------------------------------------------------------------------------ -->
+        <!-- ------------------------------------------------------------------------ -->
+      </div>
       <!-- ------------------------------------------------------------------------ -->
       <!-- ------------------------------------------------------------------------ -->
   </section>
@@ -80,7 +125,7 @@
 .wrapper {
   width: auto;
   max-width: 95%;
-
+  height: auto;
   display: flex;
   flex-flow: column wrap;
 }
@@ -151,4 +196,5 @@ section {
 <!-- ------------------------------------------------------------------------ -->
 <!--  Everything with the comments styled like this was add by brodyee        -->
 <!-- ------------------------------------------------------------------------ -->
+
 
