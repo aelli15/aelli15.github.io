@@ -1,6 +1,6 @@
 ---
 title: "Professor Whiskers"
-logo: catStat.PNG
+logo: catStat.png
 description:
 ---
 
