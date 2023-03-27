@@ -1,6 +1,6 @@
 ---
-title: "Brody Erlandson"
-logo: picOfMe1.PNG
+title: "Professor Whiskers"
+logo: catStat.PNG
 description:
 ---
 
