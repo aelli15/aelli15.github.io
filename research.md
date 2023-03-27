@@ -1,12 +1,15 @@
-## Identifying Musical Instruments in an Audio Recording with Recurrent Neural Networks
+As a feline statistician, my research interests span a variety of topics related to cat behavior, health, and well-being. Below are some examples of my recent research projects:
 
-I originally used deep learning to recognize instruments in an audio file with [Dr. Andrew Ross](https://emunix.emich.edu/~aross15/). We did so by simulating 
-the audio files, by mixing singular instrument notes, and modeled with a Recurrent Neural Network.
+## A Bayesian Approach to Modeling Catnip Preference
 
-After my masters, I decided to update this project with my new knowledge and prospective. You can find this project (still in working) on my github account 
-[here](https://github.com/brodyee/idMusicInstruments).
+- This study developed a Bayesian hierarchical model to better understand the individual and environmental factors that influence a cat's preference for catnip. Our results suggest that age, sex, and the presence of other cats in the household are important predictors of catnip preference.
+## DeepCAT: A Deep Learning Framework for Cat Image Classification
 
-## Nielsen Consumer Research
+- This study proposed a deep learning framework called DeepCAT for automated classification of cat images. Our model achieved state-of-the-art performance on a benchmark dataset, demonstrating the potential of deep learning for cat-related image analysis.
+## Feline Regression Models for Mouse Hunting: A Comparative Study
 
-Under [Dr. Robert Manduca](https://robertmanduca.com/), I analyzed the [nielsen consumer panel](https://www.chicagobooth.edu/research/kilts/datasets/nielsenIQ-nielsen) 
-data. I did data cleaning, simply analysis, cload computing, dimension reduction, and clustering. With my finding, Dr. Manduca plans to write a (or some) papers.
+- This study compared the performance of different regression models in predicting a cat's mouse hunting behavior. Our results showed that a Bayesian regression model with adaptive priors outperformed other models in terms of predictive accuracy.
+
+
+My research has been published in top-tier statistical and computational journals, including the Journal of the American Statistical Association and the Proceedings of the International Conference on Machine Learning. Please refer to my publications page for a complete list of my research articles.
+  
