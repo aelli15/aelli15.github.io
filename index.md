@@ -1,6 +1,6 @@
 ---
-title: "Professor Whiskers"
-logo: catStat.png
+title: "Austin Ellingworth"
+logo: ae.jpeg
 description:
 ---
 
