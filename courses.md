@@ -1,22 +1,22 @@
-## Colorado State University
-# Instructor
+# Colorado State University
+## Instructor
 
 - STAT 301: Introduction to Statistical Methods
 
   
-# Interim Instructor
+## Interim Instructor
 
 - STAT 302A: Statistics Supplemental
 
-# Recitation Instructor
+## Recitation Instructor
 
 - STAT 201: General Statistics
 
-# Undergraduate Mentor
+## Undergraduate Mentor
 
 - STAT 472: Statistical Research - Design, Data, Methods
 
-# Teaching Assistant and Grader
+## Teaching Assistant and Grader
 
 - STAT 301: Introduction to Applied Statistics
 - STAT 315: Intro to Theory and Practice of Statistics 
