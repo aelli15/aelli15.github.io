@@ -1,5 +1,5 @@
 # Colorado State University
-## Assitant Course Coordinator
+## Assistant Course Coordinator
 
 - STAT 301: Introduction to Statistical Methods
 
