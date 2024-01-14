@@ -2,4 +2,4 @@ Hello, I am Austin Ellingworth, a PhD candidate in the Colorado State University
 
 I am passionate about undergraduate statistics education and statistics in sports.
 
-email: aelli15 [at] colostate.edu
+email: aelli15 [at] colostate [dot] edu
