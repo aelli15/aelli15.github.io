@@ -6,6 +6,8 @@
 ## Instructor
 
 - STAT 301: Introduction to Statistical Methods
+- STAT 302A: Statistics Supplemental
+
 
   
 ## Interim Instructor
