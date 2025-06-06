@@ -2,7 +2,7 @@ I spend much of my time away from school listening to music or watching movies. 
 
 ## Music
 
-# 2024
+#### 2024
 - [Aligator Bites Never Heal](https://open.spotify.com/album/60UzB8mOCMpc7xkuJE6Bwc?si=BQMdt9tYTrWEBJZyUU2RpA) Never Heal by Doechii
 - [Box for Buddy, Box for Star](https://open.spotify.com/album/3wSIO65dy3pAoBjKBybOcV?si=7ZshjdqWRq2lxUoxwGBC9A) by This is Lorelei
 - [CHROMAKOPIA](https://open.spotify.com/album/0U28P0QVB1QRxpqp5IHOlH?si=JuKWiVBQTgmpW3BI-CB3Vw) by Tyler, the Creator
@@ -16,7 +16,7 @@ I spend much of my time away from school listening to music or watching movies. 
 
 ## Movies
 
-# 2024
+#### 2024
 - [Anora](https://letterboxd.com/film/anora/) dir. Sean Baker
 - [The Brutalist](https://letterboxd.com/film/the-brutalist/) dir. Brady Corbet
 - [Challengers](https://letterboxd.com/film/challengers/) dir. by Luca Guadagnino
