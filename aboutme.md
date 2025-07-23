@@ -1,7 +1,9 @@
 Hi and welcome. :)
 
-I am Austin Ellingworth. I am a PhD candidate in the Colorado State University Statistics Department under the tutelage Professor [Wen Zhou](https://wp.nyu.edu/rczw/). My dissertation research focuses on reproducibility and its applications in high-throughput experimentation. Additionally, I am interested in undergraduate statistics education, and statistical applications in sports and genomics. 
+I am Austin Ellingworth. I am an Assistant Professor at Grand Valley State University in the Department of Statistics. My research primarily focuses on developing methods to assess the reproducibility of results from multiple replicate studies, with particular interest in applications to high-throughput genomic settings. I am also interested multiple testing methods, statistical applications in sports and genomics, and approaches to undergraduate statistics education.
 
-Prior to CSU, I recieved a bachelor's degree in Mathematics and Statistics from Winona State University.
+Previously, I completed a PhD in Statistics from Colorado State University in August of 2025, where I was guided by Professor [Wen Zhou](https://wp.nyu.edu/rczw/). My dissertation was entitled "Statistical inference on reproducibility in high-throughput experiments." Additionally, I recieved a bachelor's degree in Mathematics and Statistics from Winona State University.
 
-email: aelli15 [at] colostate [dot] edu
+I grew up in Mankato, MN. I enjoy sports, movies, live music, and hiking.
+
+email: ellingwa [at] gvsu [dot] edu
