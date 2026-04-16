@@ -29,7 +29,6 @@ I spend much of my time away from school listening to music or watching movies. 
 ## Movies
 
 #### 2025
--
 - [Eddington](https://letterboxd.com/film/eddington/) dir. Ari Aster
 - [If I Had Legs I'd Kick You](https://letterboxd.com/film/if-i-had-legs-id-kick-you/) dir. Mary Bronstein
 - [It Was Just an Accident](https://letterboxd.com/film/it-was-just-an-accident/) (یک تصادف ساده) dir. Jafar Panahi
