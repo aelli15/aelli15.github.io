@@ -2,6 +2,18 @@ I spend much of my time away from school listening to music or watching movies. 
 
 ## Music
 
+#### 2025 
+- [Bleeds](https://open.spotify.com/album/29HKbQ2pgXgElTnH66mFXK) by Wednesday
+- [Caveman Wakes Up](https://open.spotify.com/album/56BMarRYFHZ51ZVTyamBHk) by Friendship
+- [Ego Death at a Bachelorette Party](https://open.spotify.com/album/3MROTtttK946gHaTkXeP8b) by Hayley Williams
+- [Getting Killed](https://open.spotify.com/album/0eeXb23yMW6EaIgm63xxPC) by Geese
+- [It's a Beautiful Place](https://open.spotify.com/album/3qbvg9xDwbPYF16L4SAN4d) by Water From Your Eyes
+- [Live Laugh Love](https://open.spotify.com/album/45aldsXQsGrQxpst6z2hfR) by Earl Sweatshirt
+- [LOVED](https://open.spotify.com/album/1rSbjr5U9J9rQ9sE7RxHFl) by Parcels
+- [moisturizer](https://open.spotify.com/album/3YVnHpyms4rLr3fXS0ROQy) by Wet Leg
+- [Now Would Be A Good Time](https://open.spotify.com/album/6SSsPPOxMvAiDA6B8AWH3y) by Folk Bitch Trio
+- [Phonetics On and On](https://open.spotify.com/album/7C51cbjlLSILLTMVnxbrOc) by Horsegirl
+
 #### 2024
 - [Aligator Bites Never Heal](https://open.spotify.com/album/60UzB8mOCMpc7xkuJE6Bwc?si=BQMdt9tYTrWEBJZyUU2RpA) by Doechii
 - [Box for Buddy, Box for Star](https://open.spotify.com/album/3wSIO65dy3pAoBjKBybOcV?si=7ZshjdqWRq2lxUoxwGBC9A) by This is Lorelei
@@ -16,10 +28,24 @@ I spend much of my time away from school listening to music or watching movies. 
 
 ## Movies
 
+#### 2025
+-
+- [Eddington](https://letterboxd.com/film/eddington/) dir. Ari Aster
+- [If I Had Legs I'd Kick You](https://letterboxd.com/film/if-i-had-legs-id-kick-you/) dir. Mary Bronstein
+- [It Was Just an Accident](https://letterboxd.com/film/it-was-just-an-accident/) (یک تصادف ساده) dir. Jafar Panahi
+- [Marty Supreme](https://letterboxd.com/film/marty-supreme/) dir. Josh Safdie
+- [The Mastermind](https://letterboxd.com/film/the-mastermind-2025/) dir. Kelly Reichardt
+- [No Other Choice](https://letterboxd.com/film/no-other-choice-2025/) (어쩔수가없다) dir. Park Chan-wook
+- [One Battle After Another](https://letterboxd.com/film/one-battle-after-another/) dir. Paul Thomas Anderson
+- [Sinners](https://letterboxd.com/film/sinners-2025/) dir. Ryan Coogler
+- [Sorry, Baby](https://letterboxd.com/film/sorry-baby-2025/) dir. Eva Victor
+- [Weapons](https://letterboxd.com/film/weapons-2025/) dir. Zach Cregger
+
+
 #### 2024
 - [Anora](https://letterboxd.com/film/anora/) dir. Sean Baker
 - [The Brutalist](https://letterboxd.com/film/the-brutalist/) dir. Brady Corbet
-- [Challengers](https://letterboxd.com/film/challengers/) dir. by Luca Guadagnino
+- [Challengers](https://letterboxd.com/film/challengers/) dir. Luca Guadagnino
 - [Dune: Part Two](https://letterboxd.com/film/dune-part-two/) dir. Denis Villeneuve
 - [Evil Does Not Exist](https://letterboxd.com/film/evil-does-not-exist/) (悪は存在しない) dir. Ryusuke Hamaguchi
 - [I'm Still Here](https://letterboxd.com/film/im-still-here-2024/) (Ainda Estou Aqui) dir. Walter Salles
